@@ -1,2 +1,0 @@
-# movildev
-Desarrollo Móvil
