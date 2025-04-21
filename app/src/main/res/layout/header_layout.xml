@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- HEADER -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/header"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:padding="16dp"
+    android:background="#D4E5F1">
+    <ImageView
+        android:id="@+id/backArrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/back_arrow"
+        android:contentDescription="Volver"
+        android:layout_weight="2"
+        />
+    <ImageView
+        android:id="@+id/telemedicina_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/telemedicina"
+        android:contentDescription="@string/telemedicina_header"
+        android:layout_gravity="center"
+
+        android:layout_weight="1"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/telemedicina_header"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#395176"
+        android:layout_weight="3"/>
+</LinearLayout>
