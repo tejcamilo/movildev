@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">FisioCare</string>
+    <string name="title_activity_consultar">ConsultarActivity</string>
+    <string name="title_activity_editar">EditarActivity</string>
+    <string name="title_activity_crear">CrearActivity</string>
+    <string name="titulo_info_personal">Información personal</string>
+    <string name="hint_nombre">Nombre</string>
+    <string name="hint_edad">Edad</string>
+    <string name="hint_telefono">Teléfono</string>
+    <string name="hint_direccion">Dirección</string>
+    <string name="btn_siguiente">Siguiente</string>
+
+</resources>
