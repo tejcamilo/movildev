@@ -30,7 +30,23 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-            <include layout="@layout/cita_tm" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+                <include layout="@layout/cita_tm" />
+                <Button
+                    android:id="@+id/start"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Acceder"
+                    android:textColor="#FFFFFF"
+                    android:layout_marginHorizontal="20dp"
+                    android:background="@drawable/acceder_btn"
+                    />
+            </LinearLayout>
+
             <include layout="@layout/cita_tm" />
             <include layout="@layout/cita_tm" />
 

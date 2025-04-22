@@ -4,9 +4,9 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
-    android:padding="30dp"
+    android:padding="20dp"
     android:layout_marginTop="30dp"
-    android:layout_marginHorizontal="30dp"
+    android:layout_marginHorizontal="20dp"
     android:gravity="center"
     android:background="@drawable/rounded_background"
 
@@ -97,7 +97,7 @@
             android:text="Reprogramar"
             android:backgroundTint="#417EF2"
             android:textColor="#FFFFFF"
-            android:textSize="10sp"
+            android:textSize="12sp"
             />
 
         <Button
@@ -106,7 +106,7 @@
             android:text="Cancelar"
             android:backgroundTint="#C74040"
             android:textColor="#FFFFFF"
-            android:textSize="10sp"
+            android:textSize="12sp"
             />
 
     </LinearLayout>
