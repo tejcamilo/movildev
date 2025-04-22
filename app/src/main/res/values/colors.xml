@@ -12,5 +12,9 @@
     <color name="azul_main">#395176</color>
     <color name="fondo_2">#EAEFF4</color>
     <color name="fondo_3">#D4E5F1</color>
-    <color name="fondo_forms2">#E4E9EF</color>
+    <color name="fondo_forms2">#E3E7EA</color>
+    <color name="azul_claro">#407CE2</color>
+    <color name="rojo_boton">#D43E32</color>
+
+
 </resources>

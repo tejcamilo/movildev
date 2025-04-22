@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.FisioCare.HomeFragment"
+        android:label="Inicio"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_citas"
+        android:name="com.example.FisioCare.CitasFragment"
+        android:label="Citas"
+        tools:layout="@layout/fragment_citas" />
+
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="com.example.FisioCare.HCFragment"
+        android:label="Historia_Clinica"
+        tools:layout="@layout/fragment_hc" />
+
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="com.example.FisioCare.ProfileFragment"
+        android:label="Perfil"
+        tools:layout="@layout/fragment_profile" />
+
+
+    <fragment
+        android:id="@+id/crearFacturaFragment"
+        android:name="com.example.fisiocare.crear_factura.CrearFacturaFragment"
+        android:label="Crear Factura">
+
+        <action
+            android:id="@+id/action_crearFacturaFragment_to_mainFacturaFragment"
+            app:destination="@id/mainFacturaFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/mainFacturaFragment"
+        android:name="com.example.fisiocare.main_factura.MainFacturaFragment"
+        android:label="Main Factura" />
+
+
+
+</navigation>

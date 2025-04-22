@@ -6,5 +6,5 @@
     <solid android:color="@color/fondo_forms2" />
 
     <!-- Bordes redondeados -->
-    <corners android:radius="25dp" />
+    <corners android:radius="30dp" />
 </shape>

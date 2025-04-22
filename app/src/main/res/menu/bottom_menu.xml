@@ -1,27 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
+
     <item
         android:id="@+id/nav_home"
         android:icon="@drawable/ic_home"
-        android:title="Inicio"
-        app:showAsAction="always"/>
+        android:title="@string/inicio" />
+
+    <item
+        android:id="@+id/nav_citas"
+        android:icon="@drawable/ic_calendar"
+        android:title="@string/citas" />
+
+    <item
+        android:id="@+id/nav_hc"
+        android:icon="@drawable/ic_hc"
+        android:title="@string/hc" />
+
     <item
         android:id="@+id/nav_profile"
-        android:icon="@drawable/ic_calendar"
-        android:title="Perfil"
-        app:showAsAction="always"
-        />
-    <item
-        android:id="@+id/nav_settings"
-        android:icon="@drawable/ic_hc"
-        android:title="Ajustes"
-        app:showAsAction="always"/>
-    <item
-        android:id="@+id/nav_settings"
         android:icon="@drawable/ic_user"
-        android:title="Ajustes"
-        app:showAsAction="always"/>
+        android:title="@string/perfil" />
+
 </menu>
+
 
 
