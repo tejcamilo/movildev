@@ -32,12 +32,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-            <LinearLayout
+            <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 >
-                <include layout="@layout/cita_tm" />
                 <Button
                     android:id="@+id/acceder_btn"
                     android:layout_width="match_parent"
@@ -46,8 +45,11 @@
                     android:textColor="#FFFFFF"
                     android:layout_marginHorizontal="20dp"
                     android:background="@drawable/acceder_btn"
+                    android:layout_marginTop="160dp"
+                    android:paddingTop="10dp"
                     />
-            </LinearLayout>
+                <include layout="@layout/cita_tm" />
+            </FrameLayout>
 
             <include layout="@layout/cita_tm" />
             <include layout="@layout/cita_tm" />

@@ -10,6 +10,7 @@
     android:gravity="center"
     android:background="@drawable/rounded_background"
 
+
     >
     <!-- COL1 -->
     <LinearLayout
@@ -90,6 +91,7 @@
         android:layout_weight="1"
         android:gravity="center"
         android:paddingHorizontal="5dp"
+
         >
         <Button
             android:layout_width="match_parent"
