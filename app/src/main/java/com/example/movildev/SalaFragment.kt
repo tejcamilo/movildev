@@ -14,10 +14,15 @@ class SalaFragment : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_sala, container, false)
         val startButton = view.findViewById<ImageButton>(R.id.ingresar_llamada_btn)
+        val backButton = view.findViewById<ImageButton>(R.id.back_btn)
 
         startButton.setOnClickListener {
             view.findNavController().navigate(R.id.action_salaFragment_to_llamadaFragment)
         }
+        backButton.setOnClickListener {
+            view.findNavController().navigate(R.id.action_salaFragment_to_telemedicinaFragment)
+        }
         return view
+
     }
 }

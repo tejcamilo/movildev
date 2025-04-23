@@ -20,9 +20,16 @@
         <action
             android:id="@+id/action_salaFragment_to_llamadaFragment"
             app:destination="@id/llamadaFragment" />
+        <action
+            android:id="@+id/action_salaFragment_to_telemedicinaFragment"
+            app:destination="@id/telemedicinaFragment" />
     </fragment>
     <fragment
         android:id="@+id/llamadaFragment"
         android:name="com.example.movildev.LlamadaFragment"
-        android:label="LlamadaFragment" />
+        android:label="LlamadaFragment" >
+        <action
+            android:id="@+id/action_llamadaFragment_to_salaFragment"
+            app:destination="@id/salaFragment" />
+    </fragment>
 </navigation>

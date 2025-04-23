@@ -9,13 +9,14 @@
     android:gravity="center"
     android:padding="16dp"
     android:background="#D4E5F1">
-    <ImageView
-        android:id="@+id/backArrow"
+    <ImageButton
+        android:id="@+id/back_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/back_arrow"
         android:contentDescription="Volver"
         android:layout_weight="2"
+        android:background="@android:color/transparent"
         />
     <ImageView
         android:id="@+id/telemedicina_icon"
