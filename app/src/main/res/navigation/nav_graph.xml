@@ -19,7 +19,8 @@
         android:label="SalaFragment" >
         <action
             android:id="@+id/action_salaFragment_to_llamadaFragment"
-            app:destination="@id/llamadaFragment" />
+            app:destination="@id/llamadaFragment"
+            app:popUpTo="@id/telemedicinaFragment" />
         <action
             android:id="@+id/action_salaFragment_to_telemedicinaFragment"
             app:destination="@id/telemedicinaFragment" />
