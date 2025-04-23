@@ -16,8 +16,8 @@
         app:layout_constraintEnd_toEndOf="parent"/>
 
     <!-- MAIN CONTENT -->
-    <ScrollView
-        android:id="@+id/scroll_area"
+    <LinearLayout
+        android:id="@+id/sala_body"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:fillViewport="true"
@@ -31,7 +31,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:background="@drawable/sala_espera_background"
+            android:background="@drawable/sala_background"
             android:layout_margin="30dp"
             android:padding="20dp"
             >
@@ -43,14 +43,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Sala de espera"
-                    android:textSize="25dp" />
+                    android:textSize="25sp" />
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="horizontal"
                     android:gravity="center">
                     <LinearLayout
-                        android:layout_width="wrap_content"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
                         android:layout_weight="3"
@@ -142,18 +142,20 @@
                     android:orientation="vertical"
                     android:gravity="center"
                     android:layout_marginTop="10dp">
-                    <ImageView
+                    <ImageButton
+                        android:id="@+id/ingresar_llamada_btn"
                         android:layout_width="200dp"
                         android:layout_height="200dp"
-                        android:src="@drawable/profile" />
+                        android:src="@drawable/profile"
+                        android:layout_marginBottom="30dp"
+                        android:scaleType="centerCrop"
+                        android:background="@android:color/transparent"
+                        />
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:orientation="horizontal"
-                        android:padding="16dp"
-                        android:layout_marginTop="16dp"
-                        android:layout_marginBottom="16dp"
                         android:weightSum="3">
 
                         <!-- Mute Mic Button -->
@@ -194,7 +196,7 @@
 
 
         </LinearLayout>
-    </ScrollView>
+    </LinearLayout>
 
     <!-- FOOTER -->
     <include

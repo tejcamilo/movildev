@@ -10,12 +10,19 @@
         android:name="com.example.movildev.TelemedicinaFragment"
         android:label="TelemedicinaFragment" >
         <action
-            android:id="@+id/action_telemedicinaFragment_to_citaFragment"
-            app:destination="@id/citaFragment" />
+            android:id="@+id/action_telemedicinaFragment_to_salaFragment"
+            app:destination="@id/salaFragment" />
     </fragment>
     <fragment
-        android:id="@+id/citaFragment"
-        android:name="com.example.movildev.CitaFragment"
-        android:label="fragment_cita"
-        tools:layout="@layout/fragment_cita" />
+        android:id="@+id/salaFragment"
+        android:name="com.example.movildev.SalaFragment"
+        android:label="SalaFragment" >
+        <action
+            android:id="@+id/action_salaFragment_to_llamadaFragment"
+            app:destination="@id/llamadaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/llamadaFragment"
+        android:name="com.example.movildev.LlamadaFragment"
+        android:label="LlamadaFragment" />
 </navigation>
