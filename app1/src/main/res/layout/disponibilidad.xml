@@ -1,0 +1,356 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/menu_nav"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_gravity="bottom"
+        android:background="#D4E5F1"
+        app:itemIconTint="@color/white"
+        app:itemTextColor="@color/white"
+        app:menu="@menu/bottom_menu"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Barra superior -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/superior_bar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_gravity="top"
+        android:background="#D4E5F1"
+        app:itemIconTint="@color/white"
+        app:itemTextColor="@color/white"
+        tools:ignore="MissingConstraints" >
+
+
+
+        <ImageView
+            android:id="@+id/flechaatras"
+            android:layout_width="49dp"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="Atrás"
+            android:src="@drawable/ic_arrowback" />
+
+        <TextView
+            android:id="@+id/tvCitas_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|center_horizontal"
+            android:drawableStart="@drawable/citas_logo1"
+            android:drawablePadding="1dp"
+            android:fontFamily="sans-serif"
+            android:text="Citas"
+            android:textColor="#1C274C"
+            android:textSize="28sp"
+            android:layout_marginTop="10dp" />
+
+
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+
+
+
+
+
+    <!-- Primera Card -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/card1"
+        android:layout_width="350dp"
+        android:layout_height="250dp"
+        android:background="@drawable/rounded_fragment1"
+        android:backgroundTint="#EAF0F4"
+        android:translationY="80dp"
+        android:elevation="10dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:id="@+id/contenido1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="16dp"
+            android:padding="16dp"
+            android:backgroundTint="#EAF0F4"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_calendar"/>
+                <TextView
+                    android:id="@+id/info_fecha1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="25/04/25 09:45 AM"
+                    android:textColor="#395176"
+                    android:textSize="18sp"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp">
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_terapia"/>
+                <TextView
+                    android:id="@+id/info_terapia1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="Terapia"
+                    android:textColor="#395176"
+                    android:textSize="18sp"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp">
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_doctor"/>
+                <TextView
+                    android:id="@+id/info_doctor1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="Cathalina Cañon"
+                    android:textColor="#395176"
+                    android:textSize="18sp"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp">
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_user"/>
+                <TextView
+                    android:id="@+id/info_modalidad1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="Presencial"
+                    android:textColor="#395176"
+                    android:textSize="18sp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/boton2"
+            android:layout_width="0dp"
+            android:layout_height="75dp"
+            android:orientation="horizontal"
+            android:backgroundTint="#324669"
+            android:padding="16dp"
+            android:gravity="center"
+            android:background="@drawable/rounded_fragment1"
+            app:layout_constraintTop_toBottomOf="@id/contenido1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:elevation="10dp"
+            tools:ignore="NotSibling">
+
+            <Button
+                android:layout_width="130dp"
+                android:layout_height="50dp"
+                android:text="Cancelar"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#D63F33"
+                android:background="@drawable/round_button"
+                android:textSize="16sp"
+                android:layout_marginEnd="25dp"/>
+
+            <Button
+                android:layout_width="130dp"
+                android:layout_height="50dp"
+                android:text="Confirmar"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#3E7BFA"
+                android:textSize="16sp"
+                android:background="@drawable/round_button"/>
+        </LinearLayout>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Segunda Card (copia exacta de la primera, pero posicionada debajo) -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/card2"
+        android:layout_width="350dp"
+        android:layout_height="250dp"
+        android:background="@drawable/rounded_fragment1"
+        android:backgroundTint="#EAF0F4"
+        android:translationY="100dp"
+        android:elevation="10dp"
+        app:layout_constraintTop_toBottomOf="@id/card1"
+        app:layout_constraintTop_margin="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:id="@+id/contenido"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="16dp"
+            android:padding="16dp"
+            android:backgroundTint="#EAF0F4"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_calendar"/>
+                <TextView
+                    android:id="@+id/info_fecha"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="25/04/25 10:20 AM"
+                    android:textColor="#395176"
+                    android:textSize="18sp"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp">
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_terapia"/>
+                <TextView
+                    android:id="@+id/info_terapia"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="Consulta general"
+                    android:textColor="#395176"
+                    android:textSize="18sp"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp">
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_doctor"/>
+                <TextView
+                    android:id="@+id/info_doctor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="Cathalina Cañon"
+                    android:textColor="#395176"
+                    android:textSize="18sp"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp">
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_user"/>
+                <TextView
+                    android:id="@+id/info_modalidad"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="Presencial"
+                    android:textColor="#395176"
+                    android:textSize="18sp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/boton"
+            android:layout_width="0dp"
+            android:layout_height="75dp"
+            android:orientation="horizontal"
+            android:backgroundTint="#324669"
+            android:padding="16dp"
+            android:gravity="center"
+            android:background="@drawable/rounded_fragment1"
+            app:layout_constraintTop_toBottomOf="@id/contenido"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:elevation="10dp">
+
+            <Button
+                android:layout_width="130dp"
+                android:layout_height="50dp"
+                android:text="Cancelar"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#D63F33"
+                android:background="@drawable/round_button"
+                android:textSize="16sp"
+                android:layout_marginEnd="25dp"/>
+
+            <Button
+                android:layout_width="130dp"
+                android:layout_height="50dp"
+                android:text="Confirmar"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#3E7BFA"
+                android:textSize="16sp"
+                android:background="@drawable/round_button"/>
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

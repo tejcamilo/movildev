@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="Inicio"
+        android:id="@+id/inicio"
+        android:icon="@drawable/ic_home"/>
+    <item android:title="Calendario"
+        android:id= "@+id/calendario"
+        android:icon="@drawable/ic_calendar"/>
+    <item android:title="Usuario"
+        android:id= "@+id/usuario"
+        android:icon="@drawable/ic_user"/>
+</menu>

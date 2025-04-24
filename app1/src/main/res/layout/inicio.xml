@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:id="@+id/main"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="#7DA4C8"
+tools:context=".MainActivity">
+
+<!-- Botón atrás -->
+
+
+<!-- Título "CITAS" -->
+<TextView
+    android:id="@+id/tvCitas"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:translationY="100dp"
+    android:text="CITAS"
+    android:drawableStart="@drawable/citas_logo"
+    android:drawablePadding="5dp"
+    android:textSize="50sp"
+    android:textColor="#FFFFFF" />
+
+<!-- FragmentContainer -->
+<androidx.fragment.app.FragmentContainerView
+    android:id="@+id/fragmentContainerView"
+    android:layout_width="350dp"
+    android:layout_height="180dp"
+    android:layout_gravity="center"
+    android:translationY ="28dp"
+    android:alpha="0.05"
+    android:background="@drawable/rounded_fragment" />
+
+<!-- Título Agendar -->
+<TextView
+    android:id="@+id/tvAgendar_titulo"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center|left"
+    android:translationX="50dp"
+    android:translationY="0dp"
+    android:text="Agendar Cita"
+    android:textSize="25sp"
+    android:textColor="#FFFFFF" />
+
+<!-- Botón Agendar -->
+<Button
+    android:id="@+id/btnBoton_agendar"
+    android:layout_width="110dp"
+    android:layout_height="48dp"
+    android:layout_gravity="center|left"
+    android:translationX="250dp"
+    android:translationY="0dp"
+    android:text="Ir"
+    android:textSize="20sp"
+    android:textColor="@color/white"
+    android:background="@drawable/round_button"
+    android:backgroundTint="#395176" />
+
+<!-- Título Consultar -->
+<TextView
+    android:id="@+id/tvConsultar_titulo"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center|left"
+    android:translationX="50dp"
+    android:translationY="70dp"
+    android:text="Consultar Cita"
+    android:textSize="25sp"
+    android:textColor="#FFFFFF" />
+
+<!-- Botón Consultar -->
+    <Button
+        android:id="@+id/btnBoton_consultar"
+        android:layout_width="110dp"
+        android:layout_height="48dp"
+
+        android:layout_gravity="center|left"
+        android:translationX="250dp"
+        android:translationY="70dp"
+        android:text="Ir"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:background="@drawable/round_button"
+        android:backgroundTint="#395176" />
+
+<!-- Bottom Navigation -->
+<com.google.android.material.bottomnavigation.BottomNavigationView
+    android:id="@+id/menu_nav"
+    android:layout_width="match_parent"
+    android:layout_height="56dp"
+    android:layout_gravity="bottom"
+    android:background="@color/white"
+    app:itemIconTint="@color/white"
+    app:itemTextColor="@color/white"
+    app:menu="@menu/bottom_menu"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent" />
+
+    <!--    PARTE SUPERIOR DEL MAIN INICIO -->
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/inf_bar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_gravity="center|top"
+        android:background="@color/white"
+        app:itemIconTint="@color/white"
+        app:itemTextColor="@color/white" >
+
+        <TextView
+            android:id="@+id/logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|top"
+            android:drawableStart="@drawable/hand_fisiocare1"
+            android:drawablePadding="1dp"
+            android:fontFamily="sans-serif"
+            android:text=" FisioCare"
+            android:textColor="#1C274C"
+            android:textSize="28dp"
+            android:translationY="10dp"
+            tools:ignore="MissingConstraints" />
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+    <ImageView
+        android:id="@+id/flechaatras"
+        android:layout_width="49dp"
+        android:layout_height="40dp"
+        android:layout_margin="10dp"
+        android:src="@drawable/ic_arrowback"
+        android:background="@android:color/transparent"
+        android:contentDescription="Atrás"
+        app:tint="#1C274C" />
+
+
+
+<!-- BottomNavigationView -->
+<!--        <com.google.android.material.bottomnavigation.BottomNavigationView-->
+<!--            android:id="@+id/bottomNavigationView"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="56dp"-->
+<!--            android:layout_gravity="bottom"-->
+<!--            android:background="?android:attr/windowBackground"-->
+<!--            app:menu="@menu/bottom_menu" />-->
+
+
+
+
+</FrameLayout>
