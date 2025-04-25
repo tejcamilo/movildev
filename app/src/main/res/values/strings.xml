@@ -9,5 +9,21 @@
     <string name="hint_telefono">Teléfono</string>
     <string name="hint_direccion">Dirección</string>
     <string name="btn_siguiente">Siguiente</string>
-
+    <string name="nombre_completo">Nombre Completo</string>
+    <string name="tratamiento">Tratamiento</string>
+    <string name="id_1000000000">ID 1000000000</string>
+    <string name="factura_electr_nica">Factura Electrónica</string>
+    <string name="n_mero_de_tel_fono">Número de teléfono</string>
+    <string name="seleccione">Seleccione</string>
+    <string name="valor">Valor</string>
+    <string name="nombre_o_razon_social">Nombre o Razon Social</string>
+    <string name="correo_electr_nico">Correo Electrónico</string>
+    <string name="nombre_empresa_persona_natural">Nombre (Empresa, persona natural</string>
+    <string name="n_mero_de_documento_o_nit">Número de Documento o NIT</string>
+    <string name="n_mero_de_documento">Número de Documento</string>
+    <string name="eliminar">Eliminar</string>
+    <string name="inicio">Inicio</string>
+    <string name="perfil">Perfil</string>
+    <string name="hc">Historia Clinica</string>
+    <string name="citas">Citas</string>
 </resources>

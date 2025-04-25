@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView2"
+        android:layout_width="418dp"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        app:cardElevation="10dp"
+        app:layout_constraintBottom_toTopOf="@id/bottomNavigationView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <TextView
+        android:id="@+id/logo"
+        android:layout_width="100dp"
+        android:layout_height="25dp"
+        android:elevation="10dp"
+        android:fontFamily="serif"
+        android:text="FisioCare"
+        android:textColor="@color/azul_main"
+        android:textSize="18dp"
+        tools:layout_editor_absoluteX="180dp"
+        tools:layout_editor_absoluteY="18dp"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/flechaatras"
+        android:layout_width="49dp"
+        android:layout_height="40dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="Logo"
+        android:elevation="10dp"
+        android:src="@drawable/ic_arrowback"
+        app:tint="@color/azul_main"
+        tools:layout_editor_absoluteX="6dp"
+        tools:layout_editor_absoluteY="10dp"
+        tools:ignore="MissingConstraints" />
+
+
+    <ImageView
+        android:id="@+id/logoapp"
+        android:layout_width="36dp"
+        android:layout_height="30dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="Logo"
+        android:elevation="10dp"
+        android:src="@drawable/hand_heart_svgrepo_com"
+
+        app:tint="@color/azul_main"
+        tools:layout_editor_absoluteX="145dp"
+        tools:layout_editor_absoluteY="16dp"
+        tools:ignore="MissingConstraints" />
+
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentfondo"
+        android:name="androidx.fragment.app.FragmentContainerView"
+        android:layout_width="416dp"
+        android:layout_height="663dp"
+        android:background="@color/fondo_main"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="-2dp" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentContainerView"
+        android:name="androidx.fragment.app.FragmentContainerView"
+        android:layout_width="272dp"
+        android:layout_height="155dp"
+        android:alpha="0.3"
+        android:background="@drawable/rounded_fragment"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="80dp"
+        tools:layout_editor_absoluteY="300dp" />
+
+    <TextView
+        android:id="@+id/CrearHC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Crear Historia clinica"
+        android:textColor="@color/black"
+        android:textSize="14dp"
+        tools:layout_editor_absoluteX="101dp"
+        tools:layout_editor_absoluteY="335dp"
+        tools:ignore="MissingConstraints" />
+
+
+    <Button
+        android:id="@+id/botonIr"
+        android:layout_width="73dp"
+        android:layout_height="23dp"
+        android:layout_marginStart="268dp"
+        android:layout_marginTop="408dp"
+        android:background="@drawable/button_rounded"
+        android:elevation="10dp"
+        android:gravity="center"
+        android:padding="0dp"
+        android:text="Ir"
+        android:textColor="@color/white"
+        android:textSize="10sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="DuplicateIds" />
+
+    <TextView
+        android:id="@+id/ConsultarHC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Consultar Historia clinica"
+        android:textColor="@color/black"
+        android:textSize="14dp"
+        tools:layout_editor_absoluteX="101dp"
+        tools:layout_editor_absoluteY="408dp"
+        tools:ignore="MissingConstraints" />
+
+
+    <Button
+        android:id="@+id/botonir"
+        android:layout_width="73dp"
+        android:layout_height="23dp"
+        android:layout_marginStart="268dp"
+        android:layout_marginTop="328dp"
+        android:background="@drawable/button_rounded"
+        android:elevation="10dp"
+        android:gravity="center"
+        android:padding="0dp"
+        android:text="Ir"
+        android:textColor="@color/white"
+        android:textSize="10sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/HistoriaClinicaTitulo"
+        android:layout_width="285dp"
+        android:layout_height="48dp"
+        android:text="Historia Clinica"
+        android:textColor="@color/white"
+        android:textSize="40dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="118dp"
+        tools:layout_editor_absoluteY="137dp" />
+
+    <ImageView
+        android:id="@+id/logoHC"
+        android:layout_width="63dp"
+        android:layout_height="80dp"
+        android:background="@android:color/transparent"
+        android:elevation="10dp"
+        android:src="@drawable/historia_clinica"
+        android:tint="@color/white"
+        tools:layout_editor_absoluteX="55dp"
+        tools:layout_editor_absoluteY="125dp"
+        tools:ignore="MissingConstraints,UseAppTint" />
+
+
+    <include
+        layout="@layout/footer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
