@@ -50,7 +50,8 @@
                 <include layout="@layout/cita_tm" />
             </FrameLayout>
 
-            <include layout="@layout/cita_tm" />
+            <include layout="@layout/cita_tm"
+                android:id="@+id/frame1"/>
             <include layout="@layout/cita_tm" />
 
         </LinearLayout>
