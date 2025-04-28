@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="EditarUsuario" type="id">EditarUsuario</item>
+    <item name="EditarUsuario" type="id">EditarUsuario</item>
+    <item name="ConsultarUsuario" type="id">ConsultarUsuario</item>
+</resources>

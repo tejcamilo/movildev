@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardHeader"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:backgroundTint="#D8E6F5"
+        app:cardElevation="4dp"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/logoImageView"
+        android:layout_width="49dp"
+        android:layout_height="40dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="Logo"
+        android:elevation="10dp"
+        android:src="@drawable/ic_arrowback"
+        app:tint="@color/azul_main"
+        tools:layout_editor_absoluteX="6dp"
+        tools:layout_editor_absoluteY="10dp" />
+
+    <ImageView
+        android:id="@+id/logoImageView"
+        android:layout_width="33dp"
+        android:layout_height="27dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="Logo"
+        android:elevation="10dp"
+        android:src="@drawable/ic_user"
+        android:tint="@color/azul_main"
+
+        tools:layout_editor_absoluteX="147dp"
+        tools:layout_editor_absoluteY="17dp" />
+
+    <TextView
+        android:id="@+id/logo"
+        android:layout_width="110dp"
+        android:layout_height="26dp"
+        android:elevation="10dp"
+        android:fontFamily="serif"
+        android:text="Perfil"
+        android:textColor="@color/azul_main"
+        android:textSize="18dp"
+        tools:layout_editor_absoluteX="180dp"
+        tools:layout_editor_absoluteY="18dp" />
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardPerfil"
+        android:layout_width="354dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#EDF2F7"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="8dp"
+        tools:layout_editor_absoluteX="20dp"
+        tools:layout_editor_absoluteY="150dp"
+        tools:ignore="MissingConstraints">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/labelNombre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nombre de Usuario:"
+                android:textColor="@color/azul_main"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/inputNombre"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="4dp"
+                android:backgroundTint="@android:color/transparent"
+                android:text="Cathalina Cañon"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/labelNombre" />
+
+            <TextView
+                android:id="@+id/labelDocumento"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Documento:"
+                android:textColor="@color/azul_main"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/inputNombre" />
+
+            <EditText
+                android:id="@+id/inputDocumento"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="4dp"
+                android:backgroundTint="#DADADA"
+                android:enabled="false"
+                android:text="1028481760"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/labelDocumento" />
+
+            <TextView
+                android:id="@+id/labelCorreo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Correo del Usuario:"
+                android:textColor="@color/azul_main"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/inputDocumento" />
+
+            <EditText
+                android:id="@+id/inputCorreo"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="4dp"
+                android:backgroundTint="#DADADA"
+                android:text="blabla@gmail.com"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/labelCorreo" />
+
+            <ImageView
+                android:id="@+id/editCorreo"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginEnd="4dp"
+                android:contentDescription="Editar correo"
+                android:src="@drawable/ic_edit"
+                android:tint="@color/azul_main"
+                app:layout_constraintBottom_toBottomOf="@id/inputCorreo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/inputCorreo" />
+
+            <TextView
+                android:id="@+id/labelTelefono"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Telefono:"
+                android:textColor="@color/azul_main"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/inputCorreo" />
+
+            <EditText
+                android:id="@+id/inputTelefono"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="4dp"
+                android:backgroundTint="#DADADA"
+                android:text="3204080320"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/labelTelefono" />
+
+            <ImageView
+                android:id="@+id/editTelefono"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginEnd="4dp"
+                android:contentDescription="Editar teléfono"
+                android:src="@drawable/ic_edit"
+                android:tint="@color/azul_main"
+                app:layout_constraintBottom_toBottomOf="@id/inputTelefono"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/inputTelefono" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:id="@+id/logocitaspeque"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@android:color/transparent"
+        android:elevation="30dp"
+        android:src="@drawable/ic_help"
+        android:tint="@color/azul_main"
+        tools:layout_editor_absoluteX="265dp"
+        tools:layout_editor_absoluteY="676dp"
+        tools:ignore="MissingConstraints,UseAppTint" />
+    <TextView
+        android:id="@+id/citasPeque"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ayuda"
+        android:textColor="@color/azul_main"
+        android:textSize="14dp"
+        android:elevation="30dp"
+        tools:layout_editor_absoluteX="265dp"
+        tools:layout_editor_absoluteY="705dp"
+        tools:ignore="MissingConstraints" />
+
+
+    <ImageView
+        android:id="@+id/logoperfilpeque"
+        android:layout_width="30dp"
+        android:layout_height="28dp"
+        android:background="@android:color/transparent"
+        android:elevation="30dp"
+        android:src="@drawable/ic_user"
+        android:tint="@color/azul_main"
+        tools:layout_editor_absoluteX="140dp"
+        tools:layout_editor_absoluteY="679dp"
+        tools:ignore="MissingConstraints,UseAppTint" />
+    <TextView
+        android:id="@+id/PerfilPeque"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Perfil"
+        android:textColor="@color/azul_main"
+        android:textSize="14dp"
+        android:elevation="30dp"
+        tools:layout_editor_absoluteX="140dp"
+        tools:layout_editor_absoluteY="705dp"
+        tools:ignore="MissingConstraints" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="#D8E6F5"
+        app:menu="@menu/bottom_menu"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
