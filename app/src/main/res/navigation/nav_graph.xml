@@ -33,4 +33,21 @@
             android:id="@+id/action_llamadaFragment_to_telemedicinaFragment"
             app:destination="@id/telemedicinaFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/inicioFragment"
+        android:name="com.example.movildev.HomeFragment"
+        android:label="InicioFragment" />
+    <fragment
+        android:id="@+id/citasFragment"
+        android:name="com.example.movildev.CitasFragment"
+        android:label="InicioFragment" />
+    <fragment
+        android:id="@+id/historiaFragment"
+        android:name="com.example.movildev.HistoriaFragment"
+        android:label="InicioFragment" />
+    <fragment
+        android:id="@+id/perfilFragment"
+        android:name="com.example.movildev.PerfilFragment"
+        android:label="InicioFragment" />
+
 </navigation>

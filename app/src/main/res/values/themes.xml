@@ -15,4 +15,11 @@
 
     <style name="Theme.Movildev" parent="Base.Theme.Movildev" />
 
+    <style name="BottomNavigationView" parent="Widget.Material3.BottomNavigationView">
+        <item name="itemIconTint">@color/bottom_nav_icon_color</item>
+        <item name="itemTextColor">@color/bottom_nav_text_color</item>
+        <item name="backgroundTint">@color/bottom_nav_background</item>
+        <item name="itemActiveIndicatorStyle">@android:color/transparent</item>
+    </style>
+
 </resources>

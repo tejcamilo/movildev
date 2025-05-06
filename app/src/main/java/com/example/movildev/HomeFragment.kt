@@ -16,6 +16,18 @@ import androidx.navigation.findNavController
 class HomeFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_home, container, false)
+        val view =  inflater.inflate(R.layout.fragment_home, container, false)
+
+        // modificar iconos y texto del toolbar
+        val header = view.findViewById<LinearLayout>(R.id.header)
+        val backBtn = header.findViewById<ImageButton>(R.id.back_btn)
+        val toolbarIcon = header.findViewById<ImageView>(R.id.toolbar_icon)
+        val title = header.findViewById<TextView>(R.id.title)
+
+        backBtn.setImageResource(R.drawable.back_arrow)
+        toolbarIcon.setImageResource(R.drawable.logo)
+        title.text = "FisioCare"
+
+        return view
     }
 }

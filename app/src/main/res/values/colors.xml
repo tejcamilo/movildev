@@ -8,4 +8,9 @@
     <color name="colorFuente">#395176</color>
     <color name="botonRojo">#D43E32</color>
     <color name="botonAzul">#407CE2</color>
+
+    <color name="bottom_nav_icon_color">#395176</color>
+    <color name="bottom_nav_text_color">#395176</color>
+    <color name="bottom_nav_background">#D4E5F1</color>
+
 </resources>
