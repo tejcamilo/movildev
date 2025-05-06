@@ -10,17 +10,23 @@ import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 
 class TelemedicinaFragment : Fragment() {
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
-    ): View? {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.fragment_telemedicina, container, false)
-        val startButton = view.findViewById<Button>(R.id.acceder_btn)
-
-        // modificar iconos y texto del toolbar
         val header = view.findViewById<LinearLayout>(R.id.header)
+
+        // Adjust padding for punchhole displays
+        ViewCompat.setOnApplyWindowInsetsListener(header) { view, insets ->
+            val statusBarHeight = insets.getInsets(WindowInsetsCompat.Type.statusBars()).top
+            view.setPadding(view.paddingLeft, statusBarHeight, view.paddingRight, view.paddingBottom)
+            insets
+        }
+
         val backBtn = header.findViewById<ImageButton>(R.id.back_btn)
         val toolbarIcon = header.findViewById<ImageView>(R.id.toolbar_icon)
         val title = header.findViewById<TextView>(R.id.title)
@@ -29,15 +35,17 @@ class TelemedicinaFragment : Fragment() {
         toolbarIcon.setImageResource(R.drawable.telemedicina)
         title.text = "Telemedicina"
 
+        val startButton = view.findViewById<Button>(R.id.acceder_btn)
         startButton.setOnClickListener {
-           view.findNavController()
-               .navigate(R.id.action_telemedicinaFragment_to_salaFragment)
+            view.findNavController().navigate(R.id.action_telemedicinaFragment_to_salaFragment)
         }
+
         val frame1 = view.findViewById<LinearLayout>(R.id.frame1)
         frame1.setOnClickListener {
             val text = "El acceso a la cita estará disponible 5 minutos antes de la hora programada"
             Toast.makeText(activity, text, Toast.LENGTH_LONG).show()
         }
+
         return view
     }
 }

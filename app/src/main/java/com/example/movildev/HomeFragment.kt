@@ -10,6 +10,8 @@ import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 
@@ -20,6 +22,12 @@ class HomeFragment : Fragment() {
 
         // modificar iconos y texto del toolbar
         val header = view.findViewById<LinearLayout>(R.id.header)
+        // Adjust padding for punchhole displays
+        ViewCompat.setOnApplyWindowInsetsListener(header) { view, insets ->
+            val statusBarHeight = insets.getInsets(WindowInsetsCompat.Type.statusBars()).top
+            view.setPadding(view.paddingLeft, statusBarHeight, view.paddingRight, view.paddingBottom)
+            insets
+        }
         val backBtn = header.findViewById<ImageButton>(R.id.back_btn)
         val toolbarIcon = header.findViewById<ImageView>(R.id.toolbar_icon)
         val title = header.findViewById<TextView>(R.id.title)
