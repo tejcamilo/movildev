@@ -1,5 +1,12 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
+    <style name="FisioCare" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">#395176</item> <!-- color por defecto para los botones -->
+        <item name="colorOnPrimary">#FFFFFF</item> <!-- color de texto para color primario -->
+
+
+    </style>
+
     <style name="Base.Theme.Movildev" parent="Theme.Material3.DayNight.NoActionBar">
         <item name="colorPrimary">#395176</item>
         <item name="colorOnPrimary">#FFFFFF</item> <!-- Text/icon color on primary buttons -->

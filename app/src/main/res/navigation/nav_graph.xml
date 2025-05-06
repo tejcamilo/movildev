@@ -30,7 +30,7 @@
         android:name="com.example.movildev.LlamadaFragment"
         android:label="LlamadaFragment" >
         <action
-            android:id="@+id/action_llamadaFragment_to_salaFragment"
-            app:destination="@id/salaFragment" />
+            android:id="@+id/action_llamadaFragment_to_telemedicinaFragment"
+            app:destination="@id/telemedicinaFragment" />
     </fragment>
 </navigation>

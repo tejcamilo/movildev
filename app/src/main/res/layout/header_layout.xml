@@ -13,24 +13,22 @@
         android:id="@+id/back_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/back_arrow"
-        android:contentDescription="Volver"
+        android:src="@drawable/placeholder_icon"
         android:layout_weight="2"
         android:background="@android:color/transparent"
         />
     <ImageView
-        android:id="@+id/telemedicina_icon"
+        android:id="@+id/toolbar_icon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/telemedicina"
-        android:contentDescription="@string/telemedicina_header"
+        android:src="@drawable/placeholder_icon"
         android:layout_gravity="center"
-
         android:layout_weight="1"/>
     <TextView
+        android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/telemedicina_header"
+        android:text="Title"
         android:textSize="20sp"
         android:textStyle="bold"
         android:textColor="#395176"

@@ -2,4 +2,10 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="cardBackgroundColor">#D4E5F1</color>
+    <color name="backgroundColor">#E9EEF3</color>
+    <color name="colorFuente">#395176</color>
+    <color name="botonRojo">#D43E32</color>
+    <color name="botonAzul">#407CE2</color>
 </resources>

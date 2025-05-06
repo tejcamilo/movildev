@@ -6,87 +6,51 @@
     android:layout_height="wrap_content"
     android:orientation="horizontal"
     android:gravity="center"
-    android:padding="16dp"
-    android:background="#D4E5F1"
->
-    <LinearLayout
+    android:padding="5dp"
+    android:background="#D4E5F1">
+
+    <Button
+        android:id="@+id/home_navBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:gravity="center"
-        android:layout_weight="1"
-        >
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/home"
-            />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Inicio"
-            android:textStyle="bold"
-            android:textColor="#395176"
-            />
-    </LinearLayout>
-    <LinearLayout
+        android:text="Inicio"
+        android:drawableTop="@drawable/home"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:focusable="true"
+        android:textColor="#395176" />
+
+    <Button
+        android:id="@+id/citas_navBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:gravity="center"
-        android:layout_weight="1"
-        >
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/calendar"
-            />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Citas"
-            android:textStyle="bold"
-            android:textColor="#395176"
-            />
-    </LinearLayout>
-    <LinearLayout
+        android:text="Citas"
+        android:drawableTop="@drawable/calendar"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:focusable="true"
+        android:textColor="#395176" />
+
+    <Button
+        android:id="@+id/historia_navBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:gravity="center"
-        android:layout_weight="1"
-        >
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/historia_clinica"
-            />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Historia"
-            android:textStyle="bold"
-            android:textColor="#395176"
-            />
-    </LinearLayout>
-    <LinearLayout
+        android:text="Historia"
+        android:drawableTop="@drawable/historia_clinica"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:focusable="true"
+        android:textColor="#395176" />
+
+    <Button
+        android:id="@+id/perfil_navBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:gravity="center"
-        android:layout_weight="1"
-        >
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/profile"
-            />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Perfil"
-            android:textStyle="bold"
-            android:textColor="#395176"
-            />
-    </LinearLayout>
+        android:text="Perfil"
+        android:drawableTop="@drawable/profile"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:focusable="true"
+        android:textColor="#395176" />
+
 </LinearLayout>

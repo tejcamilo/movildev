@@ -9,9 +9,7 @@
     <!-- HEADER -->
     <include
         android:id="@+id/header"
-        layout="@layout/header_layout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        layout="@layout/header_layout" />
 
     <!-- MAIN CONTENT -->
     <ScrollView
@@ -62,7 +60,6 @@
         android:id="@+id/footer"
         layout="@layout/footer_layout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-/>
+        android:layout_height="wrap_content" />
 
 </LinearLayout>
