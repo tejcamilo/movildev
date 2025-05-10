@@ -19,31 +19,11 @@ class SalaFragment : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_sala, container, false)
         val startButton = view.findViewById<ImageButton>(R.id.ingresar_llamada_btn)
-        val backButton = view.findViewById<ImageButton>(R.id.back_btn)
-
-        // modificar iconos y texto del toolbar
-        val header = view.findViewById<LinearLayout>(R.id.header)
-
-        // Adjust padding for punchhole displays
-        ViewCompat.setOnApplyWindowInsetsListener(header) { view, insets ->
-            val statusBarHeight = insets.getInsets(WindowInsetsCompat.Type.statusBars()).top
-            view.setPadding(view.paddingLeft, statusBarHeight, view.paddingRight, view.paddingBottom)
-            insets
-        }
-        val backBtn = header.findViewById<ImageButton>(R.id.back_btn)
-        val toolbarIcon = header.findViewById<ImageView>(R.id.toolbar_icon)
-        val title = header.findViewById<TextView>(R.id.title)
-
-        backBtn.setImageResource(R.drawable.back_arrow)
-        toolbarIcon.setImageResource(R.drawable.telemedicina)
-        title.text = "Telemedicina"
 
         startButton.setOnClickListener {
             view.findNavController().navigate(R.id.action_salaFragment_to_llamadaFragment)
         }
-        backButton.setOnClickListener {
-            view.findNavController().navigate(R.id.action_salaFragment_to_telemedicinaFragment)
-        }
+
         return view
 
     }

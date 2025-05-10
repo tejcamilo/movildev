@@ -5,17 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
-
-    <!-- HEADER -->
-    <include
-        android:id="@+id/header"
-        layout="@layout/header_layout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
-
     <!-- MAIN CONTENT -->
     <LinearLayout
         android:id="@+id/llamada_body"
