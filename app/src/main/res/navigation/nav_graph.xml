@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
     app:startDestination="@id/telemedicinaFragment">
     <fragment
         android:id="@+id/telemedicinaFragment"
         android:name="com.example.movildev.TelemedicinaFragment"
-        android:label="Telemedicina" >
+        android:label="Telemedicina"
+        tools:layout="@layout/fragment_telemedicina" >
         <argument
             android:name="icon"
             app:argType="reference"
@@ -18,7 +20,8 @@
     <fragment
         android:id="@+id/salaFragment"
         android:name="com.example.movildev.SalaFragment"
-        android:label="Telemedicina" >
+        android:label="Telemedicina"
+        tools:layout="@layout/fragment_sala">
         <argument
             android:name="icon"
             app:argType="reference"
@@ -27,14 +30,15 @@
             android:id="@+id/action_salaFragment_to_llamadaFragment"
             app:destination="@id/llamadaFragment"
             app:popUpTo="@id/telemedicinaFragment" />
-        <action
-            android:id="@+id/action_salaFragment_to_telemedicinaFragment"
-            app:destination="@id/telemedicinaFragment" />
+        <argument
+            android:name="id_cita"
+            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/llamadaFragment"
         android:name="com.example.movildev.LlamadaFragment"
-        android:label="Telemedicina" >
+        android:label="Telemedicina"
+        tools:layout="@layout/fragment_llamada">
         <argument
             android:name="icon"
             app:argType="reference"
@@ -46,7 +50,8 @@
     <fragment
         android:id="@+id/inicioFragment"
         android:name="com.example.movildev.HomeFragment"
-        android:label="FisioCare">
+        android:label="FisioCare"
+        tools:layout="@layout/fragment_home" >
         <argument
             android:name="icon"
             app:argType="reference"
@@ -55,7 +60,8 @@
     <fragment
         android:id="@+id/citasFragment"
         android:name="com.example.movildev.CitasFragment"
-        android:label="Citas" >
+        android:label="Citas"
+        tools:layout="@layout/fragment_citas">
         <argument
             android:name="icon"
             app:argType="reference"
@@ -67,7 +73,8 @@
     <fragment
         android:id="@+id/historiaFragment"
         android:name="com.example.movildev.HistoriaFragment"
-        android:label="Historia">
+        android:label="Historia"
+        tools:layout="@layout/fragment_historia">
         <argument
             android:name="icon"
             app:argType="reference"
@@ -76,7 +83,8 @@
     <fragment
         android:id="@+id/perfilFragment"
         android:name="com.example.movildev.PerfilFragment"
-        android:label="Perfil">
+        android:label="Perfil"
+        tools:layout="@layout/fragment_perfil">
         <argument
             android:name="icon"
             app:argType="reference"
