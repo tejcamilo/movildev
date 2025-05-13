@@ -1,6 +1,7 @@
 package com.example.movildev
 
 import android.os.Bundle
+import android.util.Log
 import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.LinearLayout
@@ -10,13 +11,27 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
-import com.google.android.material.appbar.MaterialToolbar
+import com.example.movildev.model.Citas
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ValueEventListener
 
 class MainActivity : AppCompatActivity() {
+
+    lateinit var citasRef: DatabaseReference
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        Log.d("findme", "App started")
+
+        // Initialize Firebase Realtime Database
+        val database = FirebaseDatabase.getInstance()
+        citasRef = database.getReference("citas")
 
         // Adjust padding for punchhole displays
         val header = findViewById<LinearLayout>(R.id.header)
