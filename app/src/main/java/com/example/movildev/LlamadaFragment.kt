@@ -13,11 +13,22 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
+import com.example.movildev.databinding.FragmentLlamadaBinding
+import com.example.movildev.databinding.FragmentSalaBinding
 
 class LlamadaFragment : Fragment () {
+    private var _binding: FragmentLlamadaBinding? = null
+    private val binding get() = _binding!!
+
     override fun onCreateView( inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.fragment_llamada, container, false)
+        _binding = FragmentLlamadaBinding.inflate(inflater, container, false)
+        val view = binding.root
         return view
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 }
