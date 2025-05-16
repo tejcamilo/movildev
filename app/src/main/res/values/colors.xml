@@ -1,20 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="purple_200">#FFBB86FC</color>
-    <color name="purple_500">#FF6200EE</color>
-    <color name="purple_700">#FF3700B3</color>
-    <color name="teal_200">#FF03DAC5</color>
-    <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="fondo_main">#9CC2E4</color>
-    <color name="fondo_forms">#7DA4C8</color>
-    <color name="azul_main">#395176</color>
-    <color name="fondo_2">#EAEFF4</color>
-    <color name="fondo_3">#D4E5F1</color>
-    <color name="fondo_forms2">#E3E7EA</color>
-    <color name="azul_claro">#407CE2</color>
-    <color name="rojo_boton">#D43E32</color>
 
+    <color name="cardBackgroundColor">#D4E5F1</color>
+    <color name="backgroundColor">#E9EEF3</color>
+    <color name="colorFuente">#395176</color>
+    <color name="botonRojo">#D43E32</color>
+    <color name="botonAzul">#407CE2</color>
+
+    <color name="bottom_nav_icon_color">#395176</color>
+    <color name="bottom_nav_text_color">#395176</color>
+    <color name="bottom_nav_background">#D4E5F1</color>
 
 </resources>

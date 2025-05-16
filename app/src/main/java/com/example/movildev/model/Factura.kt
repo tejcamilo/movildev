@@ -1,0 +1,12 @@
+package com.example.movildev.model
+import java.io.Serializable
+
+data class Factura(
+    val id: String,
+    val fecha: String = "",
+    val hora: String = "",
+    val paciente: String,
+    val tratamiento: String,
+    val valor: Double
+) : Serializable
+

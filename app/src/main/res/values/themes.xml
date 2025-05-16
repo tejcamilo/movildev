@@ -1,18 +1,25 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-
-    <style name="Theme.FisioCare" parent="Theme.MaterialComponents.Light.NoActionBar">
-
-
-            <item name="colorPrimary">@color/azul_main</item>
-            <item name="colorPrimaryVariant">@color/azul_main</item>
-            <item name="colorOnPrimary">@color/white</item>
-            <item name="colorSecondary">@color/fondo_main</item>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="FisioCare" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">#395176</item> <!-- color por defecto para los botones -->
+        <item name="colorOnPrimary">#FFFFFF</item> <!-- color de texto para color primario -->
 
 
-        <!-- Si tenés personalizaciones, ponelas acá -->
     </style>
 
+    <style name="Base.Theme.Movildev" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">#395176</item>
+        <item name="colorOnPrimary">#FFFFFF</item> <!-- Text/icon color on primary buttons -->
 
+    </style>
+
+    <style name="Theme.Movildev" parent="Base.Theme.Movildev" />
+
+    <style name="BottomNavigationView" parent="Widget.Material3.BottomNavigationView">
+        <item name="itemIconTint">@color/bottom_nav_icon_color</item>
+        <item name="itemTextColor">@color/bottom_nav_text_color</item>
+        <item name="backgroundTint">@color/bottom_nav_background</item>
+        <item name="itemActiveIndicatorStyle">@android:color/transparent</item>
+    </style>
 
 </resources>

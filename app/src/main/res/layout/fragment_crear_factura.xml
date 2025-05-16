@@ -6,236 +6,188 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="412dp"
-        android:layout_height="56dp"
-        app:cardElevation="10dp"
-        app:cardBackgroundColor="@color/fondo_3"
-        tools:ignore="MissingConstraints" />
+    <!-- TÍTULO PRINCIPAL -->
 
-
-    <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/fragmentfondo"
-        android:layout_width="280dp"
-        android:layout_height="227dp"
-        android:alpha="0.3"
-        android:background="@drawable/rounded_fragment2"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="55dp"
-        tools:layout_editor_absoluteY="356dp" />
 
     <TextView
-        android:id="@+id/Facturaciontext"
-        android:layout_width="110dp"
-        android:layout_height="26dp"
-        android:elevation="10dp"
-        android:text="@string/facturaci_n"
-        android:textColor="@color/azul_main"
-        android:textSize="18sp"
-        tools:layout_editor_absoluteX="172dp"
-        tools:layout_editor_absoluteY="17dp"
-        tools:ignore="MissingConstraints" />
-
-    <ImageView
-        android:id="@+id/flechaatras"
-        android:layout_width="49dp"
-        android:layout_height="40dp"
-        android:background="@android:color/transparent"
-        android:contentDescription="@string/flecha_atras"
-        android:elevation="10dp"
-        android:src="@drawable/ic_arrowback"
-        app:tint="@color/azul_main"
-        tools:layout_editor_absoluteX="6dp"
-        tools:layout_editor_absoluteY="10dp"
-        tools:ignore="DuplicateIds,MissingConstraints" />
-
-    <ImageView
-        android:layout_width="33dp"
-        android:layout_height="27dp"
-        android:background="@android:color/transparent"
-        android:contentDescription="@string/logofacturacion"
-        android:elevation="10dp"
-        android:src="@drawable/ic_facturacion"
-        android:tint="@color/azul_main"
-        tools:layout_editor_absoluteX="140dp"
-        tools:layout_editor_absoluteY="17dp"
-        tools:ignore="MissingConstraints,UseAppTint" />
-
-    <ImageView
-        android:layout_width="190dp"
-        android:layout_height="168dp"
-        android:contentDescription="@string/user_image"
-        app:srcCompat="@drawable/user_2"
-        tools:layout_editor_absoluteX="110dp"
-        tools:layout_editor_absoluteY="92dp"
-        tools:ignore="MissingConstraints" />
-
-    <TextView
+        android:id="@+id/tituloFormulario"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/nombre_completo"
-        android:textColor="@color/black"
-        android:textSize="14sp"
-        tools:layout_editor_absoluteX="148dp"
-        tools:layout_editor_absoluteY="260dp"
-        tools:ignore="MissingConstraints" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/n_mero_de_documento"
-        android:textColor="@color/black"
-        android:textSize="14sp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="133dp"
-        tools:layout_editor_absoluteY="279dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/n_mero_de_tel_fono"
-        android:textColor="@color/black"
-        android:textSize="14sp"
-        tools:layout_editor_absoluteX="143dp"
-        tools:layout_editor_absoluteY="298dp"
-        tools:ignore="MissingConstraints" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/tratamiento"
-        android:textColor="@color/black"
-        android:textSize="16sp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="71dp"
-        tools:layout_editor_absoluteY="365dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/valor_de_la_cita"
-        android:textColor="@color/black"
-        android:textSize="16sp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="72dp"
-        tools:layout_editor_absoluteY="432dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/factura_electr_nica"
-        android:textColor="@color/black"
-        android:textSize="16sp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="71dp"
-        tools:layout_editor_absoluteY="502dp" />
-
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/inputLayoutTratamiento"
-        android:layout_width="246dp"
-        android:layout_height="wrap_content"
-        android:hint="Seleccione un tratamiento"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-        app:endIconMode="@drawable/ic_dropdown"
-        tools:layout_editor_absoluteX="71dp"
-        tools:layout_editor_absoluteY="387dp">
-
-        <com.google.android.material.textfield.MaterialAutoCompleteTextView
-            android:id="@+id/selectorTratamiento"
-            android:layout_width="match_parent"
-            android:layout_height="37dp"
-            android:textSize="12sp"
-            android:padding="0dp"
-            android:gravity="center"
-            android:inputType="none"
-            android:backgroundTint="@color/azul_main"
-            android:drawableEnd="@drawable/ic_dropdown"
-            android:textColor="@color/white" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-
-    <EditText
-        android:layout_width="244dp"
-        android:layout_height="34dp"
-        android:hint="@string/valor"
-        android:inputType="number"
-        android:textSize="14sp"
-        android:padding="0dp"
-        android:gravity="center"
-        tools:ignore="MissingConstraints,Autofill"
-        tools:layout_editor_absoluteX="71dp"
-        tools:layout_editor_absoluteY="461dp" />
-
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/inputLayoutFE"
-        android:layout_width="246dp"
-        android:layout_height="wrap_content"
-        android:hint="Seleccione"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-        app:endIconMode="@drawable/ic_dropdown"
-        tools:layout_editor_absoluteX="71dp"
-        tools:layout_editor_absoluteY="387dp"
-        tools:ignore="DuplicateIds">
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <Button
-        android:layout_width="117dp"
-        android:layout_height="39dp"
-        android:background="@drawable/button_rounded_claro"
-        android:elevation="10dp"
-        android:text="@string/guardar"
-        android:textColor="@color/white"
-        android:textSize="12sp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="140dp"
-        tools:layout_editor_absoluteY="607dp" />
-
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottomNavigationView"
-        android:layout_width="0dp"
-        android:layout_height="56dp"
-        android:background="@color/fondo_3"
-        app:menu="@menu/bottom_menu"
-        tools:menu="@menu/bottom_menu"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="36dp"
+        android:text="Formulario de Factura"
+        android:textColor="@color/bottom_nav_text_color"
+        android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:itemIconTint="@color/azul_main"
-        app:itemTextColor="@color/azul_main"
-        app:labelVisibilityMode="labeled"/>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/inputLayoutF_E"
-        android:layout_width="246dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <!-- CONTENEDOR CENTRAL -->
+    <LinearLayout
+        android:id="@+id/contenedorFormulario"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:hint="Seleccione un tratamiento"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-        app:endIconMode="@drawable/ic_dropdown"
-        tools:layout_editor_absoluteX="71dp"
-        tools:layout_editor_absoluteY="525dp">
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/inputLayoutFE"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/rounded_fragment2"
+        android:orientation="vertical"
+        android:padding="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tituloFormulario">
+
+        <!-- Aquí van tus elementos internos -->
+
+
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/nombre_completo"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+        <EditText
+            android:id="@+id/idNombre"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Factura Electrónica"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-            app:endIconMode="dropdown"/>
+            android:hint="@string/nombre_completo"
+            android:inputType="text"
+            android:textSize="14sp"/>
 
+        <TextView
 
-        <com.google.android.material.textfield.MaterialAutoCompleteTextView
-            android:id="@+id/selectorF_E"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/n_mero_de_documento"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+        <EditText
+            android:id="@+id/idDocumento"
             android:layout_width="match_parent"
-            android:layout_height="37dp"
-            android:backgroundTint="@color/azul_main"
+            android:layout_height="wrap_content"
+            android:hint="@string/n_mero_de_documento"
+            android:inputType="number"
+            android:minHeight="48dp"
+            android:paddingVertical="12dp"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/n_mero_de_tel_fono"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+        <EditText
+            android:id="@+id/idTelefono"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/n_mero_de_tel_fono"
+            android:inputType="number|phone"
+            android:minHeight="48dp"
+            android:paddingVertical="12dp"
+            android:textSize="14sp" />
+
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/tratamiento"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <AutoCompleteTextView
+            android:id="@+id/selectorTratamiento"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_select"
             android:drawableEnd="@drawable/ic_dropdown"
-            android:gravity="center"
+            android:dropDownHeight="wrap_content"
+            android:dropDownVerticalOffset="4dp"
+            android:hint="Seleccione un tratamiento"
             android:inputType="none"
-            android:padding="0dp"
-            android:textColor="@color/white"
-            android:textSize="12sp"/>
-    </com.google.android.material.textfield.TextInputLayout>
+            android:padding="12dp"
+            android:textColor="@color/black"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/valor_de_la_cita"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/inputValor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/valor"
+            android:inputType="number"
+            android:minHeight="48dp"
+            android:paddingVertical="12dp"
+            android:textSize="14sp" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/factura_electr_nica"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <AutoCompleteTextView
+            android:id="@+id/selectorFE"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_select"
+            android:drawableEnd="@drawable/ic_dropdown"
+            android:dropDownHeight="wrap_content"
+            android:dropDownVerticalOffset="4dp"
+            android:hint="Seleccione una opción"
+            android:inputType="none"
+            android:padding="12dp"
+            android:textColor="@color/black"
+            android:textSize="14sp"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <Button
+                android:id="@+id/btnGuardar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/botonAzul"
+                android:text="Guardar"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/btnCancelar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/botonRojo"
+                android:text="Cancelar"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </LinearLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
