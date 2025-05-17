@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".fragments.AddCitaFragment" >
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.movildev.viewmodel.CitaViewModel" />
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp" >
+
+        <EditText
+            android:id="@+id/et_fecha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Fecha"
+            android:focusable="false"
+            android:text="@={viewModel.fecha}"/>
+
+        <EditText
+            android:id="@+id/et_hora"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Hora"
+            android:focusable="false"
+            android:text="@={viewModel.hora}" />
+
+        <EditText
+            android:id="@+id/et_tipo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Tipo"
+            android:inputType="text"
+            android:text="@={viewModel.tipo}" />
+
+        <EditText
+            android:id="@+id/et_modalidad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Modalidad"
+            android:inputType="text"
+            android:text="@={viewModel.modalidad}" />
+
+        <EditText
+            android:id="@+id/et_profesional"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Profesional"
+            android:inputType="text"
+            android:text="@={viewModel.profesional}" />
+
+        <Button
+            android:id="@+id/btn_add_cita"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Agregar Cita" />
+
+    </LinearLayout>
+</layout>

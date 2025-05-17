@@ -1,24 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".CitasFragment">
+    tools:context=".fragments.CitasFragment" >
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.movildev.viewmodel.CitaViewModel" />
+    </data>
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:textSize="60sp"
-        android:layout_weight="1"
-        android:text="Citas" />
+        android:orientation="vertical" >
 
-    <Button
-        android:id="@+id/ir_telemedicina"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Telemedicina"
-        android:layout_gravity="center" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="60sp"
+            android:layout_weight="1"
+            android:text="Citas" />
+
+        <Button
+            android:id="@+id/ir_add_citas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Agendar"
+            android:layout_gravity="center" />
+
+        <Button
+            android:id="@+id/ir_telemedicina"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Telemedicina"
+            android:layout_gravity="center"
+            android:layout_marginBottom="60dp"/>
 
 
-</LinearLayout>
+    </LinearLayout>
+</layout>

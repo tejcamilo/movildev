@@ -2,6 +2,7 @@ package com.example.movildev.viewmodel
 
 import android.util.Log
 import androidx.lifecycle.ViewModel
+import com.example.movildev.model.CitaDao
 
 class TelemedicinaViewModel : ViewModel() {
 

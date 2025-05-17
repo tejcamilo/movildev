@@ -1,4 +1,4 @@
-package com.example.movildev
+package com.example.movildev.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -11,6 +11,8 @@ import com.example.movildev.databinding.FragmentSalaBinding
 import com.example.movildev.viewmodel.SalaViewModel
 import com.example.movildev.viewmodel.SalaViewModelFactory
 import android.util.Log
+import com.example.movildev.R
+import com.example.movildev.fragments.SalaFragmentArgs
 
 class SalaFragment : Fragment() {
     private var _binding: FragmentSalaBinding? = null

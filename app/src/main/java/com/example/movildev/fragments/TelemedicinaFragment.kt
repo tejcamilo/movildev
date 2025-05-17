@@ -1,4 +1,4 @@
-package com.example.movildev
+package com.example.movildev.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,10 +7,13 @@ import android.view.ViewGroup
 import android.widget.LinearLayout
 import android.widget.Toast
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
+import com.example.movildev.R
 import com.example.movildev.databinding.FragmentTelemedicinaBinding
+import com.example.movildev.model.CitaDatabase
+import com.example.movildev.viewmodel.CitaViewModel
+import com.example.movildev.viewmodel.CitaViewModelFactory
 import com.example.movildev.viewmodel.TelemedicinaViewModel
 
 class TelemedicinaFragment : Fragment() {
@@ -23,14 +26,16 @@ class TelemedicinaFragment : Fragment() {
         _binding = FragmentTelemedicinaBinding.inflate(inflater, container, false)
         val view = binding.root
 
+        val application = requireNotNull(this.activity).application
+        val dao = CitaDatabase.getInstance(application).citaDao
+
         //ViewModelProvider ensures that a new object only gets created if one doesn't exist already
         viewModel = ViewModelProvider(this).get(TelemedicinaViewModel::class.java)
 
 
-
         binding.accederBtn.setOnClickListener {
-            val action = TelemedicinaFragmentDirections // pasar datos de cita a SalaFragment
-                .actionTelemedicinaFragmentToSalaFragment(viewModel.cita)
+            val action =
+                TelemedicinaFragmentDirections.actionTelemedicinaFragmentToSalaFragment(viewModel.cita)
             view.findNavController().navigate(action)
             viewModel.doSomething() // ejemplo de como llamar los métodos del ViewModel
         }
