@@ -4,19 +4,13 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.ImageButton
-import android.widget.ImageView
-import android.widget.LinearLayout
-import android.widget.TextView
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModel
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
 import com.example.movildev.databinding.FragmentSalaBinding
 import com.example.movildev.viewmodel.SalaViewModel
 import com.example.movildev.viewmodel.SalaViewModelFactory
+import android.util.Log
 
 class SalaFragment : Fragment() {
     private var _binding: FragmentSalaBinding? = null
@@ -29,6 +23,12 @@ class SalaFragment : Fragment() {
     ): View? {
         _binding = FragmentSalaBinding.inflate(inflater, container, false)
         val view = binding.root
+
+        val cita = SalaFragmentArgs.fromBundle(requireArguments()).cita // recibir dato desde Telemedicina
+        Log.i("Cita", cita)
+        viewModelFactory = SalaViewModelFactory(cita)
+        viewModel = ViewModelProvider(this, viewModelFactory)
+            .get(SalaViewModel::class.java)
 
         binding.ingresarLlamadaBtn.setOnClickListener {
             view.findNavController().navigate(R.id.action_salaFragment_to_llamadaFragment)

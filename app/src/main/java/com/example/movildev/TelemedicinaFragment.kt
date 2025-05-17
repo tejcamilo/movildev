@@ -29,7 +29,9 @@ class TelemedicinaFragment : Fragment() {
 
 
         binding.accederBtn.setOnClickListener {
-            view.findNavController().navigate(R.id.action_telemedicinaFragment_to_salaFragment)
+            val action = TelemedicinaFragmentDirections // pasar datos de cita a SalaFragment
+                .actionTelemedicinaFragmentToSalaFragment(viewModel.cita)
+            view.findNavController().navigate(action)
             viewModel.doSomething() // ejemplo de como llamar los métodos del ViewModel
         }
 

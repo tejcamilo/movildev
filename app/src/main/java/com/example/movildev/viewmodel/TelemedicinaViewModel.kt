@@ -6,7 +6,7 @@ import androidx.lifecycle.ViewModel
 class TelemedicinaViewModel : ViewModel() {
 
     // propiedades a ser inicializadas cuando se crea el objeto desde ViewModelProvider
-    val algo = ""
+    val cita: String = "valor a pasar"
 
 
     init {

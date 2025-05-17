@@ -26,6 +26,9 @@
             android:name="icon"
             app:argType="reference"
             android:defaultValue="@drawable/telemedicina" />
+        <argument
+            android:name="cita"
+            app:argType="string" />
         <action
             android:id="@+id/action_salaFragment_to_llamadaFragment"
             app:destination="@id/llamadaFragment"
