@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "289391446519",
+    "project_id": "citasfisiocare",
+    "storage_bucket": "citasfisiocare.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:289391446519:android:6d91b968725923c8e986f2",
+        "android_client_info": {
+          "package_name": "com.example.citasfisiocare"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCi2Gi0fGROa13Frr8BGOqyHEva5GkonKk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

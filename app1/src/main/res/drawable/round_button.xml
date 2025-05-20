@@ -7,8 +7,8 @@ android:shape="rectangle">
 <solid android:color="#395176"/>
 
 <!-- Bordes redondeados -->
-<corners android:radius="10dp"/>
+<corners android:radius="20dp"/>
 
 <!-- Sombra -->
-<padding android:bottom="5dp" android:left="5dp" android:right="5dp" android:top="5dp"/>
+<padding android:bottom="3dp" android:left="3dp" android:right="3dp" android:top="3dp"/>
 </shape>

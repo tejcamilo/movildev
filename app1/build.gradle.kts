@@ -2,15 +2,21 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
+    alias(libs.plugins.google.gms.google.services)
+   // id("com.android.application")
+   // id("com.google.gms.google-services")
+
+
 }
 
 android {
-    namespace = "com.example.myapplication"
+    namespace = "com.example.citasfisiocare"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.example.myapplication"
-        minSdk = 24
+        applicationId = "com.example.citasfisiocare"
+        minSdk = 23
+
         targetSdk = 35
         versionCode = 1
         versionName = "1.0"
@@ -49,9 +55,13 @@ dependencies {
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
-    implementation(libs.androidx.fragment)
-    implementation(libs.material)
-    implementation(libs.androidx.navigation.runtime.android)
+    implementation ("com.google.firebase:firebase-auth:22.3.1")
+
+
+    implementation ("androidx.fragment:fragment-ktx:1.6.2")
+    implementation ("com.google.android.material:material:1.11.0")
+    implementation ("androidx.navigation:navigation-runtime-ktx:2.7.7")
+    implementation(libs.firebase.database)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -67,9 +77,12 @@ dependencies {
     androidTestImplementation("androidx.test.espresso:espresso-core:3.6.1")
     androidTestImplementation("androidx.test.ext:junit:1.2.1")
     implementation("androidx.cardview:cardview:1.0.0")
+    implementation ("com.google.firebase:firebase-firestore:24.11.1")
 
     implementation("androidx.appcompat:appcompat:1.0.0-alpha1")
     implementation("com.google.android.material:material:1.0.0-alpha1")
+    implementation(platform("com.google.firebase:firebase-bom:33.13.0"))
+    implementation("com.google.firebase:firebase-analytics")
 
 
 
