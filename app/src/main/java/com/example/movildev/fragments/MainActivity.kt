@@ -61,7 +61,9 @@ class MainActivity : AppCompatActivity() {
                 R.id.facturaElectronicaFragment -> {
                     title.text = "Facturación"
                     toolbarIcon.setImageResource(R.drawable.ic_factura)
+
                 }
+
                 else -> {
                     title.text = "FisioCare"
                     toolbarIcon.setImageResource(R.drawable.placeholder_icon)
