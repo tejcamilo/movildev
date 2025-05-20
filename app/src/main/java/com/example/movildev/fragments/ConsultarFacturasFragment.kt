@@ -4,17 +4,25 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.LinearLayout
-import android.widget.Toast
 import androidx.fragment.app.Fragment
-import androidx.navigation.findNavController
+import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.movildev.R
-import com.google.android.material.floatingactionbutton.FloatingActionButton
+import com.example.movildev.adapters.FacturaAdapter
+import com.example.movildev.database.AppDatabase
 import com.example.movildev.model.Factura
-
+import com.example.movildev.repositories.FacturaRepository
+import com.example.movildev.viewmodels.FacturaViewModel
+import com.example.movildev.viewmodels.FacturaViewModelFactory
+import com.google.android.material.floatingactionbutton.FloatingActionButton
+import androidx.navigation.findNavController
 
 class ConsultarFacturasFragment : Fragment() {
+
+    private lateinit var recyclerView: RecyclerView
+    private lateinit var adapter: FacturaAdapter
+    private lateinit var viewModel: FacturaViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -22,29 +30,39 @@ class ConsultarFacturasFragment : Fragment() {
     ): View {
         val view = inflater.inflate(R.layout.fragment_consultar_factura, container, false)
 
-        val descargarBtn = view.findViewById<Button>(R.id.acceder_btn)
-        descargarBtn.setOnClickListener {
-            Toast.makeText(requireContext(), "📥 Descargando factura...", Toast.LENGTH_SHORT).show()
-        }
+        // ViewModel + DAO + Repository
+        val dao = AppDatabase.getInstance(requireContext()).facturaDao()
+        val repository = FacturaRepository(dao)
+        val factory = FacturaViewModelFactory(repository)
+        viewModel = ViewModelProvider(this, factory)[FacturaViewModel::class.java]
 
-        // 🟨 Al hacer clic en la card se envía la factura a modificar
-        val frame1 = view.findViewById<LinearLayout>(R.id.frame1)
-        frame1.setOnClickListener {
-            val factura = Factura(
-                id = "F-001",
-                paciente = "Camila Martínez",
-                tratamiento = "Fisioterapia",
-                valor = 120000.0
-            )
+        // RecyclerView
+        recyclerView = view.findViewById(R.id.recyclerFacturas)
+        recyclerView.layoutManager = LinearLayoutManager(requireContext())
 
-            val bundle = Bundle().apply {
-                putSerializable("factura", factura)
+        adapter = FacturaAdapter(
+            onModificar = { factura ->
+                val bundle = Bundle().apply {
+                    putString("paciente", factura.paciente)
+                    putString("tratamiento", factura.tratamiento)
+                    putDouble("valor", factura.valor)
+                    putString("fecha", factura.fecha)
+                    putString("hora", factura.hora)
+                }
+                view.findNavController().navigate(R.id.action_consultarFacturasFragment_to_crearFacturaFragment, bundle)
+            },
+            onEliminar = { factura ->
+                viewModel.eliminarFactura(factura)
             }
+        )
+        recyclerView.adapter = adapter
 
-            view.findNavController().navigate(R.id.action_consultarFacturasFragment_to_crearFacturaFragment, bundle)
+        // Observa los cambios
+        viewModel.facturas.observe(viewLifecycleOwner) { lista ->
+            adapter.updateData(lista)
         }
 
-        // ➕ Botón flotante para crear nueva factura
+        // FAB: Crear nueva factura
         val fabAgregar = view.findViewById<FloatingActionButton>(R.id.fabAgregar)
         fabAgregar.setOnClickListener {
             view.findNavController().navigate(R.id.action_consultarFacturasFragment_to_crearFacturaFragment)

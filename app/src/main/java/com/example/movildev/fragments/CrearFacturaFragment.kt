@@ -1,15 +1,22 @@
 package com.example.movildev.fragments
-
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
 import com.example.movildev.R
-import com.google.android.material.textfield.MaterialAutoCompleteTextView
+import com.example.movildev.database.AppDatabase
 import com.example.movildev.model.Factura
+import com.example.movildev.repositories.FacturaRepository
+import com.example.movildev.viewmodels.FacturaViewModel
+import com.example.movildev.viewmodels.FacturaViewModelFactory
+import com.google.android.material.textfield.MaterialAutoCompleteTextView
+import java.text.SimpleDateFormat
+import java.util.Date
+import java.util.Locale
 
 class CrearFacturaFragment : Fragment() {
 
@@ -19,13 +26,22 @@ class CrearFacturaFragment : Fragment() {
         "Laura Gómez" to Triple("98765432", "3150000002", "laura@example.com")
     )
 
+    private lateinit var facturaViewModel: FacturaViewModel
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
         val view = inflater.inflate(R.layout.fragment_crear_factura, container, false)
 
-        // Referencias a campos
+        // ViewModel + Repository + DAO
+
+        val dao = AppDatabase.getInstance(requireContext()).facturaDao()
+        val repository = FacturaRepository(dao)
+        val viewModelFactory = FacturaViewModelFactory(repository)
+        facturaViewModel = ViewModelProvider(this, viewModelFactory)[FacturaViewModel::class.java]
+
+        // Inputs
         val nombreInput = view.findViewById<EditText>(R.id.idNombre)
         val documentoInput = view.findViewById<EditText>(R.id.idDocumento)
         val telefonoInput = view.findViewById<EditText>(R.id.idTelefono)
@@ -36,39 +52,35 @@ class CrearFacturaFragment : Fragment() {
         val btnGuardar = view.findViewById<Button>(R.id.btnGuardar)
         val btnCancelar = view.findViewById<Button>(R.id.btnCancelar)
 
-        // Adaptador selector factura electrónica
+        // Adaptadores
         val opcionesFE = listOf("Sí", "No")
         feInput.setAdapter(ArrayAdapter(requireContext(), android.R.layout.simple_dropdown_item_1line, opcionesFE))
 
-        // Adaptador selector tratamiento (puedes reemplazar por tus valores reales)
         val tratamientos = listOf("Terapia Física", "Rehabilitación", "Consulta")
         tratamientoInput.setAdapter(ArrayAdapter(requireContext(), android.R.layout.simple_dropdown_item_1line, tratamientos))
 
-        // Verifica si estás modificando (recibes argumentos)
+        // Si viene desde Modificar
         val args = arguments
         if (args != null) {
             nombreInput.setText(args.getString("paciente"))
             tratamientoInput.setText(args.getString("tratamiento"))
             valorInput.setText(args.getDouble("valor", 0.0).toString())
-
-            // También puedes setear documento y teléfono si los recibes
             documentoInput.setText(args.getString("documento"))
             telefonoInput.setText(args.getString("telefono"))
         }
 
-        // Autocompletar datos al escribir nombre
+        // Autocompletar datos por nombre
         nombreInput.setOnFocusChangeListener { _, hasFocus ->
             if (!hasFocus) {
                 val nombre = nombreInput.text.toString()
-                datosPaciente[nombre]?.let { (documento, telefono, correo) ->
+                datosPaciente[nombre]?.let { (documento, telefono, _) ->
                     documentoInput.setText(documento)
                     telefonoInput.setText(telefono)
-                    // Aquí podrías también setear un campo correo si existiera
                 }
             }
         }
 
-        // Guardar
+        // Guardar factura
         btnGuardar.setOnClickListener {
             val paciente = nombreInput.text.toString()
             val tratamiento = tratamientoInput.text.toString()
@@ -76,6 +88,25 @@ class CrearFacturaFragment : Fragment() {
             val esElectronica = feInput.text.toString()
 
             if (paciente.isNotBlank() && tratamiento.isNotBlank() && valor > 0) {
+
+                val now = Date()
+                val formatoFecha = SimpleDateFormat("yyyy-MM-dd", Locale.getDefault())
+                val formatoHora = SimpleDateFormat("HH:mm", Locale.getDefault())
+
+                val fechaActual = formatoFecha.format(now)
+                val horaActual = formatoHora.format(now)
+
+                val factura = Factura(
+                    id = System.currentTimeMillis().toString(),
+                    fecha = fechaActual,
+                    hora = horaActual,
+                    paciente = paciente,
+                    tratamiento = tratamiento,
+                    valor = valor
+                )
+
+                facturaViewModel.guardarFactura(factura)
+
                 Toast.makeText(requireContext(), "Factura guardada correctamente ✅", Toast.LENGTH_SHORT).show()
 
                 if (esElectronica == "Sí") {
@@ -96,4 +127,3 @@ class CrearFacturaFragment : Fragment() {
         return view
     }
 }
-

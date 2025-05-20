@@ -21,27 +21,48 @@
         android:gravity="center"
         android:paddingHorizontal="5dp"
         >
+        <!-- Fecha -->
         <LinearLayout
-            android:id="@+id/fecha_cita"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:gravity="center_vertical"
             android:paddingVertical="5dp">
 
             <ImageView
                 android:layout_width="20dp"
                 android:layout_height="20dp"
-                android:src="@drawable/calendar"
-                />
+                android:src="@drawable/calendar" />
 
             <TextView
+                android:id="@+id/fechaText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="25/04/25 - 09:45 AM"
+                android:text="2024-05-14"
                 android:layout_marginStart="8dp"
                 android:textColor="#2D3748" />
         </LinearLayout>
+
+        <!-- Hora -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingVertical="5dp">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/clock" />
+
+            <TextView
+                android:id="@+id/horaText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10:45"
+                android:layout_marginStart="8dp"
+                android:textColor="#2D3748" />
+        </LinearLayout>
+
         <LinearLayout
             android:id="@+id/tipo_cita"
             android:layout_width="match_parent"
@@ -55,6 +76,7 @@
                 android:src="@drawable/tipo_cita" />
 
             <TextView
+                android:id="@+id/payment"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Valoración"
@@ -74,6 +96,7 @@
                 android:src="@drawable/ic_pay" />
 
             <TextView
+                android:id="@+id/valorCitaText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Valor de la cita"
@@ -93,6 +116,7 @@
                 android:src="@drawable/ic_user" />
 
             <TextView
+                android:id="@+id/nombrePacienteText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Nombre Paciente 1"
@@ -113,22 +137,23 @@
 
         >
         <Button
+            android:id="@+id/btnModificar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Modificar"
             android:backgroundTint="#417EF2"
             android:textColor="#FFFFFF"
-            android:textSize="12sp"
-            />
+            android:textSize="12sp" />
 
         <Button
+            android:id="@+id/btnEliminar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Eliminar"
             android:backgroundTint="#C74040"
             android:textColor="#FFFFFF"
-            android:textSize="12sp"
-            />
+            android:textSize="12sp" />
+
 
     </LinearLayout>
 </LinearLayout>
