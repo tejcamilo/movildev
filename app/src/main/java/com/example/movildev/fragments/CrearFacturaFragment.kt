@@ -58,21 +58,36 @@ class CrearFacturaFragment : Fragment() {
                 tratamientos
             )
         )
+        val args = arguments
+        if (args != null) {
+            nombreInput.setText(args.getString("paciente"))
+            tratamientoInput.setText(args.getString("tratamiento"))
+            valorInput.setText(args.getDouble("valor", 0.0).toString())
+            documentoInput.setText(args.getString("documento"))
+            telefonoInput.setText(args.getString("telefono"))
+        }
+
 
         btnGuardar.setOnClickListener {
             val paciente = nombreInput.text.toString()
+            val documento = documentoInput.text.toString()
+            val telefono = telefonoInput.text.toString()
             val tratamiento = tratamientoInput.text.toString()
             val valor = valorInput.text.toString().toDoubleOrNull() ?: 0.0
             val esElectronica = feInput.text.toString()
 
             if (paciente.isNotBlank() && tratamiento.isNotBlank() && valor > 0) {
-                val id = System.currentTimeMillis().toString()
+                val idDesdeArgs = args?.getString("id") // Si es null, es nueva
+
+                val id = idDesdeArgs ?: System.currentTimeMillis().toString()
                 val now = Date()
                 val fechaActual = SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()).format(now)
                 val horaActual = SimpleDateFormat("HH:mm", Locale.getDefault()).format(now)
 
                 val factura = Factura(
                     id = id,
+                    documento = documento,
+                    telefono = telefono ,
                     fecha = fechaActual,
                     hora = horaActual,
                     paciente = paciente,

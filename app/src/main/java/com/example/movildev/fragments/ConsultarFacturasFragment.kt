@@ -42,7 +42,10 @@ class ConsultarFacturasFragment : Fragment() {
             facturas = emptyList(),
             onModificar = { factura ->
                 val bundle = Bundle().apply {
+                    putString("id", factura.id)
                     putString("paciente", factura.paciente)
+                    putString("documento", factura.documento)
+                    putString("telefono", factura.telefono)
                     putString("tratamiento", factura.tratamiento)
                     putDouble("valor", factura.valor)
                     putString("fecha", factura.fecha)
