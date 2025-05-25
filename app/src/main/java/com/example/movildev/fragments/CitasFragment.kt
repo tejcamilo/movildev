@@ -32,6 +32,9 @@ class CitasFragment : Fragment() {
         val adapter = CitaItemAdapter()
         binding.citaList.adapter = adapter
 
+        // PARA FILTRAR CITAS DE TELEMEDICINA
+        //var teleMedicinaCitas = viewModel.getTelemedicinaCitas()
+
         viewModel.citas.observe(viewLifecycleOwner) {
             citasList ->
                 adapter.data = citasList

@@ -1,46 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
-    <!-- MAIN CONTENT -->
-    <ScrollView
-        android:id="@+id/scroll_area"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:fillViewport="true"
-        android:background="#e9eef3"
-        android:layout_weight="1"
-        >
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#e9eef3"
+    tools:context=".fragments.TelemedicinaFragment">
+<androidx.recyclerview.widget.RecyclerView android:id="@+id/cita_list"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"
+    android:layout_gravity="top"
+    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-            <FrameLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                >
-                <Button
-                    android:id="@+id/acceder_btn"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Acceder"
-                    android:textColor="#FFFFFF"
-                    android:layout_marginHorizontal="20dp"
-                    android:background="@drawable/acceder_btn"
-                    android:layout_marginTop="160dp"
-                    android:paddingTop="10dp"
-                    />
-                <include layout="@layout/cita_tm" />
-            </FrameLayout>
-
-            <include layout="@layout/cita_tm"
-                android:id="@+id/frame1"/>
-            <include layout="@layout/cita_tm" />
-
-        </LinearLayout>
-    </ScrollView>
 </LinearLayout>

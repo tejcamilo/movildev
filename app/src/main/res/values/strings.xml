@@ -3,4 +3,7 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="telemedicina_header">Telemedicina</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="reprogramar">Reprogramar</string>
+    <string name="acceder">Acceder</string>
 </resources>

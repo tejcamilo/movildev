@@ -19,6 +19,10 @@ class TelemedicinaViewModel : ViewModel() {
         Log.i("TelemedicinaViewModel", "ViewModel created")
     }
 
+    fun getTelemedicinaCitas(): LiveData<List<Cita>> {
+        return MutableLiveData(_citas.value?.filter { it.modalidad == "Telemedicina" } ?: emptyList())
+    }
+
     fun cancelar(cita: Cita) {
         val currentList = _citas.value ?: return
         val newList = currentList.map { cita0 ->

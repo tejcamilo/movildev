@@ -8,14 +8,12 @@ import android.view.ViewGroup
 import android.widget.LinearLayout
 import android.widget.Toast
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
 import com.example.movildev.R
-import com.example.movildev.fragments.TelemedicinaFragmentDirections
+import com.example.movildev.adapters.CitaItemAdapter
+import com.example.movildev.adapters.TelemedicinaItemAdapter
 import com.example.movildev.databinding.FragmentTelemedicinaBinding
-import com.example.movildev.model.Cita
 import com.example.movildev.viewmodels.TelemedicinaViewModel
 
 class TelemedicinaFragment : Fragment() {
@@ -33,27 +31,46 @@ class TelemedicinaFragment : Fragment() {
         //ViewModelProvider ensures that a new object only gets created if one doesn't exist already
         viewModel = ViewModelProvider(this).get(TelemedicinaViewModel::class.java)
 
+        val adapter = TelemedicinaItemAdapter { cita ->
+            val action =
+                TelemedicinaFragmentDirections.actionTelemedicinaFragmentToSalaFragment(viewModel.cita)
+            view.findNavController().navigate(action)
+        }
+        binding.citaList.adapter = adapter
+
+        val teleMedicinaCita = viewModel.getTelemedicinaCitas()
+
+        teleMedicinaCita.observe(viewLifecycleOwner) {
+            citasList ->
+                adapter.data = citasList
+        }
+
         viewModel.citas.observe(viewLifecycleOwner) { citasList ->
             Log.d("TelemedicinaFragment", "Citas: $citasList")
             // Update your UI here with citasList
         }
 
         //Log.d("TelemedicinaFragment", "Citas: $citas")
-
+        /*
         binding.accederBtn.setOnClickListener {
             val action =
                 TelemedicinaFragmentDirections.actionTelemedicinaFragmentToSalaFragment(viewModel.cita)
             view.findNavController().navigate(action)
             viewModel.doSomething() // ejemplo de como llamar los métodos del ViewModel
         }
-        // Hide the acceder_btn button
-        // binding.accederBtn.visibility = View.GONE
 
+         */
+        // Hide the acceder_btn button
+
+        // binding.accederBtn.visibility = View.GONE
+        /*
         val frame1 = view.findViewById<LinearLayout>(R.id.frame1)
         frame1.setOnClickListener {
             val text = "El acceso a la cita estará disponible 5 minutos antes de la hora programada"
             Toast.makeText(activity, text, Toast.LENGTH_LONG).show()
         }
+
+         */
         return view
     }
 

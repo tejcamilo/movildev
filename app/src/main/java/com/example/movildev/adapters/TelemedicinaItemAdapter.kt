@@ -13,7 +13,9 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.movildev.model.Cita
 import com.example.movildev.R
 
-class CitaItemAdapter : RecyclerView.Adapter<CitaItemAdapter.CitaItemViewHolder>() {
+class TelemedicinaItemAdapter(
+    private val onAccederClick: (Cita) -> Unit)
+        : RecyclerView.Adapter<TelemedicinaItemAdapter.TelemedicinaItemViewHolder>() {
     var data = listOf<Cita>()
         @SuppressLint("NotifyDataSetChanged")
         set(value) {
@@ -23,47 +25,49 @@ class CitaItemAdapter : RecyclerView.Adapter<CitaItemAdapter.CitaItemViewHolder>
     override fun getItemCount() = data.size
 
     override fun onCreateViewHolder(parent : ViewGroup, viewType: Int)
-        : CitaItemViewHolder = CitaItemViewHolder.inflateFrom(parent)
+            : TelemedicinaItemViewHolder = TelemedicinaItemViewHolder.inflateFrom(parent)
 
-    override fun onBindViewHolder(holder: CitaItemViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: TelemedicinaItemViewHolder, position: Int) {
         val item = data[position]
-        holder.bind(item)
+        holder.bind(item, onAccederClick)
     }
 
-    class CitaItemViewHolder(val rootView : FrameLayout) : RecyclerView.ViewHolder(rootView) {
+    class TelemedicinaItemViewHolder(val rootView : FrameLayout) : RecyclerView.ViewHolder(rootView) {
 
         val fechaCita = rootView.findViewById<TextView>(R.id.detalle_cita)
         val tipoCita = rootView.findViewById<TextView>(R.id.detalle_tipo)
         val profesionalCita = rootView.findViewById<TextView>(R.id.detalle_profesional)
-        val modalidadCita = rootView.findViewById<TextView>(R.id.detalle_modalidad)
 
         companion object {
-            fun inflateFrom(parent: ViewGroup) : CitaItemViewHolder {
+            fun inflateFrom(parent: ViewGroup) : TelemedicinaItemViewHolder {
                 val layoutInflater = LayoutInflater.from(parent.context)
                 val view = layoutInflater
                     .inflate(R.layout.cita_item, parent, false) as FrameLayout
-                return CitaItemViewHolder(view)
+                return TelemedicinaItemViewHolder(view)
             }
         }
-        fun bind(item: Cita) {
+        fun bind(item: Cita, onAccederClick: (Cita) -> Unit) {
             fechaCita.text = "${item.fecha} - ${item.hora}"
             tipoCita.text = item.tipo
             profesionalCita.text = item.profesional
-            modalidadCita.text = item.modalidad
+
+            rootView.findViewById<LinearLayout>(R.id.modalidad)
+                .visibility = View.GONE
 
             val accederBtn = rootView.findViewById<Button>(R.id.acceder_btn)
-            /*
             val params = accederBtn.layoutParams as FrameLayout.LayoutParams
-            val topMarginDp = 184
+            val topMarginDp = 160
             val scale = accederBtn.context.resources.displayMetrics.density
             params.topMargin = (topMarginDp * scale + 0.5f).toInt()
             accederBtn.layoutParams = params
-             */
-
-
-            accederBtn.visibility = View.GONE
-
-
+            if (item.hora == "10:00 AM") {
+                accederBtn.visibility = View.VISIBLE
+            } else {
+                accederBtn.visibility = View.GONE
+            }
+            accederBtn.setOnClickListener{
+                onAccederClick(item)
+            }
 
         }
     }
