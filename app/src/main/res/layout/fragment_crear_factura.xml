@@ -97,7 +97,7 @@
                 android:textColor="@color/black"
                 android:textSize="16sp" />
 
-            <AutoCompleteTextView
+            <com.google.android.material.textfield.MaterialAutoCompleteTextView
                 android:id="@+id/selectorTratamiento"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -138,7 +138,7 @@
                 android:textColor="@color/black"
                 android:textSize="16sp" />
 
-            <AutoCompleteTextView
+            <com.google.android.material.textfield.MaterialAutoCompleteTextView
                 android:id="@+id/selectorFE"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

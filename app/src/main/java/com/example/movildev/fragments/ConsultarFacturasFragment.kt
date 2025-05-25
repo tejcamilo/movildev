@@ -16,6 +16,7 @@ import com.example.movildev.viewmodels.FacturaViewModel
 import com.example.movildev.viewmodels.FacturaViewModelFactory
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import androidx.navigation.findNavController
+import com.example.movildev.repositories.FacturaRepositorySingleton
 
 class ConsultarFacturasFragment : Fragment() {
 
@@ -30,9 +31,9 @@ class ConsultarFacturasFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_consultar_factura, container, false)
 
         // ✅ Inicializar ViewModel con repo basado en lista
-        val repository = FacturaRepository() // usa la lista interna simulada
-        val factory = FacturaViewModelFactory(repository)
-        viewModel = ViewModelProvider(this, factory)[FacturaViewModel::class.java]
+        val viewModelFactory = FacturaViewModelFactory(FacturaRepositorySingleton.instance)
+        viewModel = ViewModelProvider(requireActivity(), viewModelFactory)[FacturaViewModel::class.java]
+
 
         // ✅ Configurar RecyclerView
         recyclerView = view.findViewById(R.id.recyclerFacturas)

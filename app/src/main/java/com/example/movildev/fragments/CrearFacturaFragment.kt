@@ -11,6 +11,7 @@ import androidx.navigation.findNavController
 import com.example.movildev.R
 import com.example.movildev.model.Factura
 import com.example.movildev.repositories.FacturaRepository
+import com.example.movildev.repositories.FacturaRepositorySingleton
 import com.example.movildev.viewmodels.FacturaViewModel
 import com.example.movildev.viewmodels.FacturaViewModelFactory
 import java.text.SimpleDateFormat
@@ -18,7 +19,7 @@ import java.util.*
 
 class CrearFacturaFragment : Fragment() {
 
-    private lateinit var facturaViewModel: FacturaViewModel
+    private lateinit var viewModel: FacturaViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -27,11 +28,9 @@ class CrearFacturaFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_crear_factura, container, false)
 
         // ViewModel + Repo
-        val repository = FacturaRepository()
-        val viewModelFactory = FacturaViewModelFactory(repository)
-        facturaViewModel = ViewModelProvider(this, viewModelFactory)[FacturaViewModel::class.java]
-
-        // Inputs
+        val viewModelFactory = FacturaViewModelFactory(FacturaRepositorySingleton.instance)
+        viewModel = ViewModelProvider(requireActivity(), viewModelFactory)[FacturaViewModel::class.java]
+// Inputs
         val nombreInput = view.findViewById<EditText>(R.id.idNombre)
         val documentoInput = view.findViewById<EditText>(R.id.idDocumento)
         val telefonoInput = view.findViewById<EditText>(R.id.idTelefono)
@@ -43,13 +42,24 @@ class CrearFacturaFragment : Fragment() {
         val btnCancelar = view.findViewById<Button>(R.id.btnCancelar)
 
         val opcionesFE = listOf("Sí", "No")
-        feInput.setAdapter(ArrayAdapter(requireContext(), android.R.layout.simple_dropdown_item_1line, opcionesFE))
+        feInput.setAdapter(
+            ArrayAdapter(
+                requireContext(),
+                android.R.layout.simple_dropdown_item_1line,
+                opcionesFE
+            )
+        )
 
         val tratamientos = listOf("Terapia Física", "Rehabilitación", "Consulta")
-        tratamientoInput.setAdapter(ArrayAdapter(requireContext(), android.R.layout.simple_dropdown_item_1line, tratamientos))
+        tratamientoInput.setAdapter(
+            ArrayAdapter(
+                requireContext(),
+                android.R.layout.simple_dropdown_item_1line,
+                tratamientos
+            )
+        )
 
         btnGuardar.setOnClickListener {
-
             val paciente = nombreInput.text.toString()
             val tratamiento = tratamientoInput.text.toString()
             val valor = valorInput.text.toString().toDoubleOrNull() ?: 0.0
@@ -69,28 +79,39 @@ class CrearFacturaFragment : Fragment() {
                     tratamiento = tratamiento,
                     valor = valor
                 )
-                facturaViewModel.guardarFactura(factura) { success ->
+                viewModel.guardarFactura(factura) { success ->
                     if (success) {
-                        Toast.makeText(context, "Guardado exitosamente", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(context, "Guardado exitosamente ✅", Toast.LENGTH_SHORT)
+                            .show()
+
+                        if (esElectronica == "Sí") {
+                            view.findNavController()
+                                .navigate(R.id.action_crearFacturaFragment_to_facturaElectronicaFragment)
+                        } else {
+                            view.findNavController()
+                                .navigate(R.id.action_crearFacturaFragment_to_consultarFacturasFragment)
+                        }
+
                     } else {
-                        Toast.makeText(context, "Error al guardar", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(context, "Error al guardar ❌", Toast.LENGTH_SHORT).show()
                     }
                 }
-
-                if (esElectronica == "Sí") {
-                    view.findNavController().navigate(R.id.action_crearFacturaFragment_to_facturaElectronicaFragment)
-                } else {
-                    view.findNavController().navigate(R.id.action_crearFacturaFragment_to_consultarFacturasFragment)
-                }
-
             } else {
-                Toast.makeText(requireContext(), "Por favor completa todos los campos", Toast.LENGTH_SHORT).show()
+                Toast.makeText(
+                    requireContext(),
+                    "Por favor completa todos los campos",
+                    Toast.LENGTH_SHORT
+                ).show()
             }
         }
 
         btnCancelar.setOnClickListener {
-            view.findNavController().navigate(R.id.action_crearFacturaFragment_to_consultarFacturasFragment)
+            view.findNavController()
+                .navigate(R.id.action_crearFacturaFragment_to_consultarFacturasFragment)
         }
+
+        feInput.setOnClickListener { feInput.showDropDown() }
+        tratamientoInput.setOnClickListener { tratamientoInput.showDropDown() }
 
         return view
     }

@@ -5,7 +5,7 @@ import androidx.lifecycle.ViewModel
 import com.example.movildev.model.Factura
 import com.example.movildev.repositories.FacturaRepository
 
-class CrearFacturaViewModel(private val repository: FacturaRepository) : ViewModel() {
+class FacturaViewModel(private val repository: FacturaRepository) : ViewModel() {
 
     val facturas: LiveData<List<Factura>> = repository.obtenerFacturas()
 
@@ -17,5 +17,4 @@ class CrearFacturaViewModel(private val repository: FacturaRepository) : ViewMod
         repository.eliminarFactura(factura)
     }
 }
-
 
