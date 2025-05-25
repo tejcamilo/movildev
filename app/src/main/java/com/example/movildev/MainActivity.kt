@@ -26,7 +26,12 @@ class MainActivity : AppCompatActivity() {
         // Adjust padding for punchhole displays
         ViewCompat.setOnApplyWindowInsetsListener(binding.header) { view0, insets ->
             val statusBarHeight = insets.getInsets(WindowInsetsCompat.Type.statusBars()).top
-            view.setPadding(view0.paddingLeft, statusBarHeight, view0.paddingRight, view0.paddingBottom)
+            view0.setPadding(
+                view0.paddingLeft,
+                statusBarHeight,
+                view0.paddingRight,
+                view0.paddingBottom
+            )
             insets
         }
 
