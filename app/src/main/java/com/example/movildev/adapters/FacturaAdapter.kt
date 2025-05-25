@@ -19,6 +19,7 @@ class FacturaAdapter(
     inner class FacturaViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val nombrePaciente: TextView = view.findViewById(R.id.nombrePacienteText)
         val valorCita: TextView = view.findViewById(R.id.valorCitaText)
+        val tratamiento: TextView = view.findViewById(R.id.tratamiento)
         val fechaText: TextView = view.findViewById(R.id.fechaText)
         val horaText: TextView = view.findViewById(R.id.horaText)
         val btnModificar: Button = view.findViewById(R.id.btnModificar)
@@ -35,6 +36,7 @@ class FacturaAdapter(
 
         holder.nombrePaciente.text = factura.paciente
         holder.valorCita.text = "$${factura.valor}"
+        holder.tratamiento.text = factura.tratamiento
         holder.fechaText.text = factura.fecha
         holder.horaText.text = factura.hora
 

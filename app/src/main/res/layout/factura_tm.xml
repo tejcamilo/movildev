@@ -76,7 +76,7 @@
                 android:src="@drawable/tipo_cita" />
 
             <TextView
-                android:id="@+id/payment"
+                android:id="@+id/tratamiento"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Valoración"
