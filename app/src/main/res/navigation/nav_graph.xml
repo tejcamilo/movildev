@@ -6,7 +6,7 @@
     app:startDestination="@id/telemedicinaFragment">
     <fragment
         android:id="@+id/telemedicinaFragment"
-        android:name="com.example.movildev.TelemedicinaFragment"
+        android:name="com.example.movildev.fragments.TelemedicinaFragment"
         android:label="Telemedicina"
         tools:layout="@layout/fragment_telemedicina" >
         <argument
@@ -19,7 +19,7 @@
     </fragment>
     <fragment
         android:id="@+id/salaFragment"
-        android:name="com.example.movildev.SalaFragment"
+        android:name="com.example.movildev.fragments.SalaFragment"
         android:label="Telemedicina"
         tools:layout="@layout/fragment_sala">
         <argument
@@ -36,7 +36,7 @@
     </fragment>
     <fragment
         android:id="@+id/llamadaFragment"
-        android:name="com.example.movildev.LlamadaFragment"
+        android:name="com.example.movildev.fragments.LlamadaFragment"
         android:label="Telemedicina"
         tools:layout="@layout/fragment_llamada">
         <argument
@@ -49,7 +49,7 @@
     </fragment>
     <fragment
         android:id="@+id/inicioFragment"
-        android:name="com.example.movildev.HomeFragment"
+        android:name="com.example.movildev.fragments.HomeFragment"
         android:label="FisioCare"
         tools:layout="@layout/fragment_home" >
         <argument
@@ -59,7 +59,7 @@
     </fragment>
     <fragment
         android:id="@+id/citasFragment"
-        android:name="com.example.movildev.CitasFragment"
+        android:name="com.example.movildev.fragments.CitasFragment"
         android:label="Citas"
         tools:layout="@layout/fragment_citas">
         <argument
@@ -75,7 +75,7 @@
     </fragment>
     <fragment
         android:id="@+id/historiaFragment"
-        android:name="com.example.movildev.HistoriaFragment"
+        android:name="com.example.movildev.fragments.HistoriaFragment"
         android:label="Historia"
         tools:layout="@layout/fragment_historia">
         <argument
@@ -85,7 +85,7 @@
     </fragment>
     <fragment
         android:id="@+id/perfilFragment"
-        android:name="com.example.movildev.PerfilFragment"
+        android:name="com.example.movildev.fragments.PerfilFragment"
         android:label="Perfil"
         tools:layout="@layout/fragment_perfil">
         <argument

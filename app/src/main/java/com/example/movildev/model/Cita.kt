@@ -1,10 +1,11 @@
 package com.example.movildev.model
 
-data class Citas (
+data class Cita (
+    val id: String = "",
     val fecha: String = "",
     val hora: String = "",
     val tipo: String = "",
     val modalidad: String = "",
     val profesional: String = "",
-    val disponible: Boolean = true
+    var disponible: Boolean = true
 )
