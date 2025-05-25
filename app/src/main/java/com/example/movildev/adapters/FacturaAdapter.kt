@@ -8,13 +8,13 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.movildev.R
 import com.example.movildev.model.Factura
+import com.example.movildev.repositories.FacturaRepository
 
 class FacturaAdapter(
+    private var facturas: List<Factura>,
     private val onModificar: (Factura) -> Unit,
     private val onEliminar: (Factura) -> Unit
 ) : RecyclerView.Adapter<FacturaAdapter.FacturaViewHolder>() {
-
-    private var facturas: MutableList<Factura> = mutableListOf()
 
     inner class FacturaViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val nombrePaciente: TextView = view.findViewById(R.id.nombrePacienteText)
@@ -44,9 +44,8 @@ class FacturaAdapter(
 
     override fun getItemCount(): Int = facturas.size
 
-    fun updateData(nuevasFacturas: List<Factura>) {
-        facturas.clear()
-        facturas.addAll(nuevasFacturas)
+    fun updateData(newList: List<Factura>) {
+        facturas = newList
         notifyDataSetChanged()
     }
 }

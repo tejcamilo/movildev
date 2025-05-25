@@ -50,6 +50,7 @@
                     android:textSize="16sp" />
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/inputNombre"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/nombre_o_razon_social"
@@ -58,6 +59,7 @@
 
                 <!-- Documento -->
                 <TextView
+                    android:id="@+id/inputDocumento"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
@@ -74,6 +76,7 @@
 
                 <!-- Teléfono -->
                 <TextView
+                    android:id="@+id/inputTelefono"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
@@ -90,6 +93,7 @@
 
                 <!-- Correo -->
                 <TextView
+                    android:id="@+id/inputCorreo"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"

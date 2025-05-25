@@ -10,9 +10,10 @@ class ConsultarFacturasViewModel(
     private val repository: FacturaRepository
 ) : ViewModel() {
 
-    private val _facturas = MutableLiveData<List<Factura>>()
+
     val facturas: LiveData<List<Factura>> = repository.obtenerFacturas()
 
-
+    fun eliminarFactura(factura: Factura) {
+        repository.eliminarFactura(factura)
+    }
 }
-
