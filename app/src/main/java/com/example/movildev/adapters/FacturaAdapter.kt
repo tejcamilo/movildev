@@ -9,6 +9,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.movildev.R
 import com.example.movildev.model.Factura
 import com.example.movildev.repositories.FacturaRepository
+import java.text.NumberFormat
+import java.util.Locale
 
 class FacturaAdapter(
     private var facturas: List<Factura>,
@@ -33,9 +35,11 @@ class FacturaAdapter(
 
     override fun onBindViewHolder(holder: FacturaViewHolder, position: Int) {
         val factura = facturas[position]
+        val formatoPesos = NumberFormat.getCurrencyInstance(Locale("es", "CO"))
+        formatoPesos.maximumFractionDigits = 0
 
         holder.nombrePaciente.text = factura.paciente
-        holder.valorCita.text = "$${factura.valor}"
+        holder.valorCita.text = formatoPesos.format(factura.valor)
         holder.tratamiento.text = factura.tratamiento
         holder.fechaText.text = factura.fecha
         holder.horaText.text = factura.hora
