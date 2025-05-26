@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/telemedicinaFragment">
+    app:startDestination="@id/inicioFragment">
     <fragment
         android:id="@+id/telemedicinaFragment"
         android:name="com.example.movildev.fragments.TelemedicinaFragment"
@@ -56,6 +56,27 @@
             android:name="icon"
             app:argType="reference"
             android:defaultValue="@drawable/logo" />
+        <action
+            android:id="@+id/action_inicioFragment_to_telemedicinaFragment"
+            app:destination="@id/telemedicinaFragment" />
+        <action
+            android:id="@+id/action_inicioFragment_to_citasFragment"
+            app:destination="@id/citasFragment" />
+        <action
+            android:id="@+id/action_inicioFragment_to_historiaFragment"
+            app:destination="@id/historiaFragment" />
+        <action
+            android:id="@+id/action_inicioFragment_to_perfilFragment"
+            app:destination="@id/perfilFragment" />
+        <action
+            android:id="@+id/action_inicioFragment_to_usuariosFragment"
+            app:destination="@id/usuariosFragment" />
+        <action
+            android:id="@+id/action_inicioFragment_to_facturaFragment"
+            app:destination="@id/facturaFragment" />
+        <action
+            android:id="@+id/action_inicioFragment_to_tratamientoFragment"
+            app:destination="@id/tratamientoFragment" />
     </fragment>
     <fragment
         android:id="@+id/citasFragment"
@@ -92,6 +113,36 @@
             android:name="icon"
             app:argType="reference"
             android:defaultValue="@drawable/profile" />
+    </fragment>
+    <fragment
+        android:id="@+id/usuariosFragment"
+        android:name="com.example.movildev.fragments.UsuariosFragment"
+        android:label="Usuarios"
+        tools:layout="@layout/fragment_usuarios">
+        <argument
+            android:name="icon"
+            app:argType="reference"
+            android:defaultValue="@drawable/profile" />
+    </fragment>
+    <fragment
+        android:id="@+id/facturaFragment"
+        android:name="com.example.movildev.fragments.FacturaFragment"
+        android:label="Factura"
+        tools:layout="@layout/fragment_factura">
+        <argument
+            android:name="icon"
+            app:argType="reference"
+            android:defaultValue="@drawable/factura" />
+    </fragment>
+    <fragment
+        android:id="@+id/tratamientoFragment"
+        android:name="com.example.movildev.fragments.TratamientoFragment"
+        android:label="Tratamiento"
+        tools:layout="@layout/fragment_tratamiento">
+        <argument
+            android:name="icon"
+            app:argType="reference"
+            android:defaultValue="@drawable/modalidad" />
     </fragment>
 
 </navigation>
