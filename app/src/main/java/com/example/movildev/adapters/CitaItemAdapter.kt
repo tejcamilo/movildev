@@ -6,9 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.FrameLayout
-import android.widget.LinearLayout
 import android.widget.TextView
-import androidx.fragment.app.Fragment
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.example.movildev.model.Cita
 import com.example.movildev.R
@@ -59,12 +58,23 @@ class CitaItemAdapter : RecyclerView.Adapter<CitaItemAdapter.CitaItemViewHolder>
             params.topMargin = (topMarginDp * scale + 0.5f).toInt()
             accederBtn.layoutParams = params
              */
-
-
             accederBtn.visibility = View.GONE
+
+            val cancelarBtn = rootView.findViewById<Button>(R.id.cancelar_btn)
+            cancelarBtn.setOnClickListener {
+                androidx.appcompat.app.AlertDialog.Builder(rootView.context)
+                    .setTitle("Cancelar cita")
+                    .setMessage("¿Desea cancelar la cita?")
+                    .setPositiveButton("OK") { _, _ ->
+                        item.disponible = false
+                        Toast.makeText(rootView.context, item.disponible.toString(), Toast.LENGTH_SHORT).show()
+                    }
+                    .show()
+            }
 
 
 
         }
+
     }
 }

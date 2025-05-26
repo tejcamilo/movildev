@@ -6,7 +6,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.Observer
 import androidx.navigation.findNavController
 import com.example.movildev.R
 import com.example.movildev.adapters.CitaItemAdapter
@@ -26,20 +25,27 @@ class CitasFragment : Fragment() {
         val view = binding.root
 
         binding.irTelemedicina.setOnClickListener {
-            view.findNavController().navigate(R.id.action_citasFragment_to_telemedicinaFragment)
+            //view.findNavController().navigate(R.id.action_citasFragment_to_telemedicinaFragment)
+            androidx.appcompat.app.AlertDialog.Builder(requireContext())
+                .setTitle("Popup Title")
+                .setMessage("This is your popup message.")
+                .setPositiveButton("OK") { dialog, _ ->
+                    // Action after OK is clicked
+                    view.findNavController().navigate(R.id.action_citasFragment_to_telemedicinaFragment)
+                }
+                .show()
         }
 
         val adapter = CitaItemAdapter()
         binding.citaList.adapter = adapter
 
-        // PARA FILTRAR CITAS DE TELEMEDICINA
-        //var teleMedicinaCitas = viewModel.getTelemedicinaCitas()
+        // PARA FILTRAR CITAS AGENDADAS
+        var citasAgendadas = viewModel.getCitasAgendadas()
 
-        viewModel.citas.observe(viewLifecycleOwner) {
+        citasAgendadas.observe(viewLifecycleOwner) {
             citasList ->
                 adapter.data = citasList
         }
-
         return view
     }
 

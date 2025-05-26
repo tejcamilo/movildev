@@ -19,8 +19,12 @@ class TelemedicinaViewModel : ViewModel() {
         Log.i("TelemedicinaViewModel", "ViewModel created")
     }
 
+    fun getCitasAgendadas(): LiveData<List<Cita>> {
+        return MutableLiveData(_citas.value?.filter { !it.disponible } ?: emptyList())
+    }
+
     fun getTelemedicinaCitas(): LiveData<List<Cita>> {
-        return MutableLiveData(_citas.value?.filter { it.modalidad == "Telemedicina" } ?: emptyList())
+        return MutableLiveData(_citas.value?.filter { it.modalidad == "Telemedicina" && !it.disponible } ?: emptyList())
     }
 
     fun cancelar(cita: Cita) {
