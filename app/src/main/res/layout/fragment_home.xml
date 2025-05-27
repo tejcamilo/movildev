@@ -6,7 +6,7 @@
     android:rowCount="3"
     android:columnCount="2"
     android:padding="16dp"
-    android:background="@color/cardBackgroundColor"
+    android:background="@color/backgroundColor"
     android:alignmentMode="alignMargins"
     android:useDefaultMargins="true">
 

@@ -7,7 +7,6 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import com.example.movildev.R
-import com.example.movildev.databinding.FragmentCitasBinding
 import com.example.movildev.databinding.FragmentHomeBinding
 
 class HomeFragment : Fragment() {
@@ -24,7 +23,7 @@ class HomeFragment : Fragment() {
         }
 
         binding.navCitas.setOnClickListener {
-            view.findNavController().navigate(R.id.action_inicioFragment_to_citasFragment)
+            view.findNavController().navigate(R.id.action_inicioFragment_to_landCitasFragment)
         }
 
         binding.navFacturacion.setOnClickListener {

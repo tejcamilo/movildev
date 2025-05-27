@@ -6,7 +6,6 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.navigation.fragment.NavHostFragment
-import androidx.navigation.ui.setupWithNavController
 import com.example.movildev.databinding.ActivityMainBinding
 
 
@@ -38,7 +37,23 @@ class MainActivity : AppCompatActivity() {
         val navHostFragment = supportFragmentManager
             .findFragmentById(R.id.nav_host_fragment) as NavHostFragment
         val navController = navHostFragment.navController
-        binding.bottomNav.setupWithNavController(navController)
+
+        binding.bottomNav0.gotoInicio.setOnClickListener {
+            navController.navigate(R.id.inicioFragment)
+        }
+
+        binding.bottomNav0.gotoCitas.setOnClickListener {
+            navController.navigate(R.id.landCitasFragment)
+        }
+
+        binding.bottomNav0.gotoHistoria.setOnClickListener {
+            navController.navigate(R.id.historiaFragment)
+        }
+
+        binding.bottomNav0.gotoPerfil.setOnClickListener {
+            navController.navigate(R.id.perfilFragment)
+        }
+
 
         navController.addOnDestinationChangedListener { _, destination, arguments ->
             val iconResId = arguments?.getInt("icon") ?: R.drawable.placeholder_icon

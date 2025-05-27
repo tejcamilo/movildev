@@ -60,9 +60,6 @@
             android:id="@+id/action_inicioFragment_to_telemedicinaFragment"
             app:destination="@id/telemedicinaFragment" />
         <action
-            android:id="@+id/action_inicioFragment_to_citasFragment"
-            app:destination="@id/citasFragment" />
-        <action
             android:id="@+id/action_inicioFragment_to_historiaFragment"
             app:destination="@id/historiaFragment" />
         <action
@@ -77,6 +74,9 @@
         <action
             android:id="@+id/action_inicioFragment_to_tratamientoFragment"
             app:destination="@id/tratamientoFragment" />
+        <action
+            android:id="@+id/action_inicioFragment_to_landCitasFragment"
+            app:destination="@id/landCitasFragment" />
     </fragment>
     <fragment
         android:id="@+id/citasFragment"
@@ -143,6 +143,18 @@
             android:name="icon"
             app:argType="reference"
             android:defaultValue="@drawable/modalidad" />
+    </fragment>
+    <fragment
+        android:id="@+id/landCitasFragment"
+        android:name="com.example.movildev.fragments.LandCitasFragment"
+        android:label="Citas" >
+        <argument
+            android:name="icon"
+            app:argType="reference"
+            android:defaultValue="@drawable/calendar" />
+        <action
+            android:id="@+id/action_landCitasFragment_to_citasFragment"
+            app:destination="@id/citasFragment" />
     </fragment>
 
 </navigation>
