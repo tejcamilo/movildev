@@ -14,6 +14,7 @@ import com.example.movildev.repositories.FacturaRepository
 import com.example.movildev.repositories.FacturaRepositorySingleton
 import com.example.movildev.viewmodels.FacturaViewModel
 import com.example.movildev.viewmodels.FacturaViewModelFactory
+import java.text.NumberFormat
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -50,19 +51,31 @@ class CrearFacturaFragment : Fragment() {
             )
         )
 
-        val tratamientos = listOf("Terapia Física", "Rehabilitación", "Consulta")
-        tratamientoInput.setAdapter(
-            ArrayAdapter(
-                requireContext(),
-                android.R.layout.simple_dropdown_item_1line,
-                tratamientos
-            )
+        val tratamientosConValor = mapOf(
+            "Terapia Física" to 40000.0,
+            "Rehabilitación" to 55000.0,
+            "Consulta" to 30000.0
         )
+        val tratamientos = tratamientosConValor.keys.toList()
+        tratamientoInput.setAdapter(ArrayAdapter(requireContext(), android.R.layout.simple_dropdown_item_1line, tratamientos))
+
+        val formatoPesos = NumberFormat.getCurrencyInstance(Locale("es", "CO"))
+        formatoPesos.maximumFractionDigits = 0
+
+        tratamientoInput.setOnItemClickListener { _, _, position, _ ->
+            val tratamientoSeleccionado = tratamientoInput.adapter.getItem(position) as String
+            val valorTratamiento = tratamientosConValor[tratamientoSeleccionado] ?: 0.0
+            valorInput.setText("$ ${"%,.0f".format(valorTratamiento)}") // Muestra valor en pesos
+        }
+
         val args = arguments
         if (args != null) {
             nombreInput.setText(args.getString("paciente"))
             tratamientoInput.setText(args.getString("tratamiento"))
-            valorInput.setText(args.getDouble("valor", 0.0).toString())
+
+            val valor = args.getDouble("valor", 0.0)
+            valorInput.setText(formatoPesos.format(valor))
+
             documentoInput.setText(args.getString("documento"))
             telefonoInput.setText(args.getString("telefono"))
         }
@@ -73,7 +86,14 @@ class CrearFacturaFragment : Fragment() {
             val documento = documentoInput.text.toString()
             val telefono = telefonoInput.text.toString()
             val tratamiento = tratamientoInput.text.toString()
-            val valor = valorInput.text.toString().toDoubleOrNull() ?: 0.0
+            val valor = valorInput.text.toString()
+                .replace(Regex("[^\\d]"), "")
+                .replace(Regex("[^\\d]"), "")
+                .replace(Regex("[^\\d]"), "")
+
+            .trim()
+                .toDoubleOrNull() ?: 0.0
+
             val esElectronica = feInput.text.toString()
 
             if (paciente.isNotBlank() && tratamiento.isNotBlank() && valor > 0) {
@@ -98,6 +118,8 @@ class CrearFacturaFragment : Fragment() {
                     if (success) {
                         Toast.makeText(context, "Guardado exitosamente ✅", Toast.LENGTH_SHORT)
                             .show()
+
+                        viewModel.seleccionarFactura(factura)
 
                         if (esElectronica == "Sí") {
                             view.findNavController()

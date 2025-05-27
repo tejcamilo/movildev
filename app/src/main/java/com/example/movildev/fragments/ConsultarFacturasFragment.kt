@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.widget.SearchView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -72,6 +73,19 @@ class ConsultarFacturasFragment : Fragment() {
         fabAgregar.setOnClickListener {
             view.findNavController().navigate(R.id.action_consultarFacturasFragment_to_crearFacturaFragment)
         }
+        val searchView = view.findViewById<SearchView>(R.id.searchView)
+        searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+            override fun onQueryTextSubmit(query: String?): Boolean {
+                query?.let { adapter.filtrarPorNombre(it) }
+                return true
+            }
+
+            override fun onQueryTextChange(newText: String?): Boolean {
+                adapter.filtrarPorNombre(newText ?: "")
+                return true
+            }
+        })
+
 
         return view
     }

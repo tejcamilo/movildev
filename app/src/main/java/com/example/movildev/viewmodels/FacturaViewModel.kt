@@ -8,14 +8,10 @@ import com.example.movildev.repositories.FacturaRepository
 
 class FacturaViewModel(private val repository: FacturaRepository) : ViewModel() {
 
-    val facturaSeleccionada = MutableLiveData<Factura>()
-
-    fun seleccionarFactura(factura: Factura) {
-        facturaSeleccionada.value = factura
-    }
-
-
     val facturas: LiveData<List<Factura>> = repository.obtenerFacturas()
+
+    private val _facturaSeleccionada = MutableLiveData<Factura?>()
+    val facturaSeleccionada: LiveData<Factura?> get() = _facturaSeleccionada
 
     fun guardarFactura(factura: Factura, callback: (Boolean) -> Unit) {
         repository.guardarFactura(factura, callback)
@@ -24,5 +20,8 @@ class FacturaViewModel(private val repository: FacturaRepository) : ViewModel() 
     fun eliminarFactura(factura: Factura) {
         repository.eliminarFactura(factura)
     }
-}
 
+    fun seleccionarFactura(factura: Factura) {
+        _facturaSeleccionada.value = factura
+    }
+}
