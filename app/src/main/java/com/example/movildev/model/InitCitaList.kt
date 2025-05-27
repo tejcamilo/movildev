@@ -25,6 +25,15 @@ class InitCitaList {
                 ),
                 Cita(
                     id = UUID.randomUUID().toString(),
+                    fecha = "2025-08-05",
+                    hora = "03:30 PM",
+                    tipo = "Control",
+                    modalidad = "Telemedicina",
+                    profesional = "Cathalina Cañon",
+                    disponible = false
+                ),
+                Cita(
+                    id = UUID.randomUUID().toString(),
                     fecha = "2025-07-05",
                     hora = "09:00 AM",
                     tipo = "Consulta",

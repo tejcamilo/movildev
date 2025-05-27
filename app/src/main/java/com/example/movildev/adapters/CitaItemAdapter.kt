@@ -1,6 +1,7 @@
 package com.example.movildev.adapters
 
 import android.annotation.SuppressLint
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -50,6 +51,8 @@ class CitaItemAdapter : RecyclerView.Adapter<CitaItemAdapter.CitaItemViewHolder>
             profesionalCita.text = item.profesional
             modalidadCita.text = item.modalidad
 
+            Log.i("CitaLogger", "init: $item")
+
             val accederBtn = rootView.findViewById<Button>(R.id.acceder_btn)
             /*
             val params = accederBtn.layoutParams as FrameLayout.LayoutParams
@@ -66,8 +69,8 @@ class CitaItemAdapter : RecyclerView.Adapter<CitaItemAdapter.CitaItemViewHolder>
                     .setTitle("Cancelar cita")
                     .setMessage("¿Desea cancelar la cita?")
                     .setPositiveButton("OK") { _, _ ->
-                        item.disponible = false
-                        Toast.makeText(rootView.context, item.disponible.toString(), Toast.LENGTH_SHORT).show()
+                        item.disponible = true
+                        Log.i("CitaLogger", "cancelar: $item")
                     }
                     .show()
             }

@@ -16,12 +16,12 @@
         android:layout_gravity="top"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
 
-    <Button
-        android:id="@+id/ir_telemedicina"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Telemedicina"
-        android:layout_gravity="center" />
+<!--    <Button-->
+<!--        android:id="@+id/ir_telemedicina"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Telemedicina"-->
+<!--        android:layout_gravity="center" />-->
 
 
 </LinearLayout>

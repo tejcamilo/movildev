@@ -24,17 +24,17 @@ class CitasFragment : Fragment() {
         _binding = FragmentCitasBinding.inflate(inflater, container, false)
         val view = binding.root
 
-        binding.irTelemedicina.setOnClickListener {
-            //view.findNavController().navigate(R.id.action_citasFragment_to_telemedicinaFragment)
-            androidx.appcompat.app.AlertDialog.Builder(requireContext())
-                .setTitle("Popup Title")
-                .setMessage("This is your popup message.")
-                .setPositiveButton("OK") { dialog, _ ->
-                    // Action after OK is clicked
-                    view.findNavController().navigate(R.id.action_citasFragment_to_telemedicinaFragment)
-                }
-                .show()
-        }
+//        binding.irTelemedicina.setOnClickListener {
+//            //view.findNavController().navigate(R.id.action_citasFragment_to_telemedicinaFragment)
+//            androidx.appcompat.app.AlertDialog.Builder(requireContext())
+//                .setTitle("Popup Title")
+//                .setMessage("This is your popup message.")
+//                .setPositiveButton("OK") { dialog, _ ->
+//                    // Action after OK is clicked
+//                    view.findNavController().navigate(R.id.action_citasFragment_to_telemedicinaFragment)
+//                }
+//                .show()
+//        }
 
         val adapter = CitaItemAdapter()
         binding.citaList.adapter = adapter

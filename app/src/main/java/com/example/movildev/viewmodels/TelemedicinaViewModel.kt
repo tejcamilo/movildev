@@ -20,11 +20,19 @@ class TelemedicinaViewModel : ViewModel() {
     }
 
     fun getCitasAgendadas(): LiveData<List<Cita>> {
-        return MutableLiveData(_citas.value?.filter { !it.disponible } ?: emptyList())
+        val sortedList = _citas.value
+            ?.filter { !it.disponible }
+            ?.sortedBy { it.fecha }
+            ?: emptyList()
+        return MutableLiveData(sortedList)
     }
 
     fun getTelemedicinaCitas(): LiveData<List<Cita>> {
-        return MutableLiveData(_citas.value?.filter { it.modalidad == "Telemedicina" && !it.disponible } ?: emptyList())
+        val sortedList = _citas.value
+            ?.filter { it.modalidad == "Telemedicina" && !it.disponible }
+            ?.sortedBy { it.fecha }
+            ?: emptyList()
+        return MutableLiveData(sortedList)
     }
 
     fun cancelar(cita: Cita) {
