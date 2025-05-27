@@ -1,6 +1,7 @@
 package com.example.movildev.adapters
 
 import android.annotation.SuppressLint
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -8,13 +9,13 @@ import android.widget.Button
 import android.widget.FrameLayout
 import android.widget.LinearLayout
 import android.widget.TextView
-import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
 import com.example.movildev.model.Cita
 import com.example.movildev.R
 
 class TelemedicinaItemAdapter(
-    private val onAccederClick: (Cita) -> Unit)
+    private val onAccederClick: (Cita) -> Unit,
+    private val onCancelarClick: (Cita) -> Unit)
         : RecyclerView.Adapter<TelemedicinaItemAdapter.TelemedicinaItemViewHolder>() {
     var data = listOf<Cita>()
         @SuppressLint("NotifyDataSetChanged")
@@ -29,7 +30,7 @@ class TelemedicinaItemAdapter(
 
     override fun onBindViewHolder(holder: TelemedicinaItemViewHolder, position: Int) {
         val item = data[position]
-        holder.bind(item, onAccederClick)
+        holder.bind(item, onAccederClick, onCancelarClick)
     }
 
     class TelemedicinaItemViewHolder(val rootView : FrameLayout) : RecyclerView.ViewHolder(rootView) {
@@ -46,10 +47,12 @@ class TelemedicinaItemAdapter(
                 return TelemedicinaItemViewHolder(view)
             }
         }
-        fun bind(item: Cita, onAccederClick: (Cita) -> Unit) {
+        fun bind(item: Cita, onAccederClick: (Cita) -> Unit, onCancelarClick: (Cita) -> Unit) {
             fechaCita.text = "${item.fecha} - ${item.hora}"
             tipoCita.text = item.tipo
             profesionalCita.text = item.profesional
+
+            Log.i("TelemedicinaLogger", "init: $item")
 
             rootView.findViewById<LinearLayout>(R.id.modalidad)
                 .visibility = View.GONE
@@ -68,7 +71,15 @@ class TelemedicinaItemAdapter(
             accederBtn.setOnClickListener{
                 onAccederClick(item)
             }
-
+            rootView.findViewById<Button>(R.id.cancelar_btn).setOnClickListener {
+                androidx.appcompat.app.AlertDialog.Builder(rootView.context)
+                    .setTitle("Cancelar cita")
+                    .setMessage("¿Desea cancelar la cita?")
+                    .setPositiveButton("OK") { _, _ ->
+                        onCancelarClick(item.copy(disponible = true))
+                    }
+                    .show()
+            }
         }
     }
 }

@@ -1,13 +1,12 @@
 package com.example.movildev.fragments
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import androidx.navigation.findNavController
-import com.example.movildev.R
 import com.example.movildev.adapters.CitaItemAdapter
 import com.example.movildev.databinding.FragmentCitasBinding
 import com.example.movildev.viewmodels.TelemedicinaViewModel
@@ -36,15 +35,17 @@ class CitasFragment : Fragment() {
 //                .show()
 //        }
 
-        val adapter = CitaItemAdapter()
+        // CitasFragment.kt
+        val adapter = CitaItemAdapter { cita ->
+            viewModel.cancelar(cita)
+            Log.i("CitaLogger", "cancelar: ${cita}")
+        }
         binding.citaList.adapter = adapter
 
         // PARA FILTRAR CITAS AGENDADAS
-        var citasAgendadas = viewModel.getCitasAgendadas()
-
-        citasAgendadas.observe(viewLifecycleOwner) {
-            citasList ->
-                adapter.data = citasList
+        viewModel.citas.observe(viewLifecycleOwner) { allCitas ->
+            val citasAgendadas = allCitas.filter { !it.disponible }.sortedBy { it.fecha }
+            adapter.data = citasAgendadas
         }
         return view
     }

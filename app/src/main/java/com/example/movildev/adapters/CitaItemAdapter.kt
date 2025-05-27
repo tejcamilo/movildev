@@ -8,18 +8,20 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.FrameLayout
 import android.widget.TextView
-import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.example.movildev.model.Cita
 import com.example.movildev.R
 
-class CitaItemAdapter : RecyclerView.Adapter<CitaItemAdapter.CitaItemViewHolder>() {
+class CitaItemAdapter(
+    private val onCancelarClick: (Cita) -> Unit)
+    : RecyclerView.Adapter<CitaItemAdapter.CitaItemViewHolder>() {
     var data = listOf<Cita>()
         @SuppressLint("NotifyDataSetChanged")
         set(value) {
             field = value
             notifyDataSetChanged()
         }
+
     override fun getItemCount() = data.size
 
     override fun onCreateViewHolder(parent : ViewGroup, viewType: Int)
@@ -27,7 +29,7 @@ class CitaItemAdapter : RecyclerView.Adapter<CitaItemAdapter.CitaItemViewHolder>
 
     override fun onBindViewHolder(holder: CitaItemViewHolder, position: Int) {
         val item = data[position]
-        holder.bind(item)
+        holder.bind(item, onCancelarClick)
     }
 
     class CitaItemViewHolder(val rootView : FrameLayout) : RecyclerView.ViewHolder(rootView) {
@@ -45,7 +47,7 @@ class CitaItemAdapter : RecyclerView.Adapter<CitaItemAdapter.CitaItemViewHolder>
                 return CitaItemViewHolder(view)
             }
         }
-        fun bind(item: Cita) {
+        fun bind(item: Cita, onCancelarClick: (Cita) -> Unit) {
             fechaCita.text = "${item.fecha} - ${item.hora}"
             tipoCita.text = item.tipo
             profesionalCita.text = item.profesional
@@ -69,15 +71,10 @@ class CitaItemAdapter : RecyclerView.Adapter<CitaItemAdapter.CitaItemViewHolder>
                     .setTitle("Cancelar cita")
                     .setMessage("¿Desea cancelar la cita?")
                     .setPositiveButton("OK") { _, _ ->
-                        item.disponible = true
-                        Log.i("CitaLogger", "cancelar: $item")
+                        onCancelarClick(item.copy(disponible = true))
                     }
                     .show()
             }
-
-
-
         }
-
     }
 }
