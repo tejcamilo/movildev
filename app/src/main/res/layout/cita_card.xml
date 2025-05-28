@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="12dp">
+    <Button
+        android:id="@+id/btnFactura"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="Factura"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        android:background="@drawable/acceder_btn"
+        android:layout_gravity="bottom|center"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="210dp"
+        android:translationZ="0dp"
+        android:elevation="2dp"
+        android:layout_marginBottom="0dp"/>
+
+    <LinearLayout
+        android:id="@+id/factura_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginHorizontal="20dp"
+        android:gravity="center"
+        android:background="@drawable/rounded_background"
+        >
+        <!-- COL1 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:paddingHorizontal="5dp"
+            >
+            <!-- Fecha -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingVertical="5dp">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/calendar" />
+
+                <TextView
+                    android:id="@+id/fechaText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2024-05-14"
+                    android:layout_marginStart="8dp"
+                    android:textColor="#2D3748" />
+            </LinearLayout>
+
+            <!-- Hora -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingVertical="5dp">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/clock" />
+
+                <TextView
+                    android:id="@+id/horaText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="10:45"
+                    android:layout_marginStart="8dp"
+                    android:textColor="#2D3748" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/tipo_cita"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingVertical="5dp">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/tipo_cita" />
+
+                <TextView
+                    android:id="@+id/tratamientoText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tratamiento"
+                    android:layout_marginStart="8dp"
+                    android:textColor="#2D3748" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/payment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingVertical="5dp">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_pay" />
+
+                <TextView
+                    android:id="@+id/modalidadText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Modalidad"
+                    android:layout_marginStart="8dp"
+                    android:textColor="#2D3748" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/paciente"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingVertical="5dp">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_user" />
+
+                <TextView
+                    android:id="@+id/nombrePacienteCitaText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nombre Paciente 1"
+                    android:layout_marginStart="8dp"
+                    android:textColor="#2D3748" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- COL2 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:paddingHorizontal="5dp"
+
+            >
+            <Button
+                android:id="@+id/btnReagendar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Reagendar"
+                android:backgroundTint="#417EF2"
+                android:textColor="#FFFFFF"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/btnCancelar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cancelar"
+                android:backgroundTint="#C74040"
+                android:textColor="#FFFFFF"
+                android:textSize="12sp" />
+
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</FrameLayout>

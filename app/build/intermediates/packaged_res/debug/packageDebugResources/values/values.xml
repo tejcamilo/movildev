@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="backgroundColor">#E9EEF3</color>
+    <color name="black">#FF000000</color>
+    <color name="botonAzul">#407CE2</color>
+    <color name="botonRojo">#D43E32</color>
+    <color name="bottom_nav_background">#D4E5F1</color>
+    <color name="bottom_nav_icon_color">#395176</color>
+    <color name="bottom_nav_text_color">#395176</color>
+    <color name="cardBackgroundColor">#D4E5F1</color>
+    <color name="colorFuente">#395176</color>
+    <color name="white">#FFFFFFFF</color>
+    <string name="acceder">Acceder</string>
+    <string name="app_name">FisioCare</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="correo_electr_nico">Correo Electrónico</string>
+    <string name="factura_electr_nica">Factura Electrónica</string>
+    <string name="gcm_defaultSenderId" translatable="false">219867518699</string>
+    <string name="google_api_key" translatable="false">AIzaSyC0H0_SF2ZVhLJqn-9DPFCwksZyA0tLTFc</string>
+    <string name="google_app_id" translatable="false">1:219867518699:android:6f6e95e2f0019f8e6d10ae</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyC0H0_SF2ZVhLJqn-9DPFCwksZyA0tLTFc</string>
+    <string name="google_storage_bucket" translatable="false">facturas-a8c01.firebasestorage.app</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="n_mero_de_documento">Número de Documento</string>
+    <string name="n_mero_de_documento_o_nit">Número de Documento o NIT</string>
+    <string name="n_mero_de_tel_fono">Número de Teléfono</string>
+    <string name="nombre_completo">Nombre Completo</string>
+    <string name="nombre_o_razon_social">Nombre o Razón Social</string>
+    <string name="project_id" translatable="false">facturas-a8c01</string>
+    <string name="reprogramar">Reprogramar</string>
+    <string name="seleccione">Seleccione</string>
+    <string name="telemedicina_header">Telemedicina</string>
+    <string name="tratamiento">Tratamiento</string>
+    <string name="valor_de_la_cita">Valor</string>
+    <style name="Base.Theme.Movildev" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">#395176</item>
+        <item name="colorOnPrimary">#FFFFFF</item> 
+
+    </style>
+    <style name="BottomNavigationView" parent="Widget.Material3.BottomNavigationView">
+        <item name="itemIconTint">@color/bottom_nav_icon_color</item>
+        <item name="itemTextColor">@color/bottom_nav_text_color</item>
+        <item name="backgroundTint">@color/bottom_nav_background</item>
+        <item name="itemActiveIndicatorStyle">@android:color/transparent</item>
+    </style>
+    <style name="FisioCare" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">#395176</item> 
+        <item name="colorOnPrimary">#FFFFFF</item> 
+
+
+    </style>
+    <style name="Theme.Movildev" parent="Base.Theme.Movildev"/>
+</resources>

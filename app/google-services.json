@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "219867518699",
+    "project_id": "facturas-a8c01",
+    "storage_bucket": "facturas-a8c01.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:219867518699:android:6f6e95e2f0019f8e6d10ae",
+        "android_client_info": {
+          "package_name": "com.example.movildev"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC0H0_SF2ZVhLJqn-9DPFCwksZyA0tLTFc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

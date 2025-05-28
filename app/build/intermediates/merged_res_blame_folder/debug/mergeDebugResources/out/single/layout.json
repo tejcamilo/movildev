@@ -1,0 +1,90 @@
+[
+    {
+        "merged": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-mergeDebugResources-50:\\layout\\activity_main.xml",
+        "source": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-main-53:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-mergeDebugResources-50:\\layout\\fragment_agendarcitas.xml",
+        "source": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-main-53:\\layout\\fragment_agendarcitas.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-mergeDebugResources-50:\\layout\\fragment_llamada.xml",
+        "source": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-main-53:\\layout\\fragment_llamada.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-mergeDebugResources-50:\\layout\\fragment_land_citas.xml",
+        "source": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-main-53:\\layout\\fragment_land_citas.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-mergeDebugResources-50:\\layout\\fragment_usuarios.xml",
+        "source": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-main-53:\\layout\\fragment_usuarios.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-mergeDebugResources-50:\\layout\\fragment_home.xml",
+        "source": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-main-53:\\layout\\fragment_home.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-mergeDebugResources-50:\\layout\\cita_item.xml",
+        "source": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-main-53:\\layout\\cita_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-mergeDebugResources-50:\\layout\\factura_tm.xml",
+        "source": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-main-53:\\layout\\factura_tm.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-mergeDebugResources-50:\\layout\\fragment_historia.xml",
+        "source": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-main-53:\\layout\\fragment_historia.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-mergeDebugResources-50:\\layout\\popup1.xml",
+        "source": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-main-53:\\layout\\popup1.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-mergeDebugResources-50:\\layout\\fragment_tratamiento.xml",
+        "source": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-main-53:\\layout\\fragment_tratamiento.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-mergeDebugResources-50:\\layout\\fragment_consultar_factura.xml",
+        "source": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-main-53:\\layout\\fragment_consultar_factura.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-mergeDebugResources-50:\\layout\\fragment_sala.xml",
+        "source": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-main-53:\\layout\\fragment_sala.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-mergeDebugResources-50:\\layout\\cita_card.xml",
+        "source": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-main-53:\\layout\\cita_card.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-mergeDebugResources-50:\\layout\\fragment_add_citas.xml",
+        "source": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-main-53:\\layout\\fragment_add_citas.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-mergeDebugResources-50:\\layout\\bottom_nav.xml",
+        "source": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-main-53:\\layout\\bottom_nav.xml"
+    },
+    {
+        "merged": "com.example.movildev.app-mergeDebugResources-50:/layout/cita_card.xml",
+        "source": "com.example.movildev.app-main-53:/layout/cita_card.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-mergeDebugResources-50:\\layout\\fragment_crear_factura.xml",
+        "source": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-main-53:\\layout\\fragment_crear_factura.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-mergeDebugResources-50:\\layout\\fragment_telemedicina.xml",
+        "source": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-main-53:\\layout\\fragment_telemedicina.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-mergeDebugResources-50:\\layout\\fragment_citas.xml",
+        "source": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-main-53:\\layout\\fragment_citas.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-mergeDebugResources-50:\\layout\\fragment_factura_electronica.xml",
+        "source": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-main-53:\\layout\\fragment_factura_electronica.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-mergeDebugResources-50:\\layout\\fragment_perfil.xml",
+        "source": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-main-53:\\layout\\fragment_perfil.xml"
+    }
+]
