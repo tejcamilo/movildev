@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <!-- MAIN CONTENT -->
+    <LinearLayout
+        android:id="@+id/sala_body"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#E9EEF3">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/sala_background"
+            android:layout_margin="30dp"
+            android:padding="20dp"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sala de espera"
+                    android:textSize="25sp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="3"
+                        android:gravity="center"
+                        android:layout_marginVertical="20dp"
+
+                        >
+                        <LinearLayout
+                            android:id="@+id/fecha_cita"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:paddingVertical="5dp">
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@drawable/calendar"
+                                />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="25/04/25 - 09:45 AM"
+                                android:layout_marginStart="8dp"
+                                android:textColor="#2D3748" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:id="@+id/tipo_cita"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingVertical="5dp">
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@drawable/tipo_cita" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Valoración"
+                                android:layout_marginStart="8dp"
+                                android:textColor="#2D3748" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:id="@+id/profesional"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingVertical="5dp">
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@drawable/profesional" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Cathalina Cañon"
+                                android:layout_marginStart="8dp"
+                                android:textColor="#2D3748" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:src="@drawable/clock"
+                            android:layout_weight="2"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="09:41 AM" />
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_marginTop="10dp">
+                    <ImageButton
+                        android:id="@+id/ingresar_llamada_btn"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:src="@drawable/profile"
+                        android:layout_marginBottom="30dp"
+                        android:scaleType="centerCrop"
+                        android:background="@android:color/transparent"
+                        />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:weightSum="3">
+
+                        <!-- Mute Mic Button -->
+                        <ImageButton
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:background="@drawable/blue_circle"
+                            android:src="@drawable/mute"
+                            android:contentDescription="Mute"
+                            android:scaleType="centerInside"
+                            android:layout_marginHorizontal="8dp"
+                            app:tint="#FFFFFF" />
+
+                        <!-- Hang Up Button -->
+                        <ImageButton
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:background="@drawable/red_circle"
+                            android:src="@drawable/hangup"
+                            android:contentDescription="Hang Up"
+                            android:scaleType="centerInside"
+                            app:tint="#FFFFFF"
+                            android:layout_marginHorizontal="8dp" />
+
+                        <!-- Mute Speaker Button -->
+                        <ImageButton
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:background="@drawable/blue_circle"
+                            android:src="@drawable/video_off"
+                            android:contentDescription="Mute Speaker"
+                            android:scaleType="centerInside"
+                            app:tint="#FFFFFF"
+                            android:layout_marginHorizontal="8dp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
