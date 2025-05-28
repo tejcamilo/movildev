@@ -49,7 +49,7 @@ class CitaItemAdapter(
         }
         fun bind(item: Cita, onCancelarClick: (Cita) -> Unit) {
             fechaCita.text = "${item.fecha} - ${item.hora}"
-            tipoCita.text = item.tipo
+            tipoCita.text = item.tratamiento
             profesionalCita.text = item.profesional
             modalidadCita.text = item.modalidad
 

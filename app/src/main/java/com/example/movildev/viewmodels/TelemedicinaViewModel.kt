@@ -5,9 +5,12 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.movildev.model.Cita
+import com.example.movildev.repositories.CitaRepository
 
 class TelemedicinaViewModel : ViewModel() {
-    private val _citas = MutableLiveData(InitCitaList.init())
+
+    private lateinit var viewModel : CitaViewModel
+    private var _citas = viewModel.citas
     val citas: LiveData<List<Cita>> get() = _citas
 
     // propiedades a ser inicializadas cuando se crea el objeto desde ViewModelProvider
@@ -36,11 +39,7 @@ class TelemedicinaViewModel : ViewModel() {
     }
 
     fun cancelar(cita: Cita) {
-        val currentList = _citas.value ?: return
-        val newList = currentList.map { cita0 ->
-            if (cita0.id == cita.id) cita else cita0
-        }
-        _citas.value = newList
+        viewModel.cancelarCita(cita)
     }
 
     fun doSomething(){

@@ -42,7 +42,7 @@ class AgendarCitasFragment : Fragment() {
 
         // Set adapters
         val opcionesHora = listOf("8:00 AM", "9:00 AM", "10:00 AM")
-        val opcionesModalidad = listOf("Presencial", "Virtual")
+        val opcionesModalidad = listOf("Presencial", "Telemedicina")
         val opcionesTratamientos = listOf("Terapia Física", "Rehabilitación", "Consulta")
 
         horaInput.setAdapter(ArrayAdapter(requireContext(), android.R.layout.simple_dropdown_item_1line, opcionesHora))
@@ -70,7 +70,7 @@ class AgendarCitasFragment : Fragment() {
             val tratamiento = tratamientoInput.text.toString()
 
             if (paciente.isNotBlank() && tratamiento.isNotBlank() && fecha.isNotBlank() && hora.isNotBlank()) {
-                val id = System.currentTimeMillis().toString()
+                val id = UUID.randomUUID().toString()
 
                 val cita = Cita(
                     id = id,
@@ -108,8 +108,6 @@ class AgendarCitasFragment : Fragment() {
         tratamientoInput.setOnClickListener {
             tratamientoInput.showDropDown()
         }
-
-
         return view
     }
 
@@ -120,7 +118,7 @@ class AgendarCitasFragment : Fragment() {
         val dia = calendario.get(Calendar.DAY_OF_MONTH)
 
         val datePickerDialog = DatePickerDialog(requireContext(), { _, añoSel, mesSel, diaSel ->
-            val fechaFormateada = String.format("%02d/%02d/%02d", diaSel, mesSel + 1, añoSel % 100)
+            val fechaFormateada = String.format("%04d-%02d-%02d", añoSel, mesSel + 1, diaSel)
             fechaInput.setText(fechaFormateada)
         }, año, mes, dia)
 

@@ -1,139 +1,131 @@
 [
     {
-        "merged": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-debug-51:\\mipmap-hdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-main-53:\\mipmap-hdpi\\ic_launcher_round.webp"
+        "merged": "com.example.movildev.app-debug-51:/drawable-mdpi_search.xml.flat",
+        "source": "com.example.movildev.app-main-53:/drawable-mdpi/search.xml"
     },
     {
-        "merged": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-debug-51:\\layout_fragment_consultar_factura.xml.flat",
-        "source": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-main-53:\\layout\\fragment_consultar_factura.xml"
-    },
-    {
-        "merged": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-debug-51:\\layout_bottom_nav.xml.flat",
-        "source": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-main-53:\\layout\\bottom_nav.xml"
-    },
-    {
-        "merged": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-debug-51:\\layout_fragment_add_citas.xml.flat",
-        "source": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-main-53:\\layout\\fragment_add_citas.xml"
-    },
-    {
-        "merged": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-debug-51:\\mipmap-hdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-main-53:\\mipmap-hdpi\\ic_launcher.webp"
+        "merged": "com.example.movildev.app-debug-51:/drawable-mdpi_attach.xml.flat",
+        "source": "com.example.movildev.app-main-53:/drawable-mdpi/attach.xml"
     },
     {
         "merged": "com.example.movildev.app-debug-51:/mipmap-hdpi_ic_launcher.webp.flat",
         "source": "com.example.movildev.app-main-53:/mipmap-hdpi/ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-debug-51:\\layout_fragment_llamada.xml.flat",
-        "source": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-main-53:\\layout\\fragment_llamada.xml"
+        "merged": "com.example.movildev.app-debug-51:/drawable_ic_user_profile.xml.flat",
+        "source": "com.example.movildev.app-main-53:/drawable/ic_user_profile.xml"
     },
     {
-        "merged": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-debug-51:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-main-53:\\mipmap-xhdpi\\ic_launcher_round.webp"
+        "merged": "com.example.movildev.app-debug-51:/drawable-mdpi_placeholder_icon.xml.flat",
+        "source": "com.example.movildev.app-main-53:/drawable-mdpi/placeholder_icon.xml"
+    },
+    {
+        "merged": "com.example.movildev.app-debug-51:/drawable-mdpi_video_off.xml.flat",
+        "source": "com.example.movildev.app-main-53:/drawable-mdpi/video_off.xml"
+    },
+    {
+        "merged": "com.example.movildev.app-debug-51:/drawable-mdpi_profile.xml.flat",
+        "source": "com.example.movildev.app-main-53:/drawable-mdpi/profile.xml"
+    },
+    {
+        "merged": "com.example.movildev.app-debug-51:/layout_fragment_consultar_factura.xml.flat",
+        "source": "com.example.movildev.app-main-53:/layout/fragment_consultar_factura.xml"
     },
     {
         "merged": "com.example.movildev.app-debug-51:/mipmap-xhdpi_ic_launcher.webp.flat",
         "source": "com.example.movildev.app-main-53:/mipmap-xhdpi/ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-debug-51:\\layout_fragment_perfil.xml.flat",
-        "source": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-main-53:\\layout\\fragment_perfil.xml"
+        "merged": "com.example.movildev.app-debug-51:/layout_cita_item.xml.flat",
+        "source": "com.example.movildev.app-main-53:/layout/cita_item.xml"
     },
     {
-        "merged": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-debug-51:\\drawable-mdpi_calendar.xml.flat",
-        "source": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-main-53:\\drawable-mdpi\\calendar.xml"
+        "merged": "com.example.movildev.app-debug-51:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.example.movildev.app-main-53:/mipmap-anydpi-v26/ic_launcher.xml"
     },
     {
-        "merged": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-debug-51:\\drawable_sala_background.xml.flat",
-        "source": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-main-53:\\drawable\\sala_background.xml"
+        "merged": "com.example.movildev.app-debug-51:/drawable-mdpi_telemedicina.xml.flat",
+        "source": "com.example.movildev.app-main-53:/drawable-mdpi/telemedicina.xml"
     },
     {
-        "merged": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-debug-51:\\drawable_rounded_fragment2.xml.flat",
-        "source": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-main-53:\\drawable\\rounded_fragment2.xml"
+        "merged": "com.example.movildev.app-debug-51:/drawable_ic_launcher_background.xml.flat",
+        "source": "com.example.movildev.app-main-53:/drawable/ic_launcher_background.xml"
     },
     {
-        "merged": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-debug-51:\\layout_cita_item.xml.flat",
-        "source": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-main-53:\\layout\\cita_item.xml"
+        "merged": "com.example.movildev.app-debug-51:/drawable_tile_background.xml.flat",
+        "source": "com.example.movildev.app-main-53:/drawable/tile_background.xml"
     },
     {
-        "merged": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-debug-51:\\drawable_blue_circle.xml.flat",
-        "source": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-main-53:\\drawable\\blue_circle.xml"
+        "merged": "com.example.movildev.app-debug-51:/drawable_sala_background.xml.flat",
+        "source": "com.example.movildev.app-main-53:/drawable/sala_background.xml"
     },
     {
-        "merged": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-debug-51:\\xml_data_extraction_rules.xml.flat",
-        "source": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-main-53:\\xml\\data_extraction_rules.xml"
+        "merged": "com.example.movildev.app-debug-51:/drawable_ic_dropdown.xml.flat",
+        "source": "com.example.movildev.app-main-53:/drawable/ic_dropdown.xml"
     },
     {
-        "merged": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-debug-51:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-main-53:\\mipmap-xxxhdpi\\ic_launcher.webp"
+        "merged": "com.example.movildev.app-debug-51:/layout_bottom_nav.xml.flat",
+        "source": "com.example.movildev.app-main-53:/layout/bottom_nav.xml"
     },
     {
-        "merged": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-debug-51:\\layout_factura_tm.xml.flat",
-        "source": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-main-53:\\layout\\factura_tm.xml"
+        "merged": "com.example.movildev.app-debug-51:/layout_factura_tm.xml.flat",
+        "source": "com.example.movildev.app-main-53:/layout/factura_tm.xml"
     },
     {
-        "merged": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-debug-51:\\mipmap-xhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-main-53:\\mipmap-xhdpi\\ic_launcher.webp"
+        "merged": "com.example.movildev.app-debug-51:/drawable_acceder_btn.xml.flat",
+        "source": "com.example.movildev.app-main-53:/drawable/acceder_btn.xml"
     },
     {
-        "merged": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-debug-51:\\layout_fragment_citas.xml.flat",
-        "source": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-main-53:\\layout\\fragment_citas.xml"
+        "merged": "com.example.movildev.app-debug-51:/drawable-mdpi_clock.xml.flat",
+        "source": "com.example.movildev.app-main-53:/drawable-mdpi/clock.xml"
     },
     {
-        "merged": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-debug-51:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-main-53:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+        "merged": "com.example.movildev.app-debug-51:/xml_data_extraction_rules.xml.flat",
+        "source": "com.example.movildev.app-main-53:/xml/data_extraction_rules.xml"
     },
     {
-        "merged": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-debug-51:\\drawable-mdpi_placeholder_icon.xml.flat",
-        "source": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-main-53:\\drawable-mdpi\\placeholder_icon.xml"
+        "merged": "com.example.movildev.app-debug-51:/drawable-mdpi_logo.xml.flat",
+        "source": "com.example.movildev.app-main-53:/drawable-mdpi/logo.xml"
     },
     {
-        "merged": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-debug-51:\\drawable-mdpi_factura.xml.flat",
-        "source": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-main-53:\\drawable-mdpi\\factura.xml"
+        "merged": "com.example.movildev.app-debug-51:/layout_fragment_sala.xml.flat",
+        "source": "com.example.movildev.app-main-53:/layout/fragment_sala.xml"
     },
     {
-        "merged": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-debug-51:\\xml_backup_rules.xml.flat",
-        "source": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-main-53:\\xml\\backup_rules.xml"
+        "merged": "com.example.movildev.app-debug-51:/drawable-mdpi_modalidad.xml.flat",
+        "source": "com.example.movildev.app-main-53:/drawable-mdpi/modalidad.xml"
     },
     {
-        "merged": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-debug-51:\\drawable-mdpi_video_off.xml.flat",
-        "source": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-main-53:\\drawable-mdpi\\video_off.xml"
+        "merged": "com.example.movildev.app-debug-51:/drawable-mdpi_home.xml.flat",
+        "source": "com.example.movildev.app-main-53:/drawable-mdpi/home.xml"
     },
     {
-        "merged": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-debug-51:\\drawable_button_background.xml.flat",
-        "source": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-main-53:\\drawable\\button_background.xml"
+        "merged": "com.example.movildev.app-debug-51:/drawable_rounded_select.xml.flat",
+        "source": "com.example.movildev.app-main-53:/drawable/rounded_select.xml"
+    },
+    {
+        "merged": "com.example.movildev.app-debug-51:/drawable_ic_launcher_foreground.xml.flat",
+        "source": "com.example.movildev.app-main-53:/drawable/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "com.example.movildev.app-debug-51:/layout_activity_main.xml.flat",
+        "source": "com.example.movildev.app-main-53:/layout/activity_main.xml"
     },
     {
         "merged": "com.example.movildev.app-debug-51:/mipmap-mdpi_ic_launcher.webp.flat",
         "source": "com.example.movildev.app-main-53:/mipmap-mdpi/ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-debug-51:\\drawable-mdpi_chat.xml.flat",
-        "source": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-main-53:\\drawable-mdpi\\chat.xml"
+        "merged": "com.example.movildev.app-debug-51:/drawable-mdpi_mute.xml.flat",
+        "source": "com.example.movildev.app-main-53:/drawable-mdpi/mute.xml"
     },
     {
-        "merged": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-debug-51:\\layout_fragment_telemedicina.xml.flat",
-        "source": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-main-53:\\layout\\fragment_telemedicina.xml"
+        "merged": "com.example.movildev.app-debug-51:/layout_fragment_perfil.xml.flat",
+        "source": "com.example.movildev.app-main-53:/layout/fragment_perfil.xml"
     },
     {
-        "merged": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-debug-51:\\drawable_ic_launcher_background.xml.flat",
-        "source": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-main-53:\\drawable\\ic_launcher_background.xml"
-    },
-    {
-        "merged": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-debug-51:\\drawable_tile_background.xml.flat",
-        "source": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-main-53:\\drawable\\tile_background.xml"
-    },
-    {
-        "merged": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-debug-51:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-main-53:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
-    },
-    {
-        "merged": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-debug-51:\\drawable-mdpi_check_circle.xml.flat",
-        "source": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-main-53:\\drawable-mdpi\\check_circle.xml"
-    },
-    {
-        "merged": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-debug-51:\\layout_fragment_land_citas.xml.flat",
-        "source": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-main-53:\\layout\\fragment_land_citas.xml"
+        "merged": "com.example.movildev.app-debug-51:/drawable-mdpi_profesional.xml.flat",
+        "source": "com.example.movildev.app-main-53:/drawable-mdpi/profesional.xml"
     },
     {
         "merged": "com.example.movildev.app-debug-51:/mipmap-mdpi_ic_launcher_round.webp.flat",
@@ -144,124 +136,116 @@
         "source": "com.example.movildev.app-main-53:/mipmap-xxhdpi/ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-debug-51:\\drawable_acceder_btn.xml.flat",
-        "source": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-main-53:\\drawable\\acceder_btn.xml"
+        "merged": "com.example.movildev.app-debug-51:/drawable-mdpi_chat.xml.flat",
+        "source": "com.example.movildev.app-main-53:/drawable-mdpi/chat.xml"
+    },
+    {
+        "merged": "com.example.movildev.app-debug-51:/layout_fragment_llamada.xml.flat",
+        "source": "com.example.movildev.app-main-53:/layout/fragment_llamada.xml"
+    },
+    {
+        "merged": "com.example.movildev.app-debug-51:/layout_fragment_telemedicina.xml.flat",
+        "source": "com.example.movildev.app-main-53:/layout/fragment_telemedicina.xml"
+    },
+    {
+        "merged": "com.example.movildev.app-debug-51:/drawable_blue_circle.xml.flat",
+        "source": "com.example.movildev.app-main-53:/drawable/blue_circle.xml"
     },
     {
         "merged": "com.example.movildev.app-debug-51:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
         "source": "com.example.movildev.app-main-53:/mipmap-xxhdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-debug-51:\\drawable_green_circle.xml.flat",
-        "source": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-main-53:\\drawable\\green_circle.xml"
+        "merged": "com.example.movildev.app-debug-51:/drawable-mdpi_factura.xml.flat",
+        "source": "com.example.movildev.app-main-53:/drawable-mdpi/factura.xml"
     },
     {
-        "merged": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-debug-51:\\drawable_ic_factura.xml.flat",
-        "source": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-main-53:\\drawable\\ic_factura.xml"
+        "merged": "com.example.movildev.app-debug-51:/drawable_ic_pay.xml.flat",
+        "source": "com.example.movildev.app-main-53:/drawable/ic_pay.xml"
     },
     {
-        "merged": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-debug-51:\\layout_fragment_sala.xml.flat",
-        "source": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-main-53:\\layout\\fragment_sala.xml"
+        "merged": "com.example.movildev.app-debug-51:/layout_fragment_citas.xml.flat",
+        "source": "com.example.movildev.app-main-53:/layout/fragment_citas.xml"
     },
     {
-        "merged": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-debug-51:\\drawable_ic_launcher_foreground.xml.flat",
-        "source": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-main-53:\\drawable\\ic_launcher_foreground.xml"
+        "merged": "com.example.movildev.app-debug-51:/drawable-mdpi_check_circle.xml.flat",
+        "source": "com.example.movildev.app-main-53:/drawable-mdpi/check_circle.xml"
     },
     {
-        "merged": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-debug-51:\\drawable-mdpi_hangup.xml.flat",
-        "source": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-main-53:\\drawable-mdpi\\hangup.xml"
-    },
-    {
-        "merged": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-debug-51:\\drawable-mdpi_tipo_cita.xml.flat",
-        "source": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-main-53:\\drawable-mdpi\\tipo_cita.xml"
+        "merged": "com.example.movildev.app-debug-51:/navigation_nav_graph.xml.flat",
+        "source": "com.example.movildev.app-main-53:/navigation/nav_graph.xml"
     },
     {
         "merged": "com.example.movildev.app-debug-51:/mipmap-xxxhdpi_ic_launcher.webp.flat",
         "source": "com.example.movildev.app-main-53:/mipmap-xxxhdpi/ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-debug-51:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-main-53:\\mipmap-xxhdpi\\ic_launcher_round.webp"
-    },
-    {
-        "merged": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-debug-51:\\drawable-mdpi_mute.xml.flat",
-        "source": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-main-53:\\drawable-mdpi\\mute.xml"
-    },
-    {
-        "merged": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-debug-51:\\drawable_cancelar_cita_btn.xml.flat",
-        "source": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-main-53:\\drawable\\cancelar_cita_btn.xml"
+        "merged": "com.example.movildev.app-debug-51:/drawable-mdpi_tipo_cita.xml.flat",
+        "source": "com.example.movildev.app-main-53:/drawable-mdpi/tipo_cita.xml"
     },
     {
         "merged": "com.example.movildev.app-debug-51:/mipmap-xhdpi_ic_launcher_round.webp.flat",
         "source": "com.example.movildev.app-main-53:/mipmap-xhdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-debug-51:\\drawable-mdpi_back_arrow.xml.flat",
-        "source": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-main-53:\\drawable-mdpi\\back_arrow.xml"
+        "merged": "com.example.movildev.app-debug-51:/drawable_green_circle.xml.flat",
+        "source": "com.example.movildev.app-main-53:/drawable/green_circle.xml"
     },
     {
-        "merged": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-debug-51:\\drawable_ic_add.xml.flat",
-        "source": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-main-53:\\drawable\\ic_add.xml"
+        "merged": "com.example.movildev.app-debug-51:/layout_fragment_historia.xml.flat",
+        "source": "com.example.movildev.app-main-53:/layout/fragment_historia.xml"
     },
     {
-        "merged": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-debug-51:\\mipmap-mdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-main-53:\\mipmap-mdpi\\ic_launcher_round.webp"
+        "merged": "com.example.movildev.app-debug-51:/layout_fragment_tratamiento.xml.flat",
+        "source": "com.example.movildev.app-main-53:/layout/fragment_tratamiento.xml"
     },
     {
-        "merged": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-debug-51:\\layout_fragment_historia.xml.flat",
-        "source": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-main-53:\\layout\\fragment_historia.xml"
+        "merged": "com.example.movildev.app-debug-51:/layout_cita_card.xml.flat",
+        "source": "com.example.movildev.app-main-53:/layout/cita_card.xml"
     },
     {
-        "merged": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-debug-51:\\drawable-mdpi_attach.xml.flat",
-        "source": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-main-53:\\drawable-mdpi\\attach.xml"
+        "merged": "com.example.movildev.app-debug-51:/drawable-mdpi_calendar.xml.flat",
+        "source": "com.example.movildev.app-main-53:/drawable-mdpi/calendar.xml"
     },
     {
-        "merged": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-debug-51:\\mipmap-mdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-main-53:\\mipmap-mdpi\\ic_launcher.webp"
+        "merged": "com.example.movildev.app-debug-51:/drawable-mdpi_back_arrow.xml.flat",
+        "source": "com.example.movildev.app-main-53:/drawable-mdpi/back_arrow.xml"
     },
     {
-        "merged": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-debug-51:\\drawable_spinner_background.xml.flat",
-        "source": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-main-53:\\drawable\\spinner_background.xml"
+        "merged": "com.example.movildev.app-debug-51:/layout_fragment_usuarios.xml.flat",
+        "source": "com.example.movildev.app-main-53:/layout/fragment_usuarios.xml"
     },
     {
-        "merged": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-debug-51:\\layout_fragment_tratamiento.xml.flat",
-        "source": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-main-53:\\layout\\fragment_tratamiento.xml"
+        "merged": "com.example.movildev.app-debug-51:/drawable-mdpi_historia_clinica.xml.flat",
+        "source": "com.example.movildev.app-main-53:/drawable-mdpi/historia_clinica.xml"
     },
     {
-        "merged": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-debug-51:\\drawable-mdpi_search.xml.flat",
-        "source": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-main-53:\\drawable-mdpi\\search.xml"
+        "merged": "com.example.movildev.app-debug-51:/drawable_rounded_fragment2.xml.flat",
+        "source": "com.example.movildev.app-main-53:/drawable/rounded_fragment2.xml"
     },
     {
-        "merged": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-debug-51:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-main-53:\\mipmap-anydpi-v26\\ic_launcher.xml"
+        "merged": "com.example.movildev.app-debug-51:/layout_fragment_home.xml.flat",
+        "source": "com.example.movildev.app-main-53:/layout/fragment_home.xml"
     },
     {
-        "merged": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-debug-51:\\drawable_ic_dropdown.xml.flat",
-        "source": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-main-53:\\drawable\\ic_dropdown.xml"
+        "merged": "com.example.movildev.app-debug-51:/drawable_reprogramar_cita_btn.xml.flat",
+        "source": "com.example.movildev.app-main-53:/drawable/reprogramar_cita_btn.xml"
     },
     {
-        "merged": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-debug-51:\\drawable-mdpi_profesional.xml.flat",
-        "source": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-main-53:\\drawable-mdpi\\profesional.xml"
+        "merged": "com.example.movildev.app-debug-51:/drawable_spinner_background.xml.flat",
+        "source": "com.example.movildev.app-main-53:/drawable/spinner_background.xml"
     },
     {
-        "merged": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-debug-51:\\drawable_reprogramar_cita_btn.xml.flat",
-        "source": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-main-53:\\drawable\\reprogramar_cita_btn.xml"
+        "merged": "com.example.movildev.app-debug-51:/drawable_ic_factura.xml.flat",
+        "source": "com.example.movildev.app-main-53:/drawable/ic_factura.xml"
     },
     {
-        "merged": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-debug-51:\\drawable_red_circle.xml.flat",
-        "source": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-main-53:\\drawable\\red_circle.xml"
+        "merged": "com.example.movildev.app-debug-51:/drawable_cancelar_cita_btn.xml.flat",
+        "source": "com.example.movildev.app-main-53:/drawable/cancelar_cita_btn.xml"
     },
     {
-        "merged": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-debug-51:\\layout_popup1.xml.flat",
-        "source": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-main-53:\\layout\\popup1.xml"
-    },
-    {
-        "merged": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-debug-51:\\drawable_ic_pay.xml.flat",
-        "source": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-main-53:\\drawable\\ic_pay.xml"
-    },
-    {
-        "merged": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-debug-51:\\drawable-mdpi_logo.xml.flat",
-        "source": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-main-53:\\drawable-mdpi\\logo.xml"
+        "merged": "com.example.movildev.app-debug-51:/xml_backup_rules.xml.flat",
+        "source": "com.example.movildev.app-main-53:/xml/backup_rules.xml"
     },
     {
         "merged": "com.example.movildev.app-debug-51:/mipmap-hdpi_ic_launcher_round.webp.flat",
@@ -272,79 +256,51 @@
         "source": "com.example.movildev.app-main-53:/mipmap-xxxhdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-debug-51:\\drawable-mdpi_telemedicina.xml.flat",
-        "source": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-main-53:\\drawable-mdpi\\telemedicina.xml"
+        "merged": "com.example.movildev.app-debug-51:/layout_fragment_factura_electronica.xml.flat",
+        "source": "com.example.movildev.app-main-53:/layout/fragment_factura_electronica.xml"
     },
     {
-        "merged": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-debug-51:\\navigation_nav_graph.xml.flat",
-        "source": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-main-53:\\navigation\\nav_graph.xml"
+        "merged": "com.example.movildev.app-debug-51:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.example.movildev.app-main-53:/mipmap-anydpi-v26/ic_launcher_round.xml"
     },
     {
-        "merged": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-debug-51:\\layout_fragment_factura_electronica.xml.flat",
-        "source": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-main-53:\\layout\\fragment_factura_electronica.xml"
+        "merged": "com.example.movildev.app-debug-51:/drawable_button_background.xml.flat",
+        "source": "com.example.movildev.app-main-53:/drawable/button_background.xml"
     },
     {
-        "merged": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-debug-51:\\layout_activity_main.xml.flat",
-        "source": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-main-53:\\layout\\activity_main.xml"
+        "merged": "com.example.movildev.app-debug-51:/layout_popup1.xml.flat",
+        "source": "com.example.movildev.app-main-53:/layout/popup1.xml"
     },
     {
-        "merged": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-debug-51:\\layout_fragment_usuarios.xml.flat",
-        "source": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-main-53:\\layout\\fragment_usuarios.xml"
+        "merged": "com.example.movildev.app-debug-51:/layout_fragment_crear_factura.xml.flat",
+        "source": "com.example.movildev.app-main-53:/layout/fragment_crear_factura.xml"
     },
     {
-        "merged": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-debug-51:\\layout_cita_card.xml.flat",
-        "source": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-main-53:\\layout\\cita_card.xml"
+        "merged": "com.example.movildev.app-debug-51:/drawable_ic_add.xml.flat",
+        "source": "com.example.movildev.app-main-53:/drawable/ic_add.xml"
     },
     {
-        "merged": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-debug-51:\\drawable-mdpi_historia_clinica.xml.flat",
-        "source": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-main-53:\\drawable-mdpi\\historia_clinica.xml"
+        "merged": "com.example.movildev.app-debug-51:/drawable-mdpi_hangup.xml.flat",
+        "source": "com.example.movildev.app-main-53:/drawable-mdpi/hangup.xml"
     },
     {
-        "merged": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-debug-51:\\layout_fragment_agendarcitas.xml.flat",
-        "source": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-main-53:\\layout\\fragment_agendarcitas.xml"
+        "merged": "com.example.movildev.app-debug-51:/drawable_red_circle.xml.flat",
+        "source": "com.example.movildev.app-main-53:/drawable/red_circle.xml"
     },
     {
-        "merged": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-debug-51:\\drawable-mdpi_home.xml.flat",
-        "source": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-main-53:\\drawable-mdpi\\home.xml"
+        "merged": "com.example.movildev.app-debug-51:/layout_fragment_land_citas.xml.flat",
+        "source": "com.example.movildev.app-main-53:/layout/fragment_land_citas.xml"
     },
     {
-        "merged": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-debug-51:\\drawable_rounded_select.xml.flat",
-        "source": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-main-53:\\drawable\\rounded_select.xml"
+        "merged": "com.example.movildev.app-debug-51:/drawable_ic_user.xml.flat",
+        "source": "com.example.movildev.app-main-53:/drawable/ic_user.xml"
     },
     {
-        "merged": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-debug-51:\\drawable_ic_user.xml.flat",
-        "source": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-main-53:\\drawable\\ic_user.xml"
+        "merged": "com.example.movildev.app-debug-51:/drawable_rounded_background.xml.flat",
+        "source": "com.example.movildev.app-main-53:/drawable/rounded_background.xml"
     },
     {
-        "merged": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-debug-51:\\drawable-mdpi_modalidad.xml.flat",
-        "source": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-main-53:\\drawable-mdpi\\modalidad.xml"
-    },
-    {
-        "merged": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-debug-51:\\drawable-mdpi_profile.xml.flat",
-        "source": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-main-53:\\drawable-mdpi\\profile.xml"
-    },
-    {
-        "merged": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-debug-51:\\layout_fragment_crear_factura.xml.flat",
-        "source": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-main-53:\\layout\\fragment_crear_factura.xml"
-    },
-    {
-        "merged": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-debug-51:\\drawable_rounded_background.xml.flat",
-        "source": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-main-53:\\drawable\\rounded_background.xml"
-    },
-    {
-        "merged": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-debug-51:\\drawable_ic_user_profile.xml.flat",
-        "source": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-main-53:\\drawable\\ic_user_profile.xml"
-    },
-    {
-        "merged": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-debug-51:\\drawable-mdpi_clock.xml.flat",
-        "source": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-main-53:\\drawable-mdpi\\clock.xml"
-    },
-    {
-        "merged": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-debug-51:\\mipmap-xxhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-main-53:\\mipmap-xxhdpi\\ic_launcher.webp"
-    },
-    {
-        "merged": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-debug-51:\\layout_fragment_home.xml.flat",
-        "source": "C:\\Users\\HP Photoseries\\.gradle\\daemon\\8.11.1\\com.example.movildev.app-main-53:\\layout\\fragment_home.xml"
+        "merged": "com.example.movildev.app-debug-51:/layout_fragment_agendarcitas.xml.flat",
+        "source": "com.example.movildev.app-main-53:/layout/fragment_agendarcitas.xml"
     }
 ]

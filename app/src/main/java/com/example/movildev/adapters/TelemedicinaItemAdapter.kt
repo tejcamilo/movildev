@@ -49,7 +49,7 @@ class TelemedicinaItemAdapter(
         }
         fun bind(item: Cita, onAccederClick: (Cita) -> Unit, onCancelarClick: (Cita) -> Unit) {
             fechaCita.text = "${item.fecha} - ${item.hora}"
-            tipoCita.text = item.tipo
+            tipoCita.text = item.tratamiento
             profesionalCita.text = item.profesional
 
             Log.i("TelemedicinaLogger", "init: $item")
