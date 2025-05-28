@@ -14,7 +14,7 @@
         android:layout_gravity="bottom|center"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
-        android:layout_marginTop="210dp"
+        android:layout_marginTop="184dp"
         android:translationZ="0dp"
         android:elevation="2dp"
         android:layout_marginBottom="0dp"/>
@@ -59,28 +59,6 @@
                     android:layout_marginStart="8dp"
                     android:textColor="#2D3748" />
             </LinearLayout>
-
-            <!-- Hora -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:paddingVertical="5dp">
-
-                <ImageView
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:src="@drawable/clock" />
-
-                <TextView
-                    android:id="@+id/horaText"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="10:45"
-                    android:layout_marginStart="8dp"
-                    android:textColor="#2D3748" />
-            </LinearLayout>
-
             <LinearLayout
                 android:id="@+id/tipo_cita"
                 android:layout_width="match_parent"
@@ -141,6 +119,7 @@
                     android:layout_marginStart="8dp"
                     android:textColor="#2D3748" />
             </LinearLayout>
+
 
         </LinearLayout>
 

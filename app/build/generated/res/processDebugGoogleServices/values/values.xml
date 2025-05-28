@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="gcm_defaultSenderId" translatable="false">219867518699</string>
-    <string name="google_api_key" translatable="false">AIzaSyC0H0_SF2ZVhLJqn-9DPFCwksZyA0tLTFc</string>
-    <string name="google_app_id" translatable="false">1:219867518699:android:6f6e95e2f0019f8e6d10ae</string>
-    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyC0H0_SF2ZVhLJqn-9DPFCwksZyA0tLTFc</string>
-    <string name="google_storage_bucket" translatable="false">facturas-a8c01.firebasestorage.app</string>
-    <string name="project_id" translatable="false">facturas-a8c01</string>
-</resources>

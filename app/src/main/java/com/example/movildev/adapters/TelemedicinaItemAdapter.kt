@@ -57,7 +57,11 @@ class TelemedicinaItemAdapter(
             rootView.findViewById<LinearLayout>(R.id.modalidad)
                 .visibility = View.GONE
 
+            rootView.findViewById<LinearLayout>(R.id.paciente)
+                .visibility = View.GONE
+
             val accederBtn = rootView.findViewById<Button>(R.id.acceder_btn)
+            accederBtn.text = "Acceder"
             val params = accederBtn.layoutParams as FrameLayout.LayoutParams
             val topMarginDp = 160
             val scale = accederBtn.context.resources.displayMetrics.density

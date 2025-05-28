@@ -1,1 +1,13 @@
+.DS_Store
+.idea
+local.properties
+*.iml
+.gradle
+/local.properties
+.idea/
 /build
+/captures
+.externalNativeBuild
+.cxx
+**/build/
+/app/google-services.json

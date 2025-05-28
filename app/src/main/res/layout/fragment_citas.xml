@@ -19,15 +19,12 @@
             android:background="@drawable/rounded_background"
             android:layout_margin="12dp"
             android:elevation="4dp" />
-
         <!-- 🧾 LISTADO DE CITAS -->
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerCitas"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:padding="12dp"
-            android:clipToPadding="false"
             android:scrollbars="vertical"
             tools:listitem="@layout/cita_item" />
 

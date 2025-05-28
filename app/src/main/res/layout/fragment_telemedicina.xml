@@ -7,13 +7,11 @@
     android:orientation="vertical"
     android:background="#e9eef3"
     tools:context=".fragments.TelemedicinaFragment">
-<androidx.recyclerview.widget.RecyclerView android:id="@+id/cita_list"
-    android:layout_width="match_parent"
-    android:layout_height="0dp"
-    android:layout_weight="1"
-    android:layout_gravity="top"
-    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:android="http://schemas.android.com/apk/res/android" />
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/cita_list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="top"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
 
 </LinearLayout>

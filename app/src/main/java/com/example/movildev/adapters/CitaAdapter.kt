@@ -33,7 +33,6 @@ class CitaAdapter(
         val modalidadCita: TextView = view.findViewById(R.id.modalidadText)
         val tratamiento: TextView = view.findViewById(R.id.tratamientoText)
         val fechaText: TextView = view.findViewById(R.id.fechaText)
-        val horaText: TextView = view.findViewById(R.id.horaText)
         val btnReagendar: Button = view.findViewById(R.id.btnReagendar)
         val btnCancelar: Button = view.findViewById(R.id.btnCancelar)
         val btnFactura: Button = view.findViewById(R.id.btnFactura)
@@ -50,8 +49,7 @@ class CitaAdapter(
         holder.nombrePaciente.text = cita.paciente
         holder.modalidadCita.text = cita.modalidad
         holder.tratamiento.text = cita.tratamiento
-        holder.fechaText.text = cita.fecha
-        holder.horaText.text = cita.hora
+        holder.fechaText.text = "${cita.fecha} - ${cita.hora}"
 
         holder.btnReagendar.setOnClickListener { onReagendar(cita) }
         holder.btnCancelar.setOnClickListener { onCancelar(cita) }
