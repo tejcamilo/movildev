@@ -36,7 +36,9 @@ android {
     }
     buildFeatures {
         compose = true
+        viewBinding = true
     }
+
 }
 
 dependencies {
@@ -49,8 +51,18 @@ dependencies {
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
+
     implementation("androidx.fragment:fragment-ktx:1.8.6")
     implementation(libs.material)
+
+    implementation(libs.androidx.room.common.jvm)
+    implementation(libs.androidx.room.runtime.android)
+
+    // ✅ Navigation Component (Agregado)
+    implementation("androidx.navigation:navigation-fragment-ktx:2.7.5")
+    implementation("androidx.navigation:navigation-ui-ktx:2.7.5")
+    implementation(libs.androidx.navigation.compose.android)
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -60,12 +72,12 @@ dependencies {
     debugImplementation(libs.androidx.ui.test.manifest)
 
     implementation("androidx.activity:activity-compose:1.10.1")
-    implementation("androidx.compose.ui:ui:1.7.8")
-    implementation("androidx.compose.ui:ui-tooling-preview:1.7.8")
-    implementation("androidx.compose.material3:material3:1.3.2")
-    debugImplementation("androidx.compose.ui:ui-tooling:1.7.8")
+    implementation("androidx.compose.ui:ui:1.8.2")
+    implementation("androidx.compose.ui:ui-tooling-preview:1.8.2")
+    implementation(libs.material3)
+    debugImplementation("androidx.compose.ui:ui-tooling:1.8.2")
 
     implementation(libs.compose.theme.adapter)
     implementation(libs.androidx.fragment.ktx)
-}
 
+}
