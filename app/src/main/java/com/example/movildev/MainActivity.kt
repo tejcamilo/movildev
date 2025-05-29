@@ -2,6 +2,7 @@ package com.example.movildev
 
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
@@ -56,6 +57,11 @@ class MainActivity : AppCompatActivity() {
 
 
         navController.addOnDestinationChangedListener { _, destination, arguments ->
+            val isLogin = destination.id == R.id.loginFragment
+
+            binding.header.visibility = if (isLogin) View.GONE else View.VISIBLE
+            binding.bottomNav0.root.visibility = if (isLogin) View.GONE else View.VISIBLE
+
             val iconResId = arguments?.getInt("icon") ?: R.drawable.placeholder_icon
             binding.title.text = destination.label
             binding.toolbarIcon.setImageResource(iconResId)

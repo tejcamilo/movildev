@@ -12,3 +12,4 @@ local.properties
 **/build/
 /app/google-services.json
 /app/build/
+**/.gradle/
