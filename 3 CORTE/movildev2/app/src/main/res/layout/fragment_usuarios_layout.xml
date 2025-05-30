@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0F4FA"
+    android:paddingTop="16dp">
+
+    <!-- Search Bar -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_search"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_alignParentTop="true"
+        app:cardCornerRadius="24dp"
+        app:cardElevation="2dp"
+        android:background="#FFFFFF">
+
+        <EditText
+            android:id="@+id/input_buscar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Buscar"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:background="@null"
+            android:textColor="#1F2937"
+            android:textSize="14sp" />
+    </androidx.cardview.widget.CardView>
+
+    <!-- RecyclerView -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_usuarios"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/card_search"
+        android:layout_above="@id/fab_agregar"
+        android:paddingTop="16dp"
+        android:clipToPadding="false" />
+
+    <!-- Floating Action Button -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_agregar"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        app:srcCompat="@drawable/ic_add"
+        app:backgroundTint="#417EF2"
+        android:contentDescription="Agregar usuario" />
+
+</RelativeLayout>

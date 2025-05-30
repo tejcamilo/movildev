@@ -1,0 +1,6 @@
+<resources>
+    <string-array name="tipo_documento_array">
+        <item>Cédula</item>
+        <item>Tarjeta de identidad</item>
+    </string-array>
+</resources>
