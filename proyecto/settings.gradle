@@ -1,0 +1,35 @@
+// settings.gradle
+
+pluginManagement {
+    repositories {
+        // Asegúrate de que los repositorios estén aquí para que Gradle encuentre los plugins.
+        // google() y mavenCentral() son cruciales.
+        google {
+            content {
+                includeGroupByRegex("com\\.android.*")
+                includeGroupByRegex("com\\.google.*")
+                includeGroupByRegex("androidx.*")
+            }
+        }
+        mavenCentral()
+        gradlePluginPortal()
+        // Opcional: Si usas versiones muy recientes o snapshots de Compose,
+        // a veces es necesario añadir este repositorio.
+        // Si tienes problemas de "Plugin not found" con Compose y los otros no funcionan,
+        // puedes descomentar la siguiente línea:
+        // maven("https://maven.pkg.jetbrains.space/public/p/compose/dev")
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        // Asegúrate de que los repositorios para las dependencias de tu proyecto estén aquí.
+        google()
+        mavenCentral()
+        // Si tus dependencias de Firebase son recientes, es posible que también necesites
+        // el repositorio de Google en esta sección.
+    }
+}
+
+rootProject.name = "movildev"
+include ':app'
