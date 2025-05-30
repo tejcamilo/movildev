@@ -13,6 +13,12 @@ import com.example.movildev.viewmodels.SalaViewModelFactory
 import android.util.Log
 import com.example.movildev.R
 import com.example.movildev.fragments.SalaFragmentArgs
+import com.example.movildev.model.Cita
+import com.example.movildev.repositories.CitaRepositorySingleton
+import com.example.movildev.repositories.FacturaRepositorySingleton
+import com.example.movildev.viewmodels.FacturaViewModel
+import com.example.movildev.viewmodels.FacturaViewModelFactory
+import com.example.movildev.viewmodels.TelemedicinaViewModelFactory
 
 class SalaFragment : Fragment() {
     private var _binding: FragmentSalaBinding? = null
@@ -25,13 +31,24 @@ class SalaFragment : Fragment() {
     ): View? {
         _binding = FragmentSalaBinding.inflate(inflater, container, false)
         val view = binding.root
+        // Obtener datos del bundle
+        val args = arguments
+        val cita = Cita(
+            id = args?.getString("id") ?: "",
+            fecha = args?.getString("fecha") ?: "",
+            hora = args?.getString("hora") ?: "",
+            paciente = args?.getString("paciente") ?: "",
+            tratamiento = args?.getString("tratamiento") ?: "",
+            modalidad = args?.getString("modalidad") ?: "",
+            profesional = args?.getString("profesional") ?: "",
+            disponible = args?.getBoolean("disponible") ?: false
+        )
 
-        val cita = SalaFragmentArgs.fromBundle(requireArguments()).cita // recibir dato desde Telemedicina
-        Log.i("Cita", cita)
+        Log.i("Cita", cita.toString())
+
         viewModelFactory = SalaViewModelFactory(cita)
         viewModel = ViewModelProvider(this, viewModelFactory)
             .get(SalaViewModel::class.java)
-
         binding.ingresarLlamadaBtn.setOnClickListener {
             view.findNavController().navigate(R.id.action_salaFragment_to_llamadaFragment)
         }

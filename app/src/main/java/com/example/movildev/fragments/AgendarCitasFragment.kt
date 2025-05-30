@@ -53,8 +53,10 @@ class AgendarCitasFragment : Fragment() {
         fechaInput.setOnClickListener {
             mostrarDatePicker(fechaInput)
         }
+        var idCita = System.currentTimeMillis().toString() // default si no se edita una cita
         val args = arguments
         if (args != null) {
+            idCita = args.getString("id") ?: idCita
             nombreInput.setText(args.getString("paciente"))
             tratamientoInput.setText(args.getString("tratamiento"))
             modalidadInput.setText(args.getString("modalidad"))
@@ -78,7 +80,9 @@ class AgendarCitasFragment : Fragment() {
                     hora = hora,
                     paciente = paciente,
                     tratamiento = tratamiento,
-                    modalidad = modalidad
+                    modalidad = modalidad,
+                    disponible = false,
+                    profesional = "Cathalina"
                 )
 
                 viewModel.guardarCita(cita) { success ->

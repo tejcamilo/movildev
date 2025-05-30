@@ -34,6 +34,7 @@ class HomeFragment : Fragment() {
             view.findNavController().navigate(R.id.action_inicioFragment_to_telemedicinaFragment)
         }
 
+
         binding.navTratamiento.setOnClickListener {
             view.findNavController().navigate(R.id.action_inicioFragment_to_tratamientoFragment)
         }

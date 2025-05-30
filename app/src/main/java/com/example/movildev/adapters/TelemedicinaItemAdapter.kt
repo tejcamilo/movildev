@@ -12,32 +12,37 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.movildev.model.Cita
 import com.example.movildev.R
+import com.example.movildev.adapters.CitaItemAdapter.CitaItemViewHolder
 
 class TelemedicinaItemAdapter(
     private val onAccederClick: (Cita) -> Unit,
-    private val onCancelarClick: (Cita) -> Unit)
-        : RecyclerView.Adapter<TelemedicinaItemAdapter.TelemedicinaItemViewHolder>() {
+    private val onCancelarClick: (Cita) -> Unit,
+    private val onReagendarClick: (Cita) -> Unit
+) : RecyclerView.Adapter<TelemedicinaItemAdapter.TelemedicinaItemViewHolder>() {
+
     var data = listOf<Cita>()
         @SuppressLint("NotifyDataSetChanged")
         set(value) {
             field = value
             notifyDataSetChanged()
         }
+
     override fun getItemCount() = data.size
 
-    override fun onCreateViewHolder(parent : ViewGroup, viewType: Int)
-            : TelemedicinaItemViewHolder = TelemedicinaItemViewHolder.inflateFrom(parent)
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int)
+            = TelemedicinaItemViewHolder.inflateFrom(parent)
 
     override fun onBindViewHolder(holder: TelemedicinaItemViewHolder, position: Int) {
         val item = data[position]
-        holder.bind(item, onAccederClick, onCancelarClick)
+        holder.bind(item, onAccederClick, onCancelarClick, onReagendarClick)
     }
 
-    class TelemedicinaItemViewHolder(val rootView : FrameLayout) : RecyclerView.ViewHolder(rootView) {
+    class TelemedicinaItemViewHolder(val rootView: FrameLayout) : RecyclerView.ViewHolder(rootView) {
 
         val fechaCita = rootView.findViewById<TextView>(R.id.detalle_cita)
-        val tipoCita = rootView.findViewById<TextView>(R.id.detalle_tipo)
+        val pacienteCita = rootView.findViewById<TextView>(R.id.nombre_paciente)
         val profesionalCita = rootView.findViewById<TextView>(R.id.detalle_profesional)
+        val tratamientoCita = rootView.findViewById<TextView>(R.id.detalles_tratamiento)
 
         companion object {
             fun inflateFrom(parent: ViewGroup) : TelemedicinaItemViewHolder {
@@ -47,34 +52,25 @@ class TelemedicinaItemAdapter(
                 return TelemedicinaItemViewHolder(view)
             }
         }
-        fun bind(item: Cita, onAccederClick: (Cita) -> Unit, onCancelarClick: (Cita) -> Unit) {
+        fun bind(item: Cita, onAccederClick: (Cita) -> Unit,
+                 onReagendarClick: (Cita) -> Unit,
+                 onCancelarClick: (Cita) -> Unit) {
             fechaCita.text = "${item.fecha} - ${item.hora}"
-            tipoCita.text = item.tratamiento
-            profesionalCita.text = item.profesional
+            pacienteCita.text = item.paciente
+            profesionalCita.text = "Cathalina"
+            tratamientoCita.text = item.tratamiento
 
-            Log.i("TelemedicinaLogger", "init: $item")
 
-            rootView.findViewById<LinearLayout>(R.id.modalidad)
-                .visibility = View.GONE
-
-            rootView.findViewById<LinearLayout>(R.id.paciente)
-                .visibility = View.GONE
+            Log.i("TelemedicinaLogger", "bind: $item")
 
             val accederBtn = rootView.findViewById<Button>(R.id.acceder_btn)
-            accederBtn.text = "Acceder"
-            val params = accederBtn.layoutParams as FrameLayout.LayoutParams
-            val topMarginDp = 160
-            val scale = accederBtn.context.resources.displayMetrics.density
-            params.topMargin = (topMarginDp * scale + 0.5f).toInt()
-            accederBtn.layoutParams = params
-            if (item.hora == "10:00 AM") {
-                accederBtn.visibility = View.VISIBLE
-            } else {
-                accederBtn.visibility = View.GONE
+            accederBtn.visibility = if (item.hora == "10:00 AM") View.VISIBLE else View.GONE
+            accederBtn.setOnClickListener { onAccederClick(item) }
+
+            rootView.findViewById<Button>(R.id.reprogramar_btn).setOnClickListener {
+                onReagendarClick(item)
             }
-            accederBtn.setOnClickListener{
-                onAccederClick(item)
-            }
+
             rootView.findViewById<Button>(R.id.cancelar_btn).setOnClickListener {
                 androidx.appcompat.app.AlertDialog.Builder(rootView.context)
                     .setTitle("Cancelar cita")
@@ -87,3 +83,4 @@ class TelemedicinaItemAdapter(
         }
     }
 }
+

@@ -82,7 +82,7 @@
             android:layout_width="64dp"
             android:layout_height="64dp"
             android:background="@android:color/transparent"
-            android:src="@drawable/factura"
+            android:src="@drawable/ic_factura1"
             android:scaleType="fitXY"
             android:contentDescription="@string/app_name" />
 

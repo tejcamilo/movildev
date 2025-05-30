@@ -13,7 +13,10 @@ import com.example.movildev.model.Cita
 import com.example.movildev.R
 
 class CitaItemAdapter(
-    private val onCancelarClick: (Cita) -> Unit)
+
+    private val onAccederClick: (Cita) -> Unit,
+    private val onCancelarClick: (Cita) -> Unit,
+    private val onReagendarClick: (Cita) -> Unit)
     : RecyclerView.Adapter<CitaItemAdapter.CitaItemViewHolder>() {
     var data = listOf<Cita>()
         @SuppressLint("NotifyDataSetChanged")
@@ -29,15 +32,15 @@ class CitaItemAdapter(
 
     override fun onBindViewHolder(holder: CitaItemViewHolder, position: Int) {
         val item = data[position]
-        holder.bind(item, onCancelarClick)
+        holder.bind(item, onAccederClick, onCancelarClick, onReagendarClick)
     }
 
     class CitaItemViewHolder(val rootView : FrameLayout) : RecyclerView.ViewHolder(rootView) {
 
         val fechaCita = rootView.findViewById<TextView>(R.id.detalle_cita)
-        val tipoCita = rootView.findViewById<TextView>(R.id.detalle_tipo)
+        val pacienteCita = rootView.findViewById<TextView>(R.id.nombre_paciente)
         val profesionalCita = rootView.findViewById<TextView>(R.id.detalle_profesional)
-        val modalidadCita = rootView.findViewById<TextView>(R.id.detalle_modalidad)
+        val tratamientoCita = rootView.findViewById<TextView>(R.id.detalles_tratamiento)
 
         companion object {
             fun inflateFrom(parent: ViewGroup) : CitaItemViewHolder {
@@ -47,13 +50,16 @@ class CitaItemAdapter(
                 return CitaItemViewHolder(view)
             }
         }
-        fun bind(item: Cita, onCancelarClick: (Cita) -> Unit) {
+        fun bind(item: Cita, onAccederClick: (Cita) -> Unit,
+                 onReagendarClick: (Cita) -> Unit,
+                 onCancelarClick: (Cita) -> Unit) {
             fechaCita.text = "${item.fecha} - ${item.hora}"
-            tipoCita.text = item.tratamiento
-            profesionalCita.text = item.profesional
-            modalidadCita.text = item.modalidad
+            pacienteCita.text = item.paciente
+            profesionalCita.text = "Cathalina"
+            tratamientoCita.text = item.tratamiento
 
-            Log.i("CitaLogger", "init: $item")
+
+            Log.i("CitaLogger", "bind: $item")
 
             val accederBtn = rootView.findViewById<Button>(R.id.acceder_btn)
             /*
@@ -65,6 +71,10 @@ class CitaItemAdapter(
              */
             accederBtn.visibility = View.GONE
 
+            rootView.findViewById<Button>(R.id.reprogramar_btn).setOnClickListener {
+                onReagendarClick(item)
+            }
+
             val cancelarBtn = rootView.findViewById<Button>(R.id.cancelar_btn)
             cancelarBtn.setOnClickListener {
                 androidx.appcompat.app.AlertDialog.Builder(rootView.context)
@@ -72,6 +82,16 @@ class CitaItemAdapter(
                     .setMessage("¿Desea cancelar la cita?")
                     .setPositiveButton("OK") { _, _ ->
                         onCancelarClick(item.copy(disponible = true))
+                    }
+                    .show()
+            }
+            val reagendarBtn = rootView.findViewById<Button>(R.id.btnReagendar)
+            cancelarBtn.setOnClickListener {
+                androidx.appcompat.app.AlertDialog.Builder(rootView.context)
+                    .setTitle("Reagendar cita")
+                    .setMessage("¿Desea reagendar la cita?")
+                    .setPositiveButton("OK") { _, _ ->
+                        onReagendarClick(item.copy(disponible = true))
                     }
                     .show()
             }

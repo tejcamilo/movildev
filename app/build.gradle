@@ -5,6 +5,7 @@ plugins {
     id 'com.google.gms.google-services'
     // using androidx.navigation.safeargs.kotlin breaks the app
     id 'androidx.navigation.safeargs'
+    id 'kotlin-parcelize'
 }
 
 android {

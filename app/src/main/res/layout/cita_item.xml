@@ -8,11 +8,11 @@
         android:id="@+id/acceder_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text=""
+        android:text="@string/acceder"
         android:textColor="#FFFFFF"
         android:layout_marginHorizontal="20dp"
         android:background="@drawable/acceder_btn"
-        android:layout_marginTop="214dp"
+        android:layout_marginTop="180dp"
         android:paddingTop="10dp"
         />
     <LinearLayout
@@ -58,7 +58,7 @@
                     android:textColor="#2D3748" />
             </LinearLayout>
             <LinearLayout
-                android:id="@+id/tipo_cita"
+                android:id="@+id/tratamiento"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -70,7 +70,7 @@
                     android:src="@drawable/tipo_cita" />
 
                 <TextView
-                    android:id="@+id/detalle_tipo"
+                    android:id="@+id/detalles_tratamiento"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
@@ -96,26 +96,7 @@
                     android:textColor="#2D3748" />
             </LinearLayout>
             <LinearLayout
-                android:id="@+id/modalidad"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:paddingVertical="5dp">
-
-                <ImageView
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:src="@drawable/modalidad" />
-
-                <TextView
-                    android:id="@+id/detalle_modalidad"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:textColor="#2D3748" />
-            </LinearLayout>
-            <LinearLayout
-                android:id="@+id/paciente"
+                android:id="@+id/NombrePaciente"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -127,13 +108,13 @@
                     android:src="@drawable/ic_user" />
 
                 <TextView
-                    android:id="@+id/nombrePacienteCitaText"
+                    android:id="@+id/nombre_paciente"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text=""
                     android:layout_marginStart="8dp"
                     android:textColor="#2D3748" />
             </LinearLayout>
+
         </LinearLayout>
 
         <!-- COL2 -->

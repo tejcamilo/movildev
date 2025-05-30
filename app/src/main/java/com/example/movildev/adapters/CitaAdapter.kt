@@ -35,7 +35,8 @@ class CitaAdapter(
         val fechaText: TextView = view.findViewById(R.id.fechaText)
         val btnReagendar: Button = view.findViewById(R.id.btnReagendar)
         val btnCancelar: Button = view.findViewById(R.id.btnCancelar)
-        val btnFactura: Button = view.findViewById(R.id.btnFactura)
+        val btnFactura: Button = view
+            .findViewById(R.id.btnFactura)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CitaViewHolder {

@@ -16,6 +16,13 @@
         <action
             android:id="@+id/action_telemedicinaFragment_to_salaFragment"
             app:destination="@id/salaFragment" />
+        <action
+            android:id="@+id/action_telemedicinaFragment_to_agendarCitasFragment"
+            app:destination="@id/agendarCitasFragment" />
+        <action
+            android:id="@+id/action_telemedicinaFragment_to_inicioFragment"
+            app:destination="@id/inicioFragment" />
+
     </fragment>
     <fragment
         android:id="@+id/salaFragment"
@@ -26,9 +33,7 @@
             android:name="icon"
             app:argType="reference"
             android:defaultValue="@drawable/telemedicina" />
-        <argument
-            android:name="cita"
-            app:argType="string" />
+
         <action
             android:id="@+id/action_salaFragment_to_llamadaFragment"
             app:destination="@id/llamadaFragment"
@@ -160,7 +165,7 @@
         <argument
             android:name="icon"
             app:argType="reference"
-            android:defaultValue="@drawable/ic_factura" />
+            android:defaultValue="@drawable/ic_factura1" />
 
         <action
             android:id="@+id/action_consultarFacturasFragment_to_crearFacturaFragment"
@@ -176,7 +181,7 @@
         <argument
             android:name="icon"
             app:argType="reference"
-            android:defaultValue="@drawable/ic_factura" />
+            android:defaultValue="@drawable/ic_factura1" />
 
         <action
             android:id="@+id/action_crearFacturaFragment_to_facturaElectronicaFragment"
@@ -196,7 +201,7 @@
         <argument
             android:name="icon"
             app:argType="reference"
-            android:defaultValue="@drawable/ic_factura" />
+            android:defaultValue="@drawable/ic_factura1" />
 
         <action
             android:id="@+id/action_facturaElectronicaFragment_to_consultarFacturasFragment"
