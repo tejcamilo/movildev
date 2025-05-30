@@ -1,51 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    >
+    android:layout_height="match_parent">
 
     <!-- Barra superior -->
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/superior_bar"
         android:layout_width="match_parent"
         android:layout_height="56dp"
-        android:layout_gravity="top"
         android:background="#D4E5F1"
         app:itemIconTint="@color/white"
         app:itemTextColor="@color/white"
-        tools:ignore="MissingConstraints" >
+        app:layout_constraintTop_toTopOf="parent">
 
-
-
-        <ImageView
-            android:id="@+id/flechaatras"
-            android:layout_width="49dp"
-            android:layout_height="40dp"
-            android:layout_margin="10dp"
-            android:background="@android:color/transparent"
-            android:contentDescription="Atrás"
-            android:src="@drawable/ic_arrowback" />
-
-        <TextView
-            android:id="@+id/HistoriaClinicaTitulo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="top|center_horizontal"
-            android:drawableStart="@drawable/historia_clinica"
-            android:drawablePadding="1dp"
-            android:fontFamily="sans-serif"
-            android:text="Historia Clinica"
-            android:textColor="#1C274C"
-            android:textSize="28sp"
-            android:layout_marginTop="10dp" />
-
-
-
+        <!-- Aquí BottomNavigationView no debería contener hijos directos, entonces estos views debes moverlos fuera o usar otro layout -->
     </com.google.android.material.bottomnavigation.BottomNavigationView>
 
+    <!-- Aquí reorganicé los elementos que pusiste dentro de BottomNavigationView para que funcionen correctamente -->
+    <ImageView
+        android:id="@+id/flechaatras"
+        android:layout_width="49dp"
+        android:layout_height="40dp"
+        android:layout_margin="10dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="Atrás"
+        android:src="@drawable/ic_arrowback"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/HistoriaClinicaTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/historia_clinica"
+        android:drawablePadding="1dp"
+        android:fontFamily="sans-serif"
+        android:text="Historia Clinica"
+        android:textColor="#1C274C"
+        android:textSize="28sp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/flechaatras"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:gravity="center"/>
+
+    <!-- Card 1 -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/card1"
         android:layout_width="353dp"
@@ -53,10 +54,10 @@
         android:background="@drawable/rounded_fragment1"
         android:backgroundTint="#EAF0F4"
         android:elevation="10dp"
-        android:translationY="80dp"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/superior_bar"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintEnd_toEndOf="parent"
+        android:translationY="20dp">
 
         <LinearLayout
             android:id="@+id/contenido1"
@@ -70,6 +71,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
+            <!-- Fecha -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -88,11 +90,9 @@
                     android:text="25/04/25 09:45 AM"
                     android:textColor="#395176"
                     android:textSize="18sp" />
-
-
             </LinearLayout>
 
-
+            <!-- Terapia -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -114,7 +114,7 @@
                     android:textSize="18sp" />
             </LinearLayout>
 
-
+            <!-- Doctor -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -136,7 +136,7 @@
                     android:textSize="18sp" />
             </LinearLayout>
 
-
+            <!-- Modalidad -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -159,7 +159,6 @@
             </LinearLayout>
         </LinearLayout>
 
-
         <LinearLayout
             android:id="@+id/boton2"
             android:layout_width="0dp"
@@ -173,9 +172,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/contenido1"
-            tools:ignore="NotSibling">
-
+            app:layout_constraintTop_toBottomOf="@id/contenido1">
 
             <com.google.android.material.button.MaterialButton
                 android:layout_width="wrap_content"
@@ -185,7 +182,6 @@
                 android:text="Descargar"
                 android:textColor="@color/white"
                 android:textSize="12sp"
-                app:backgroundTint="#1C274C"
                 app:iconGravity="top"
                 app:iconPadding="4dp"
                 app:iconTint="@color/white" />
@@ -198,32 +194,26 @@
                 android:text="Editar"
                 android:textColor="@color/white"
                 android:textSize="12sp"
-                app:backgroundTint="#1C274C"
                 app:iconGravity="top"
                 app:iconPadding="4dp"
                 app:iconTint="@color/white" />
-
-
         </LinearLayout>
 
-
     </androidx.constraintlayout.widget.ConstraintLayout>
-    <!-- Segunda Card (copia exacta de la primera, pero posicionada debajo) -->
+
+    <!-- Segunda Card (copia de la primera) -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/card2"
-
-        android:layout_height="297dp"
-
         android:layout_width="353dp"
-
+        android:layout_height="297dp"
         android:background="@drawable/rounded_fragment1"
         android:backgroundTint="#EAF0F4"
         android:elevation="10dp"
-        android:translationY="100dp"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:translationY="40dp"
+        app:layout_constraintTop_toBottomOf="@id/card1"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_margin="16dp"
-        app:layout_constraintTop_toBottomOf="@id/card1">
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp">
 
         <LinearLayout
             android:id="@+id/contenido"
@@ -237,7 +227,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
-
+            <!-- Fecha -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -258,7 +248,7 @@
                     android:textSize="18sp" />
             </LinearLayout>
 
-
+            <!-- Terapia -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -280,7 +270,7 @@
                     android:textSize="18sp" />
             </LinearLayout>
 
-
+            <!-- Doctor -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -302,7 +292,7 @@
                     android:textSize="18sp" />
             </LinearLayout>
 
-
+            <!-- Modalidad -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -319,18 +309,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
-                    android:text="Cathalina Cañon"
+                    android:text="Presencial"
                     android:textColor="#395176"
                     android:textSize="18sp" />
-
-
             </LinearLayout>
-
         </LinearLayout>
 
-
         <LinearLayout
-            android:id="@+id/boton"
+            android:id="@+id/boton1"
             android:layout_width="0dp"
             android:layout_height="75dp"
             android:background="@drawable/rounded_fragment1"
@@ -344,21 +330,21 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/contenido">
 
-
             <com.google.android.material.button.MaterialButton
-                android:layout_width="139dp"
+                android:id="@+id/btnDescargar2"
+                android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:layout_marginEnd="20dp"
                 android:backgroundTint="#324669"
                 android:text="Descargar"
                 android:textColor="@color/white"
                 android:textSize="12sp"
-                app:backgroundTint="#1C274C"
                 app:iconGravity="top"
                 app:iconPadding="4dp"
                 app:iconTint="@color/white" />
 
             <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnEditar2"
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:layout_marginEnd="20dp"
@@ -366,13 +352,10 @@
                 android:text="Editar"
                 android:textColor="@color/white"
                 android:textSize="12sp"
-                app:backgroundTint="#1C274C"
                 app:iconGravity="top"
                 app:iconPadding="4dp"
                 app:iconTint="@color/white" />
-
         </LinearLayout>
-
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

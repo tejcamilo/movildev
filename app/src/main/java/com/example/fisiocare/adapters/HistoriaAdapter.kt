@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.fisiocare.Model.HistoriaClinica
-import com.project.fisiocare.databinding.ItemHistoriaBinding
+import com.example.fisiocare.databinding.ItemHistoriaBinding
 
 class HistoriaAdapter :
     ListAdapter<HistoriaClinica, HistoriaAdapter.HistoriaViewHolder>(HistoriaDiffCallback()) {
@@ -27,7 +27,6 @@ class HistoriaAdapter :
         fun bind(historia: HistoriaClinica) {
             binding.tvNombre.text = historia.nombreCompleto
             binding.tvDocumento.text = historia.documento
-            binding.tvCorreo.text = historia.correo
         }
     }
 

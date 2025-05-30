@@ -13,7 +13,6 @@
         app:cardBackgroundColor="@color/fondo_3"
         tools:ignore="MissingConstraints"/>
 
-
     <androidx.fragment.app.FragmentContainerView
         android:name="androidx.fragment.app.FragmentContainerView"
         android:layout_width="295dp"
@@ -48,9 +47,7 @@
         tools:layout_editor_absoluteY="10dp"
         tools:ignore="DuplicateIds,MissingConstraints" />
 
-
     <ImageView
-
         android:layout_width="33dp"
         android:layout_height="27dp"
         android:background="@android:color/transparent"
@@ -61,7 +58,6 @@
         tools:layout_editor_absoluteX="140dp"
         tools:layout_editor_absoluteY="17dp"
         tools:ignore="MissingConstraints,UseAppTint" />
-
 
     <TextView
         android:id="@+id/textView4"
@@ -146,7 +142,6 @@
         tools:layout_editor_absoluteX="72dp"
         tools:layout_editor_absoluteY="398dp" />
 
-
     <EditText
         android:layout_width="247dp"
         android:layout_height="wrap_content"
@@ -196,7 +191,5 @@
         app:itemIconTint="@color/azul_main"
         app:itemTextColor="@color/azul_main"
         app:labelVisibilityMode="labeled"/>
-
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

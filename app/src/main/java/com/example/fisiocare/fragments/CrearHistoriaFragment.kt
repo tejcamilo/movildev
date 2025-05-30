@@ -4,67 +4,74 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import android.widget.EditText
+import android.widget.ImageView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import com.example.fisiocare.Model.HistoriaClinica
-import com.example.fisiocare.viewmodel.HistoriaClinicaViewModel
-import com.example.fisiocare.viewmodel.HistoriaClinicaViewModelFactory
-import com.project.fisiocare.databinding.FragmentCrearHistoriaBinding
+import com.example.fisiocare.repository.HistoriaClinicaRepositorySingleton
+import com.example.fisiocare.viewmodel.CrearHistoriaViewModel
+import com.example.fisiocare.viewmodel.CrearHistoriaViewModelFactory
+import com.example.fisiocare.R
+
 class CrearHistoriaFragment : Fragment() {
 
-    private var _binding: FragmentCrearHistoriaBinding? = null
-    private val binding get() = _binding!!
-    private lateinit var historiaViewModel: HistoriaClinicaViewModel
+    private lateinit var nombreEditText: EditText
+    private lateinit var documentoEditText: EditText
+    private lateinit var telefonoEditText: EditText
+    private lateinit var epsEditText: EditText
+    private lateinit var motivoEditText: EditText
 
+
+    private lateinit var guardarButton: Button
+    private lateinit var flechaAtras: ImageView
+
+    private lateinit var viewModel: CrearHistoriaViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentCrearHistoriaBinding.inflate(inflater, container, false)
-        return binding.root
-    }
+        val view = inflater.inflate(R.layout.fragment_crear_historia, container, false)
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        val factory = HistoriaClinicaViewModelFactory(requireContext())
-        historiaViewModel = ViewModelProvider(this, factory)[HistoriaClinicaViewModel::class.java]
-        super.onViewCreated(view, savedInstanceState)
+        // Inicializar el ViewModel con el repositorio singleton
+        viewModel = ViewModelProvider(
+            this,
+            CrearHistoriaViewModelFactory(HistoriaClinicaRepositorySingleton.get())
+        )[CrearHistoriaViewModel::class.java]
 
-        binding.btnGuardarHistoria.setOnClickListener {
-            guardarHistoriaClinica()
+        // Referencias a los EditText y botones
+        nombreEditText = view.findViewById(R.id.etNombreCompleto)
+        documentoEditText = view.findViewById(R.id.etDocumento)
+        telefonoEditText = view.findViewById(R.id.etTelefono)
+        motivoEditText = view.findViewById(R.id.etMotivoConsulta)
+        epsEditText = view.findViewById(R.id.etEps)
+
+
+        guardarButton = view.findViewById(R.id.botonGuardar)
+        flechaAtras = view.findViewById(R.id.flechaatras)
+
+        // Acción del botón guardar
+        guardarButton.setOnClickListener {
+            val nombre = nombreEditText.text.toString()
+            val telefono = documentoEditText.text.toString()
+            val eps = epsEditText.text.toString()
+            val motivo = motivoEditText.text.toString() // asumiendo que tienes este EditText
+            val documento = documentoEditText.text.toString()
+
+            viewModel.insertarHistoria(nombre, telefono, eps, motivo, documento)
+
+            Toast.makeText(requireContext(), "Historia guardada", Toast.LENGTH_SHORT).show()
         }
-    }
 
-    private fun guardarHistoriaClinica() {
-        val nombre = binding.etNombreCompleto.text.toString().trim()
-        val documento = binding.etDocumento.text.toString().trim()
-        val telefono = binding.etTelefono.text.toString().trim()
-        val correo = binding.etCorreo.text.toString().trim()
-        val eps = binding.etEps.text.toString().trim()
-        val antecedentes = binding.etAntecedentes.text.toString().trim()
-
-        if (nombre.isEmpty() || documento.isEmpty() || telefono.isEmpty() || correo.isEmpty() || eps.isEmpty()) {
-            Toast.makeText(requireContext(), "Por favor completa todos los campos", Toast.LENGTH_SHORT).show()
-            return
+        // Acción del ícono de volver
+        flechaAtras.setOnClickListener {
+            findNavController().navigateUp()
         }
 
-        val historia = HistoriaClinica(
-            nombreCompleto = nombre,
-            documento = documento,
-            telefono = telefono,
-            correo = correo,
-            eps = eps,
-            antecedentes = antecedentes
-        )
-
-        historiaViewModel.insertar(historia)
-        Toast.makeText(requireContext(), "Historia clínica guardada", Toast.LENGTH_SHORT).show()
-    }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
+        return view
     }
 }

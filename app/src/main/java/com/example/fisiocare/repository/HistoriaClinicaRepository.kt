@@ -1,18 +1,15 @@
 package com.example.fisiocare.repository
 
-import android.content.Context
+import com.example.fisiocare.database.dao.HistoriaClinicaDao
 import com.example.fisiocare.Model.HistoriaClinica
-import com.example.fisiocare.database.AppDatabase
-import com.example.fisiocare.database.HistoriaClinicaDao
 
-class HistoriaClinicaRepository(context: Context) {
+class HistoriaClinicaRepository(private val dao: HistoriaClinicaDao) {
 
-    private val dao: HistoriaClinicaDao =
-        AppDatabase.getInstance(context).historiaClinicaDao()
-
-    suspend fun insertar(historia: HistoriaClinica) {
-        dao.insertar(historia)
+    suspend fun insertarHistoria(historia: HistoriaClinica) {
+        dao.insertarHistoria(historia)
     }
 
-    // Otros métodos si los necesitas (consultas, actualizaciones...)
+    suspend fun obtenerHistoriaPorId(id: Int): HistoriaClinica? {
+        return dao.obtenerHistoriaPorId(id)
+    }
 }

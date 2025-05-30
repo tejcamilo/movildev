@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<navigation
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/crearHistoriaFragment">
+    app:startDestination="@id/ConsultarHistoriaFragment"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+    <fragment
+        android:id="@+id/ConsultarHistoriaFragment"
+        android:name="com.example.fisiocare.fragments.ConsultarHistoriaFragment"
+        android:label="Historia Clínica"
+        tools:layout="@layout/fragment_consultar_historia" />
 
     <fragment
         android:id="@+id/crearHistoriaFragment"
         android:name="com.example.fisiocare.fragments.CrearHistoriaFragment"
-        android:label="Crear Historia Clínica" >
-        <!-- Ejemplo de acción a otro fragmento: -->
-        <!--
-        <action
-            android:id="@+id/action_crearHistoria_to_otroFragment"
-            app:destination="@id/otroFragment" />
-        -->
-    </fragment>
+        android:label="Crear Historia">
 
-    <!-- Aquí defines más fragments y acciones si tienes más pantallas -->
+    </fragment>
 
 </navigation>

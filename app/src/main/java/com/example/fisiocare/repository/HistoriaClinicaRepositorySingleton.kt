@@ -5,15 +5,20 @@ import com.example.fisiocare.database.AppDatabase
 
 object HistoriaClinicaRepositorySingleton {
 
-    private var repository: HistoriaClinicaRepository? = null
+    // Repositorio privado no nulo después de inicialización
+    private lateinit var repository: HistoriaClinicaRepository
 
     fun initialize(context: Context) {
-        val database = AppDatabase.getDatabase(context)
-        repository = HistoriaClinicaRepository(database.historiaClinicaDao())
+        if (!::repository.isInitialized) {
+            val database = AppDatabase.getDatabase(context)
+            repository = HistoriaClinicaRepository(database.historiaClinicaDao())
+        }
     }
 
     fun get(): HistoriaClinicaRepository {
+        if (!::repository.isInitialized) {
+            throw IllegalStateException("HistoriaClinicaRepositorySingleton debe inicializarse antes de usarlo.")
+        }
         return repository
-            ?: throw IllegalStateException("HistoriaRepositorySingleton debe inicializarse antes de usarlo.")
     }
 }
