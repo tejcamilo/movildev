@@ -1,0 +1,34 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Tema base usando Material 3 sin ActionBar -->
+    <style name="FisioCare" parent="Theme.Material3.DayNight">
+        <item name="colorPrimary">#395176</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+
+        <!-- Simula NoActionBar -->
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <!-- Tema base personalizado para tu app -->
+    <style name="Base.Theme.Movildev" parent="Theme.Material3.DayNight">
+        <item name="colorPrimary">#395176</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+
+        <!-- Simula NoActionBar -->
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <!-- Tema final que se asigna en AndroidManifest.xml -->
+    <style name="Theme.Movildev" parent="Base.Theme.Movildev" />
+
+    <!-- Estilo personalizado para BottomNavigationView -->
+    <style name="BottomNavigationViewCustom" parent="Widget.Material3.BottomNavigationView">
+        <item name="itemIconTint">@color/bottom_nav_icon_color</item>
+        <item name="itemTextColor">@color/bottom_nav_text_color</item>
+        <item name="backgroundTint">@color/bottom_nav_background</item>
+        <item name="itemRippleColor">@android:color/transparent</item> <!-- no existe itemActiveIndicatorStyle en XML -->
+    </style>
+
+</resources>

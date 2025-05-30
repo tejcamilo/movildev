@@ -1,0 +1,46 @@
+ <?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+app:startDestination="@id/inicioSesionFragment">
+
+<!-- Fragmento de Inicio de Sesión -->
+<fragment
+    android:id="@+id/inicioSesionFragment"
+    android:name="com.FisioCare.InicioSesionFragment"
+    android:label="Iniciar Sesión"
+    tools:layout="@layout/fragment_iniciosesion">
+    <action
+        android:id="@+id/action_inicioSesionFragment_to_menuFragment"
+        app:destination="@id/menuFragment" />
+</fragment>
+
+<!-- Menú principal -->
+<fragment
+    android:id="@+id/menuFragment"
+    android:name="com.FisioCare.MenuFragment"
+    android:label="Menú"
+    tools:layout="@layout/fragment_menu">
+    <action
+        android:id="@+id/action_menuFragment_to_usuarioRegistrarFragment"
+        app:destination="@id.usuarioRegistrarFragment" />
+    <action
+        android:id="@+id/action_menuFragment_to_consultarUsuarioFragment"
+        app:destination="@id.consultarUsuarioFragment" />
+</fragment>
+
+<!-- Registrar Usuario -->
+<fragment
+    android:id="@+id/usuarioRegistrarFragment"
+    android:name="com.FisioCare.UsuarioRegistrarFragment"
+    android:label="Registrar Usuario"
+    tools:layout="@layout/usuario_registrar" />
+
+<!-- Consultar Usuario -->
+<fragment
+    android:id="@+id/consultarUsuarioFragment"
+    android:name="com.FisioCare.ConsultarUsuarioFragment"
+    android:label="Consultar Usuario"
+    tools:layout="@layout/fragment_consultarusuario" />
+
+</navigation>

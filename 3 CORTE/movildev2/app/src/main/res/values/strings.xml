@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">FisioCare</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="telemedicina_header">Telemedicina</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="reprogramar">Reprogramar</string>
+    <string name="acceder">Acceder</string>
+    <string name="nombre_de_usuario">Nombre de usuario</string>
+    <string name="usuario_creado">Usuario guardado</string>
+    <string name="usuario_actualizado">Usuario actualizado</string>
+    <string name="titulo_perfil">Perfil</string>
+    <string name="editar">Editar</string>
+    <string name="nombre_usuario">Nombre de Usuario:</string>
+    <string name="documento">Documento:</string>
+    <string name="correo">Correo del Usuario:</string>
+    <string name="telefono">Teléfono:</string>
+    <string name="guardar">Guardar</string>
+
+</resources>
