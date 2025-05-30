@@ -61,14 +61,14 @@
             android:layout_width="64dp"
             android:layout_height="64dp"
             android:background="@android:color/transparent"
-            android:src="@drawable/calendar"
+            android:src="@drawable/editar_calendar"
             android:scaleType="fitXY"
             android:contentDescription="@string/app_name" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Agendar Citas"
+            android:text="Modificar Citas"
             android:textColor="@color/colorFuente"
             android:textSize="16sp"
             android:textStyle="bold"

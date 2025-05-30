@@ -68,13 +68,20 @@ class TelemedicinaItemAdapter(
             accederBtn.setOnClickListener { onAccederClick(item) }
 
             rootView.findViewById<Button>(R.id.reprogramar_btn).setOnClickListener {
-                onReagendarClick(item)
+                androidx.appcompat.app.AlertDialog.Builder(rootView.context)
+                    .setTitle("Cancelar cita")
+                    .setMessage("¿Desea caneclar la cita?")
+                    .setPositiveButton("OK") { _, _ ->
+                        onReagendarClick(item)
+                    }
+                    .show()
+
             }
 
             rootView.findViewById<Button>(R.id.cancelar_btn).setOnClickListener {
                 androidx.appcompat.app.AlertDialog.Builder(rootView.context)
-                    .setTitle("Cancelar cita")
-                    .setMessage("¿Desea cancelar la cita?")
+                    .setTitle("Reprogramar cita")
+                    .setMessage("¿Desea reprogramar la cita?")
                     .setPositiveButton("OK") { _, _ ->
                         onCancelarClick(item.copy(disponible = true))
                     }

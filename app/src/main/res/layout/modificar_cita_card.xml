@@ -1,24 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:paddingBottom="12dp">
-    <Button
-        android:id="@+id/btnFactura"
-        android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:text="Factura"
-        android:textColor="#FFFFFF"
-        android:textSize="14sp"
-        android:background="@drawable/acceder_btn"
-        android:layout_gravity="bottom|center"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginTop="214dp"
-        android:translationZ="0dp"
-        android:elevation="2dp"
-        android:layout_marginBottom="0dp"/>
 
     <LinearLayout
         android:id="@+id/factura_card"
@@ -29,8 +14,7 @@
         android:layout_marginTop="30dp"
         android:layout_marginHorizontal="20dp"
         android:gravity="center"
-        android:background="@drawable/rounded_background"
-        >
+        android:background="@drawable/rounded_background">
         <!-- COL1 -->
         <LinearLayout
             android:layout_width="wrap_content"
@@ -38,8 +22,7 @@
             android:orientation="vertical"
             android:layout_weight="3"
             android:gravity="center"
-            android:paddingHorizontal="5dp"
-            >
+            android:paddingHorizontal="5dp">
             <!-- Fecha -->
             <LinearLayout
                 android:layout_width="match_parent"
@@ -60,6 +43,7 @@
                     android:layout_marginStart="8dp"
                     android:textColor="#2D3748" />
             </LinearLayout>
+
             <LinearLayout
                 android:id="@+id/tipo_cita"
                 android:layout_width="match_parent"
@@ -80,6 +64,7 @@
                     android:layout_marginStart="8dp"
                     android:textColor="#2D3748" />
             </LinearLayout>
+
             <LinearLayout
                 android:id="@+id/payment"
                 android:layout_width="match_parent"
@@ -92,35 +77,11 @@
                     android:layout_height="20dp"
                     android:src="@drawable/modalidad" />
 
-
-                    <TextView
-                        android:id="@+id/modalidadText"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Modalidad"
-                        android:layout_marginStart="8dp"
-                        android:textColor="#2D3748" />
-            </LinearLayout>
-            <LinearLayout
-                android:id="@+id/acceder_telemedicina"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:paddingVertical="5dp"
-                android:clickable="true"
-                android:focusable="true"
-                android:background="?attr/selectableItemBackground">
-
-                <ImageView
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:src="@drawable/goto_telemedicina" />
-
                 <TextView
-                    android:id="@+id/acceder_telemedicina_text"
+                    android:id="@+id/modalidadText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Acceder"
+                    android:text="Modalidad"
                     android:layout_marginStart="8dp"
                     android:textColor="#2D3748" />
             </LinearLayout>
@@ -135,7 +96,7 @@
                 <ImageView
                     android:layout_width="20dp"
                     android:layout_height="20dp"
-                    android:src="@drawable/profile" />
+                    android:src="@drawable/ic_user" />
 
                 <TextView
                     android:id="@+id/nombrePacienteCitaText"
@@ -158,26 +119,23 @@
             android:gravity="center"
             android:paddingHorizontal="5dp"
 
+            android:foreground="?attr/selectableItemBackground"
+
             >
-            <Button
-                android:id="@+id/btnReagendar"
-                android:layout_width="match_parent"
+
+            <ImageButton
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/editar_cita"
+                android:background="@android:color/transparent"
+       />
+            <TextView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Reprogramar"
-                android:backgroundTint="#417EF2"
-                android:textColor="#FFFFFF"
-                android:textSize="12sp" />
-
-            <Button
-                android:id="@+id/btnCancelar"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Cancelar"
-                android:backgroundTint="#C74040"
-                android:textColor="#FFFFFF"
-                android:textSize="12sp" />
-
-
+                android:textColor="@color/colorFuente"
+                android:textStyle="bold"
+                android:text="Modificar" />
 
         </LinearLayout>
 

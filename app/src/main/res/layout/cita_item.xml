@@ -126,21 +126,31 @@
             android:gravity="center"
             android:paddingHorizontal="5dp"
             >
-            <Button
-                android:id="@+id/reprogramar_btn"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/reprogramar"
-                android:backgroundTint="#417EF2"
-                android:textColor="#FFFFFF"
-                android:textSize="12sp"
-                />
+<!--            <Button-->
+<!--                android:id="@+id/gotoTelemedicina"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Acceder"-->
+<!--                android:backgroundTint="@color/colorFuente"-->
+<!--                android:textColor="#FFFFFF"-->
+<!--                android:textSize="12sp"-->
+<!--                />-->
+
             <Button
                 android:id="@+id/cancelar_btn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/cancelar"
-                android:backgroundTint="#C74040"
+                android:text="Reprogramar"
+                android:backgroundTint="@color/botonAzul"
+                android:textColor="#FFFFFF"
+                android:textSize="12sp"
+                />
+            <Button
+                android:id="@+id/reprogramar_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cancelar"
+                android:backgroundTint="@color/botonRojo"
                 android:textColor="#FFFFFF"
                 android:textSize="12sp"
                 />

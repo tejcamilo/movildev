@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.FrameLayout
+import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.movildev.model.Cita
@@ -41,6 +42,7 @@ class CitaItemAdapter(
         val pacienteCita = rootView.findViewById<TextView>(R.id.nombre_paciente)
         val profesionalCita = rootView.findViewById<TextView>(R.id.detalle_profesional)
         val tratamientoCita = rootView.findViewById<TextView>(R.id.detalles_tratamiento)
+        val acceder = rootView.findViewById<LinearLayout>(R.id.acceder_telemedicina)
 
         companion object {
             fun inflateFrom(parent: ViewGroup) : CitaItemViewHolder {
@@ -58,6 +60,10 @@ class CitaItemAdapter(
             profesionalCita.text = "Cathalina"
             tratamientoCita.text = item.tratamiento
 
+            acceder.setOnClickListener {
+
+            }
+
 
             Log.i("CitaLogger", "bind: $item")
 
@@ -72,7 +78,13 @@ class CitaItemAdapter(
             accederBtn.visibility = View.GONE
 
             rootView.findViewById<Button>(R.id.reprogramar_btn).setOnClickListener {
-                onReagendarClick(item)
+                androidx.appcompat.app.AlertDialog.Builder(rootView.context)
+                    .setTitle("Cancelar cita")
+                    .setMessage("¿Desea caneclar la cita?")
+                    .setPositiveButton("OK") { _, _ ->
+                        onReagendarClick(item)
+                    }
+                    .show()
             }
 
             val cancelarBtn = rootView.findViewById<Button>(R.id.cancelar_btn)

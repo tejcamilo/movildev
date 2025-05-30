@@ -97,8 +97,24 @@ class FacturaAdapter(
         holder.fechaText.text = factura.fecha
         holder.horaText.text = factura.hora
 
-        holder.btnModificar.setOnClickListener { onModificar(factura) }
-        holder.btnEliminar.setOnClickListener { onEliminar(factura) }
+        holder.btnModificar.setOnClickListener {
+            androidx.appcompat.app.AlertDialog.Builder(holder.itemView.context)
+                .setTitle("Modificar factura")
+                .setMessage("¿Desea modificar la factura?")
+                .setPositiveButton("OK") { _, _ ->
+                    onModificar(factura)
+                }
+                .show()
+        }
+        holder.btnEliminar.setOnClickListener {
+            androidx.appcompat.app.AlertDialog.Builder(holder.itemView.context)
+                .setTitle("Eliminar factura")
+                .setMessage("¿Desea eliminar la factura?")
+                .setPositiveButton("OK") { _, _ ->
+                    onEliminar(factura)
+                }
+                .show()
+         }
         holder.btnDescargar.setOnClickListener {
             // Aquí puedes generar el PDF con los datos de `factura`
             generarPDF(context = holder.itemView.context, factura = factura)
